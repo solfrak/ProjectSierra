@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated projectSierraModel -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="projectSierraModel.presentation.ProjectSierraModelModelWizardID"
+            name="%_UI_ProjectSierraModelModelWizard_label"
+            class="projectSierraModel.presentation.ProjectSierraModelModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ProjectSierraModelModelFile.gif">
+         <description>%_UI_ProjectSierraModelModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated projectSierraModel -->
+      <editor
+            id="projectSierraModel.presentation.ProjectSierraModelEditorID"
+            name="%_UI_ProjectSierraModelEditor_label"
+            icon="icons/full/obj16/ProjectSierraModelModelFile.gif"
+            extensions="projectsierramodel"
+            class="projectSierraModel.presentation.ProjectSierraModelEditor"
+            contributorClass="projectSierraModel.presentation.ProjectSierraModelActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
