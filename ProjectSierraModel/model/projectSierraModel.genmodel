@@ -9,53 +9,40 @@
   <foreignModel>projectSierraModel.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="ProjectSierraModel" disposableProviderFactory="true" ecorePackage="projectSierraModel.ecore#/">
+    <genClasses ecoreClass="projectSierraModel.ecore#//Capabilitty">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Capabilitty/includes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Capabilitty/isIncludedIn"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Capabilitty/extends"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Capabilitty/isExtendedBy"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Capabilitty/isImplementedBy"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Capabilitty/involves"/>
+    </genClasses>
     <genClasses ecoreClass="projectSierraModel.ecore#//SpecializableElement">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//SpecializableElement/specializes"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//SpecializableElement/isSpcecializedBy"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//SpecializableElement/isSpecializedBy"/>
     </genClasses>
     <genClasses ecoreClass="projectSierraModel.ecore#//ContainableElement">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//ContainableElement/contains"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//ContainableElement/containedIn"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//ContainableElement/isContainedIn"/>
     </genClasses>
-    <genClasses ecoreClass="projectSierraModel.ecore#//Constraint">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projectSierraModel.ecore#//Constraint/hasExpression"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projectSierraModel.ecore#//Constraint/isExpressedIn"/>
+    <genClasses ecoreClass="projectSierraModel.ecore#//ActivityDiagram">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//ActivityDiagram/containableElements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//ActivityDiagram/specializableElements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//ActivityDiagram/exchangeElements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//ActivityDiagram/performingElements"/>
     </genClasses>
-    <genClasses ecoreClass="projectSierraModel.ecore#//Capability">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Capability/involves"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Capability/includes"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Capability/isIncludedIn"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Capability/extends"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Capability/isExtendedBy"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Capability/isSupportedBy"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Capability/implements"/>
+    <genClasses ecoreClass="projectSierraModel.ecore#//ExchangeElement"/>
+    <genClasses ecoreClass="projectSierraModel.ecore#//Exchange">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Exchange/sendsTo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Exchange/receivesFrom"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Exchange/conveys"/>
     </genClasses>
-    <genClasses ecoreClass="projectSierraModel.ecore#//InvolvableElement">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//InvolvableElement/involvedIn"/>
-    </genClasses>
-    <genClasses ecoreClass="projectSierraModel.ecore#//Actor"/>
-    <genClasses ecoreClass="projectSierraModel.ecore#//Entity"/>
-    <genClasses ecoreClass="projectSierraModel.ecore#//Component"/>
-    <genClasses ecoreClass="projectSierraModel.ecore#//System">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//System/support"/>
-    </genClasses>
-    <genClasses ecoreClass="projectSierraModel.ecore#//PerformingElement">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//PerformingElement/performs"/>
-    </genClasses>
-    <genClasses ecoreClass="projectSierraModel.ecore#//ExchangingElement">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//ExchangingElement/sendsTo"/>
-    </genClasses>
+    <genClasses ecoreClass="projectSierraModel.ecore#//Item"/>
     <genClasses ecoreClass="projectSierraModel.ecore#//Function">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Function/hasPort"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Function/hasInput"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Function/hasOutput"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Function/hasOuput"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Function/isPerformedBy"/>
-    </genClasses>
-    <genClasses ecoreClass="projectSierraModel.ecore#//Item">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Item/conveys"/>
-    </genClasses>
-    <genClasses ecoreClass="projectSierraModel.ecore#//Chain">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Chain/isImplementedBy"/>
     </genClasses>
     <genClasses ecoreClass="projectSierraModel.ecore#//Port">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Port/isPortOf"/>
@@ -63,26 +50,19 @@
     <genClasses ecoreClass="projectSierraModel.ecore#//Input">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Input/isInputOf"/>
     </genClasses>
-    <genClasses ecoreClass="projectSierraModel.ecore#//Output">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Output/isOutputOf"/>
+    <genClasses ecoreClass="projectSierraModel.ecore#//Ouput">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Ouput/isOuputOf"/>
     </genClasses>
-    <genClasses ecoreClass="projectSierraModel.ecore#//Exchange">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Exchange/receivesFrom"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Exchange/isConveyedBy"/>
+    <genClasses ecoreClass="projectSierraModel.ecore#//PerformingElement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//PerformingElement/performs"/>
     </genClasses>
-    <genClasses ecoreClass="projectSierraModel.ecore#//Requirement">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projectSierraModel.ecore#//Requirement/hasRationale"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Requirement/hasConstraint"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Requirement/derives"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Requirement/isDerivedFrom"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Requirement/refines"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Requirement/isRefinedBy"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Requirement/specifies"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Requirement/justifies"/>
+    <genClasses ecoreClass="projectSierraModel.ecore#//InvolveableElement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//InvolveableElement/isInvolvedIn"/>
     </genClasses>
-    <genClasses ecoreClass="projectSierraModel.ecore#//DesignElement">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//DesignElement/isSpecifiedBy"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//DesignElement/isJustifiedBy"/>
+    <genClasses ecoreClass="projectSierraModel.ecore#//Actor"/>
+    <genClasses ecoreClass="projectSierraModel.ecore#//Entity"/>
+    <genClasses ecoreClass="projectSierraModel.ecore#//Chain">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Chain/implements"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
