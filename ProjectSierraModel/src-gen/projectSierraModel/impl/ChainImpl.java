@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import projectSierraModel.Capability;
+import projectSierraModel.Capabilitty;
 import projectSierraModel.Chain;
 import projectSierraModel.ProjectSierraModelPackage;
 
@@ -22,21 +22,21 @@ import projectSierraModel.ProjectSierraModelPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link projectSierraModel.impl.ChainImpl#getIsImplementedBy <em>Is Implemented By</em>}</li>
+ *   <li>{@link projectSierraModel.impl.ChainImpl#getImplements <em>Implements</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ChainImpl extends ContainableElementImpl implements Chain {
 	/**
-	 * The cached value of the '{@link #getIsImplementedBy() <em>Is Implemented By</em>}' reference.
+	 * The cached value of the '{@link #getImplements() <em>Implements</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIsImplementedBy()
+	 * @see #getImplements()
 	 * @generated
 	 * @ordered
 	 */
-	protected Capability isImplementedBy;
+	protected Capabilitty implements_;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -62,17 +62,17 @@ public class ChainImpl extends ContainableElementImpl implements Chain {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Capability getIsImplementedBy() {
-		if (isImplementedBy != null && isImplementedBy.eIsProxy()) {
-			InternalEObject oldIsImplementedBy = (InternalEObject) isImplementedBy;
-			isImplementedBy = (Capability) eResolveProxy(oldIsImplementedBy);
-			if (isImplementedBy != oldIsImplementedBy) {
+	public Capabilitty getImplements() {
+		if (implements_ != null && implements_.eIsProxy()) {
+			InternalEObject oldImplements = (InternalEObject) implements_;
+			implements_ = (Capabilitty) eResolveProxy(oldImplements);
+			if (implements_ != oldImplements) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							ProjectSierraModelPackage.CHAIN__IS_IMPLEMENTED_BY, oldIsImplementedBy, isImplementedBy));
+							ProjectSierraModelPackage.CHAIN__IMPLEMENTS, oldImplements, implements_));
 			}
 		}
-		return isImplementedBy;
+		return implements_;
 	}
 
 	/**
@@ -80,8 +80,8 @@ public class ChainImpl extends ContainableElementImpl implements Chain {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Capability basicGetIsImplementedBy() {
-		return isImplementedBy;
+	public Capabilitty basicGetImplements() {
+		return implements_;
 	}
 
 	/**
@@ -89,12 +89,12 @@ public class ChainImpl extends ContainableElementImpl implements Chain {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetIsImplementedBy(Capability newIsImplementedBy, NotificationChain msgs) {
-		Capability oldIsImplementedBy = isImplementedBy;
-		isImplementedBy = newIsImplementedBy;
+	public NotificationChain basicSetImplements(Capabilitty newImplements, NotificationChain msgs) {
+		Capabilitty oldImplements = implements_;
+		implements_ = newImplements;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					ProjectSierraModelPackage.CHAIN__IS_IMPLEMENTED_BY, oldIsImplementedBy, newIsImplementedBy);
+					ProjectSierraModelPackage.CHAIN__IMPLEMENTS, oldImplements, newImplements);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -108,21 +108,21 @@ public class ChainImpl extends ContainableElementImpl implements Chain {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIsImplementedBy(Capability newIsImplementedBy) {
-		if (newIsImplementedBy != isImplementedBy) {
+	public void setImplements(Capabilitty newImplements) {
+		if (newImplements != implements_) {
 			NotificationChain msgs = null;
-			if (isImplementedBy != null)
-				msgs = ((InternalEObject) isImplementedBy).eInverseRemove(this,
-						ProjectSierraModelPackage.CAPABILITY__IMPLEMENTS, Capability.class, msgs);
-			if (newIsImplementedBy != null)
-				msgs = ((InternalEObject) newIsImplementedBy).eInverseAdd(this,
-						ProjectSierraModelPackage.CAPABILITY__IMPLEMENTS, Capability.class, msgs);
-			msgs = basicSetIsImplementedBy(newIsImplementedBy, msgs);
+			if (implements_ != null)
+				msgs = ((InternalEObject) implements_).eInverseRemove(this,
+						ProjectSierraModelPackage.CAPABILITTY__IS_IMPLEMENTED_BY, Capabilitty.class, msgs);
+			if (newImplements != null)
+				msgs = ((InternalEObject) newImplements).eInverseAdd(this,
+						ProjectSierraModelPackage.CAPABILITTY__IS_IMPLEMENTED_BY, Capabilitty.class, msgs);
+			msgs = basicSetImplements(newImplements, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ProjectSierraModelPackage.CHAIN__IS_IMPLEMENTED_BY,
-					newIsImplementedBy, newIsImplementedBy));
+			eNotify(new ENotificationImpl(this, Notification.SET, ProjectSierraModelPackage.CHAIN__IMPLEMENTS,
+					newImplements, newImplements));
 	}
 
 	/**
@@ -133,11 +133,11 @@ public class ChainImpl extends ContainableElementImpl implements Chain {
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case ProjectSierraModelPackage.CHAIN__IS_IMPLEMENTED_BY:
-			if (isImplementedBy != null)
-				msgs = ((InternalEObject) isImplementedBy).eInverseRemove(this,
-						ProjectSierraModelPackage.CAPABILITY__IMPLEMENTS, Capability.class, msgs);
-			return basicSetIsImplementedBy((Capability) otherEnd, msgs);
+		case ProjectSierraModelPackage.CHAIN__IMPLEMENTS:
+			if (implements_ != null)
+				msgs = ((InternalEObject) implements_).eInverseRemove(this,
+						ProjectSierraModelPackage.CAPABILITTY__IS_IMPLEMENTED_BY, Capabilitty.class, msgs);
+			return basicSetImplements((Capabilitty) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -150,8 +150,8 @@ public class ChainImpl extends ContainableElementImpl implements Chain {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case ProjectSierraModelPackage.CHAIN__IS_IMPLEMENTED_BY:
-			return basicSetIsImplementedBy(null, msgs);
+		case ProjectSierraModelPackage.CHAIN__IMPLEMENTS:
+			return basicSetImplements(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -164,10 +164,10 @@ public class ChainImpl extends ContainableElementImpl implements Chain {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case ProjectSierraModelPackage.CHAIN__IS_IMPLEMENTED_BY:
+		case ProjectSierraModelPackage.CHAIN__IMPLEMENTS:
 			if (resolve)
-				return getIsImplementedBy();
-			return basicGetIsImplementedBy();
+				return getImplements();
+			return basicGetImplements();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -180,8 +180,8 @@ public class ChainImpl extends ContainableElementImpl implements Chain {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case ProjectSierraModelPackage.CHAIN__IS_IMPLEMENTED_BY:
-			setIsImplementedBy((Capability) newValue);
+		case ProjectSierraModelPackage.CHAIN__IMPLEMENTS:
+			setImplements((Capabilitty) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -195,8 +195,8 @@ public class ChainImpl extends ContainableElementImpl implements Chain {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case ProjectSierraModelPackage.CHAIN__IS_IMPLEMENTED_BY:
-			setIsImplementedBy((Capability) null);
+		case ProjectSierraModelPackage.CHAIN__IMPLEMENTS:
+			setImplements((Capabilitty) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -210,8 +210,8 @@ public class ChainImpl extends ContainableElementImpl implements Chain {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case ProjectSierraModelPackage.CHAIN__IS_IMPLEMENTED_BY:
-			return isImplementedBy != null;
+		case ProjectSierraModelPackage.CHAIN__IMPLEMENTS:
+			return implements_ != null;
 		}
 		return super.eIsSet(featureID);
 	}

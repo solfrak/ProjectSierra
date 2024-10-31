@@ -41,25 +41,24 @@ public class ChainItemProvider extends ContainableElementItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addIsImplementedByPropertyDescriptor(object);
+			addImplementsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Is Implemented By feature.
+	 * This adds a property descriptor for the Implements feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addIsImplementedByPropertyDescriptor(Object object) {
+	protected void addImplementsPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Chain_isImplementedBy_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Chain_isImplementedBy_feature",
+						getResourceLocator(), getString("_UI_Chain_implements_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Chain_implements_feature",
 								"_UI_Chain_type"),
-						ProjectSierraModelPackage.Literals.CHAIN__IS_IMPLEMENTED_BY, true, false, true, null, null,
-						null));
+						ProjectSierraModelPackage.Literals.CHAIN__IMPLEMENTS, true, false, true, null, null, null));
 	}
 
 	/**

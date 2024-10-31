@@ -11,7 +11,7 @@ package projectSierraModel;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link projectSierraModel.Chain#getIsImplementedBy <em>Is Implemented By</em>}</li>
+ *   <li>{@link projectSierraModel.Chain#getImplements <em>Implements</em>}</li>
  * </ul>
  *
  * @see projectSierraModel.ProjectSierraModelPackage#getChain()
@@ -20,27 +20,27 @@ package projectSierraModel;
  */
 public interface Chain extends ContainableElement {
 	/**
-	 * Returns the value of the '<em><b>Is Implemented By</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link projectSierraModel.Capability#getImplements <em>Implements</em>}'.
+	 * Returns the value of the '<em><b>Implements</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link projectSierraModel.Capabilitty#getIsImplementedBy <em>Is Implemented By</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Is Implemented By</em>' reference.
-	 * @see #setIsImplementedBy(Capability)
-	 * @see projectSierraModel.ProjectSierraModelPackage#getChain_IsImplementedBy()
-	 * @see projectSierraModel.Capability#getImplements
-	 * @model opposite="implements"
+	 * @return the value of the '<em>Implements</em>' reference.
+	 * @see #setImplements(Capabilitty)
+	 * @see projectSierraModel.ProjectSierraModelPackage#getChain_Implements()
+	 * @see projectSierraModel.Capabilitty#getIsImplementedBy
+	 * @model opposite="isImplementedBy"
 	 * @generated
 	 */
-	Capability getIsImplementedBy();
+	Capabilitty getImplements();
 
 	/**
-	 * Sets the value of the '{@link projectSierraModel.Chain#getIsImplementedBy <em>Is Implemented By</em>}' reference.
+	 * Sets the value of the '{@link projectSierraModel.Chain#getImplements <em>Implements</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Is Implemented By</em>' reference.
-	 * @see #getIsImplementedBy()
+	 * @param value the new value of the '<em>Implements</em>' reference.
+	 * @see #getImplements()
 	 * @generated
 	 */
-	void setIsImplementedBy(Capability value);
+	void setImplements(Capabilitty value);
 
 } // Chain

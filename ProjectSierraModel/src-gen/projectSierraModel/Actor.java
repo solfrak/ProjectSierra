@@ -12,5 +12,5 @@ package projectSierraModel;
  * @model
  * @generated
  */
-public interface Actor extends InvolvableElement {
+public interface Actor extends InvolveableElement, PerformingElement {
 } // Actor

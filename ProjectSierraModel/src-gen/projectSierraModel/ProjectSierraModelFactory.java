@@ -22,22 +22,22 @@ public interface ProjectSierraModelFactory extends EFactory {
 	ProjectSierraModelFactory eINSTANCE = projectSierraModel.impl.ProjectSierraModelFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Constraint</em>'.
+	 * Returns a new object of class '<em>Capabilitty</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Constraint</em>'.
+	 * @return a new object of class '<em>Capabilitty</em>'.
 	 * @generated
 	 */
-	Constraint createConstraint();
+	Capabilitty createCapabilitty();
 
 	/**
-	 * Returns a new object of class '<em>Capability</em>'.
+	 * Returns a new object of class '<em>Activity Diagram</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Capability</em>'.
+	 * @return a new object of class '<em>Activity Diagram</em>'.
 	 * @generated
 	 */
-	Capability createCapability();
+	ActivityDiagram createActivityDiagram();
 
 	/**
 	 * Returns a new object of class '<em>Actor</em>'.
@@ -56,24 +56,6 @@ public interface ProjectSierraModelFactory extends EFactory {
 	 * @generated
 	 */
 	Entity createEntity();
-
-	/**
-	 * Returns a new object of class '<em>Component</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Component</em>'.
-	 * @generated
-	 */
-	Component createComponent();
-
-	/**
-	 * Returns a new object of class '<em>System</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>System</em>'.
-	 * @generated
-	 */
-	System createSystem();
 
 	/**
 	 * Returns a new object of class '<em>Function</em>'.
@@ -121,13 +103,13 @@ public interface ProjectSierraModelFactory extends EFactory {
 	Input createInput();
 
 	/**
-	 * Returns a new object of class '<em>Output</em>'.
+	 * Returns a new object of class '<em>Ouput</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Output</em>'.
+	 * @return a new object of class '<em>Ouput</em>'.
 	 * @generated
 	 */
-	Output createOutput();
+	Ouput createOuput();
 
 	/**
 	 * Returns a new object of class '<em>Exchange</em>'.
@@ -137,15 +119,6 @@ public interface ProjectSierraModelFactory extends EFactory {
 	 * @generated
 	 */
 	Exchange createExchange();
-
-	/**
-	 * Returns a new object of class '<em>Requirement</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Requirement</em>'.
-	 * @generated
-	 */
-	Requirement createRequirement();
 
 	/**
 	 * Returns the package supported by this factory.

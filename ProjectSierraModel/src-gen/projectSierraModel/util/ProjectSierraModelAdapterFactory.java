@@ -9,26 +9,7 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
-import projectSierraModel.Actor;
-import projectSierraModel.Capability;
-import projectSierraModel.Chain;
-import projectSierraModel.Component;
-import projectSierraModel.Constraint;
-import projectSierraModel.ContainableElement;
-import projectSierraModel.DesignElement;
-import projectSierraModel.Entity;
-import projectSierraModel.Exchange;
-import projectSierraModel.ExchangingElement;
-import projectSierraModel.Function;
-import projectSierraModel.Input;
-import projectSierraModel.InvolvableElement;
-import projectSierraModel.Item;
-import projectSierraModel.Output;
-import projectSierraModel.PerformingElement;
-import projectSierraModel.Port;
-import projectSierraModel.ProjectSierraModelPackage;
-import projectSierraModel.Requirement;
-import projectSierraModel.SpecializableElement;
+import projectSierraModel.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -86,6 +67,11 @@ public class ProjectSierraModelAdapterFactory extends AdapterFactoryImpl {
 	 */
 	protected ProjectSierraModelSwitch<Adapter> modelSwitch = new ProjectSierraModelSwitch<Adapter>() {
 		@Override
+		public Adapter caseCapabilitty(Capabilitty object) {
+			return createCapabilittyAdapter();
+		}
+
+		@Override
 		public Adapter caseSpecializableElement(SpecializableElement object) {
 			return createSpecializableElementAdapter();
 		}
@@ -96,53 +82,18 @@ public class ProjectSierraModelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseConstraint(Constraint object) {
-			return createConstraintAdapter();
+		public Adapter caseActivityDiagram(ActivityDiagram object) {
+			return createActivityDiagramAdapter();
 		}
 
 		@Override
-		public Adapter caseCapability(Capability object) {
-			return createCapabilityAdapter();
+		public Adapter caseExchangeElement(ExchangeElement object) {
+			return createExchangeElementAdapter();
 		}
 
 		@Override
-		public Adapter caseInvolvableElement(InvolvableElement object) {
-			return createInvolvableElementAdapter();
-		}
-
-		@Override
-		public Adapter caseActor(Actor object) {
-			return createActorAdapter();
-		}
-
-		@Override
-		public Adapter caseEntity(Entity object) {
-			return createEntityAdapter();
-		}
-
-		@Override
-		public Adapter caseComponent(Component object) {
-			return createComponentAdapter();
-		}
-
-		@Override
-		public Adapter caseSystem(projectSierraModel.System object) {
-			return createSystemAdapter();
-		}
-
-		@Override
-		public Adapter casePerformingElement(PerformingElement object) {
-			return createPerformingElementAdapter();
-		}
-
-		@Override
-		public Adapter caseExchangingElement(ExchangingElement object) {
-			return createExchangingElementAdapter();
-		}
-
-		@Override
-		public Adapter caseFunction(Function object) {
-			return createFunctionAdapter();
+		public Adapter caseExchange(Exchange object) {
+			return createExchangeAdapter();
 		}
 
 		@Override
@@ -151,8 +102,8 @@ public class ProjectSierraModelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseChain(Chain object) {
-			return createChainAdapter();
+		public Adapter caseFunction(Function object) {
+			return createFunctionAdapter();
 		}
 
 		@Override
@@ -166,23 +117,33 @@ public class ProjectSierraModelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseOutput(Output object) {
-			return createOutputAdapter();
+		public Adapter caseOuput(Ouput object) {
+			return createOuputAdapter();
 		}
 
 		@Override
-		public Adapter caseExchange(Exchange object) {
-			return createExchangeAdapter();
+		public Adapter casePerformingElement(PerformingElement object) {
+			return createPerformingElementAdapter();
 		}
 
 		@Override
-		public Adapter caseRequirement(Requirement object) {
-			return createRequirementAdapter();
+		public Adapter caseInvolveableElement(InvolveableElement object) {
+			return createInvolveableElementAdapter();
 		}
 
 		@Override
-		public Adapter caseDesignElement(DesignElement object) {
-			return createDesignElementAdapter();
+		public Adapter caseActor(Actor object) {
+			return createActorAdapter();
+		}
+
+		@Override
+		public Adapter caseEntity(Entity object) {
+			return createEntityAdapter();
+		}
+
+		@Override
+		public Adapter caseChain(Chain object) {
+			return createChainAdapter();
 		}
 
 		@Override
@@ -202,6 +163,20 @@ public class ProjectSierraModelAdapterFactory extends AdapterFactoryImpl {
 	@Override
 	public Adapter createAdapter(Notifier target) {
 		return modelSwitch.doSwitch((EObject) target);
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link projectSierraModel.Capabilitty <em>Capabilitty</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see projectSierraModel.Capabilitty
+	 * @generated
+	 */
+	public Adapter createCapabilittyAdapter() {
+		return null;
 	}
 
 	/**
@@ -233,44 +208,30 @@ public class ProjectSierraModelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link projectSierraModel.Constraint <em>Constraint</em>}'.
+	 * Creates a new adapter for an object of class '{@link projectSierraModel.ActivityDiagram <em>Activity Diagram</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see projectSierraModel.Constraint
+	 * @see projectSierraModel.ActivityDiagram
 	 * @generated
 	 */
-	public Adapter createConstraintAdapter() {
+	public Adapter createActivityDiagramAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link projectSierraModel.Capability <em>Capability</em>}'.
+	 * Creates a new adapter for an object of class '{@link projectSierraModel.ExchangeElement <em>Exchange Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see projectSierraModel.Capability
+	 * @see projectSierraModel.ExchangeElement
 	 * @generated
 	 */
-	public Adapter createCapabilityAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link projectSierraModel.InvolvableElement <em>Involvable Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see projectSierraModel.InvolvableElement
-	 * @generated
-	 */
-	public Adapter createInvolvableElementAdapter() {
+	public Adapter createExchangeElementAdapter() {
 		return null;
 	}
 
@@ -303,34 +264,6 @@ public class ProjectSierraModelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link projectSierraModel.Component <em>Component</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see projectSierraModel.Component
-	 * @generated
-	 */
-	public Adapter createComponentAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link projectSierraModel.System <em>System</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see projectSierraModel.System
-	 * @generated
-	 */
-	public Adapter createSystemAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link projectSierraModel.PerformingElement <em>Performing Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -345,16 +278,16 @@ public class ProjectSierraModelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link projectSierraModel.ExchangingElement <em>Exchanging Element</em>}'.
+	 * Creates a new adapter for an object of class '{@link projectSierraModel.InvolveableElement <em>Involveable Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see projectSierraModel.ExchangingElement
+	 * @see projectSierraModel.InvolveableElement
 	 * @generated
 	 */
-	public Adapter createExchangingElementAdapter() {
+	public Adapter createInvolveableElementAdapter() {
 		return null;
 	}
 
@@ -429,16 +362,16 @@ public class ProjectSierraModelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link projectSierraModel.Output <em>Output</em>}'.
+	 * Creates a new adapter for an object of class '{@link projectSierraModel.Ouput <em>Ouput</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see projectSierraModel.Output
+	 * @see projectSierraModel.Ouput
 	 * @generated
 	 */
-	public Adapter createOutputAdapter() {
+	public Adapter createOuputAdapter() {
 		return null;
 	}
 
@@ -453,34 +386,6 @@ public class ProjectSierraModelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createExchangeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link projectSierraModel.Requirement <em>Requirement</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see projectSierraModel.Requirement
-	 * @generated
-	 */
-	public Adapter createRequirementAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link projectSierraModel.DesignElement <em>Design Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see projectSierraModel.DesignElement
-	 * @generated
-	 */
-	public Adapter createDesignElementAdapter() {
 		return null;
 	}
 

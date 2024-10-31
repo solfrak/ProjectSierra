@@ -2,23 +2,14 @@
  */
 package projectSierraModel.impl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
 import projectSierraModel.Exchange;
-import projectSierraModel.ExchangingElement;
+import projectSierraModel.ExchangeElement;
 import projectSierraModel.Item;
 import projectSierraModel.ProjectSierraModelPackage;
 
@@ -30,13 +21,24 @@ import projectSierraModel.ProjectSierraModelPackage;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link projectSierraModel.impl.ExchangeImpl#getSendsTo <em>Sends To</em>}</li>
  *   <li>{@link projectSierraModel.impl.ExchangeImpl#getReceivesFrom <em>Receives From</em>}</li>
- *   <li>{@link projectSierraModel.impl.ExchangeImpl#getIsConveyedBy <em>Is Conveyed By</em>}</li>
+ *   <li>{@link projectSierraModel.impl.ExchangeImpl#getConveys <em>Conveys</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ExchangeImpl extends ContainableElementImpl implements Exchange {
+	/**
+	 * The cached value of the '{@link #getSendsTo() <em>Sends To</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSendsTo()
+	 * @generated
+	 * @ordered
+	 */
+	protected ExchangeElement sendsTo;
+
 	/**
 	 * The cached value of the '{@link #getReceivesFrom() <em>Receives From</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -45,17 +47,17 @@ public class ExchangeImpl extends ContainableElementImpl implements Exchange {
 	 * @generated
 	 * @ordered
 	 */
-	protected ExchangingElement receivesFrom;
+	protected ExchangeElement receivesFrom;
 
 	/**
-	 * The cached value of the '{@link #getIsConveyedBy() <em>Is Conveyed By</em>}' reference list.
+	 * The cached value of the '{@link #getConveys() <em>Conveys</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIsConveyedBy()
+	 * @see #getConveys()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Item> isConveyedBy;
+	protected Item conveys;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -81,10 +83,50 @@ public class ExchangeImpl extends ContainableElementImpl implements Exchange {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ExchangingElement getReceivesFrom() {
+	public ExchangeElement getSendsTo() {
+		if (sendsTo != null && sendsTo.eIsProxy()) {
+			InternalEObject oldSendsTo = (InternalEObject) sendsTo;
+			sendsTo = (ExchangeElement) eResolveProxy(oldSendsTo);
+			if (sendsTo != oldSendsTo) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							ProjectSierraModelPackage.EXCHANGE__SENDS_TO, oldSendsTo, sendsTo));
+			}
+		}
+		return sendsTo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ExchangeElement basicGetSendsTo() {
+		return sendsTo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSendsTo(ExchangeElement newSendsTo) {
+		ExchangeElement oldSendsTo = sendsTo;
+		sendsTo = newSendsTo;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ProjectSierraModelPackage.EXCHANGE__SENDS_TO,
+					oldSendsTo, sendsTo));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ExchangeElement getReceivesFrom() {
 		if (receivesFrom != null && receivesFrom.eIsProxy()) {
 			InternalEObject oldReceivesFrom = (InternalEObject) receivesFrom;
-			receivesFrom = (ExchangingElement) eResolveProxy(oldReceivesFrom);
+			receivesFrom = (ExchangeElement) eResolveProxy(oldReceivesFrom);
 			if (receivesFrom != oldReceivesFrom) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
@@ -99,7 +141,7 @@ public class ExchangeImpl extends ContainableElementImpl implements Exchange {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ExchangingElement basicGetReceivesFrom() {
+	public ExchangeElement basicGetReceivesFrom() {
 		return receivesFrom;
 	}
 
@@ -108,8 +150,8 @@ public class ExchangeImpl extends ContainableElementImpl implements Exchange {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setReceivesFrom(ExchangingElement newReceivesFrom) {
-		ExchangingElement oldReceivesFrom = receivesFrom;
+	public void setReceivesFrom(ExchangeElement newReceivesFrom) {
+		ExchangeElement oldReceivesFrom = receivesFrom;
 		receivesFrom = newReceivesFrom;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ProjectSierraModelPackage.EXCHANGE__RECEIVES_FROM,
@@ -121,12 +163,8 @@ public class ExchangeImpl extends ContainableElementImpl implements Exchange {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Item> getIsConveyedBy() {
-		if (isConveyedBy == null) {
-			isConveyedBy = new EObjectWithInverseResolvingEList<Item>(Item.class, this,
-					ProjectSierraModelPackage.EXCHANGE__IS_CONVEYED_BY, ProjectSierraModelPackage.ITEM__CONVEYS);
-		}
-		return isConveyedBy;
+	public Item getConveys() {
+		return conveys;
 	}
 
 	/**
@@ -134,14 +172,40 @@ public class ExchangeImpl extends ContainableElementImpl implements Exchange {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case ProjectSierraModelPackage.EXCHANGE__IS_CONVEYED_BY:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getIsConveyedBy()).basicAdd(otherEnd, msgs);
+	public NotificationChain basicSetConveys(Item newConveys, NotificationChain msgs) {
+		Item oldConveys = conveys;
+		conveys = newConveys;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					ProjectSierraModelPackage.EXCHANGE__CONVEYS, oldConveys, newConveys);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
 		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setConveys(Item newConveys) {
+		if (newConveys != conveys) {
+			NotificationChain msgs = null;
+			if (conveys != null)
+				msgs = ((InternalEObject) conveys).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - ProjectSierraModelPackage.EXCHANGE__CONVEYS, null, msgs);
+			if (newConveys != null)
+				msgs = ((InternalEObject) newConveys).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - ProjectSierraModelPackage.EXCHANGE__CONVEYS, null, msgs);
+			msgs = basicSetConveys(newConveys, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ProjectSierraModelPackage.EXCHANGE__CONVEYS,
+					newConveys, newConveys));
 	}
 
 	/**
@@ -152,8 +216,8 @@ public class ExchangeImpl extends ContainableElementImpl implements Exchange {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case ProjectSierraModelPackage.EXCHANGE__IS_CONVEYED_BY:
-			return ((InternalEList<?>) getIsConveyedBy()).basicRemove(otherEnd, msgs);
+		case ProjectSierraModelPackage.EXCHANGE__CONVEYS:
+			return basicSetConveys(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -166,12 +230,16 @@ public class ExchangeImpl extends ContainableElementImpl implements Exchange {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+		case ProjectSierraModelPackage.EXCHANGE__SENDS_TO:
+			if (resolve)
+				return getSendsTo();
+			return basicGetSendsTo();
 		case ProjectSierraModelPackage.EXCHANGE__RECEIVES_FROM:
 			if (resolve)
 				return getReceivesFrom();
 			return basicGetReceivesFrom();
-		case ProjectSierraModelPackage.EXCHANGE__IS_CONVEYED_BY:
-			return getIsConveyedBy();
+		case ProjectSierraModelPackage.EXCHANGE__CONVEYS:
+			return getConveys();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -185,12 +253,14 @@ public class ExchangeImpl extends ContainableElementImpl implements Exchange {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case ProjectSierraModelPackage.EXCHANGE__RECEIVES_FROM:
-			setReceivesFrom((ExchangingElement) newValue);
+		case ProjectSierraModelPackage.EXCHANGE__SENDS_TO:
+			setSendsTo((ExchangeElement) newValue);
 			return;
-		case ProjectSierraModelPackage.EXCHANGE__IS_CONVEYED_BY:
-			getIsConveyedBy().clear();
-			getIsConveyedBy().addAll((Collection<? extends Item>) newValue);
+		case ProjectSierraModelPackage.EXCHANGE__RECEIVES_FROM:
+			setReceivesFrom((ExchangeElement) newValue);
+			return;
+		case ProjectSierraModelPackage.EXCHANGE__CONVEYS:
+			setConveys((Item) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -204,11 +274,14 @@ public class ExchangeImpl extends ContainableElementImpl implements Exchange {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case ProjectSierraModelPackage.EXCHANGE__RECEIVES_FROM:
-			setReceivesFrom((ExchangingElement) null);
+		case ProjectSierraModelPackage.EXCHANGE__SENDS_TO:
+			setSendsTo((ExchangeElement) null);
 			return;
-		case ProjectSierraModelPackage.EXCHANGE__IS_CONVEYED_BY:
-			getIsConveyedBy().clear();
+		case ProjectSierraModelPackage.EXCHANGE__RECEIVES_FROM:
+			setReceivesFrom((ExchangeElement) null);
+			return;
+		case ProjectSierraModelPackage.EXCHANGE__CONVEYS:
+			setConveys((Item) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -222,10 +295,12 @@ public class ExchangeImpl extends ContainableElementImpl implements Exchange {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+		case ProjectSierraModelPackage.EXCHANGE__SENDS_TO:
+			return sendsTo != null;
 		case ProjectSierraModelPackage.EXCHANGE__RECEIVES_FROM:
 			return receivesFrom != null;
-		case ProjectSierraModelPackage.EXCHANGE__IS_CONVEYED_BY:
-			return isConveyedBy != null && !isConveyedBy.isEmpty();
+		case ProjectSierraModelPackage.EXCHANGE__CONVEYS:
+			return conveys != null;
 		}
 		return super.eIsSet(featureID);
 	}

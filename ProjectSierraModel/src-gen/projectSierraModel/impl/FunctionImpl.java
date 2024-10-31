@@ -2,24 +2,15 @@
  */
 package projectSierraModel.impl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
 import projectSierraModel.Function;
 import projectSierraModel.Input;
-import projectSierraModel.Output;
+import projectSierraModel.Ouput;
 import projectSierraModel.PerformingElement;
 import projectSierraModel.Port;
 import projectSierraModel.ProjectSierraModelPackage;
@@ -34,13 +25,13 @@ import projectSierraModel.ProjectSierraModelPackage;
  * <ul>
  *   <li>{@link projectSierraModel.impl.FunctionImpl#getHasPort <em>Has Port</em>}</li>
  *   <li>{@link projectSierraModel.impl.FunctionImpl#getHasInput <em>Has Input</em>}</li>
- *   <li>{@link projectSierraModel.impl.FunctionImpl#getHasOutput <em>Has Output</em>}</li>
+ *   <li>{@link projectSierraModel.impl.FunctionImpl#getHasOuput <em>Has Ouput</em>}</li>
  *   <li>{@link projectSierraModel.impl.FunctionImpl#getIsPerformedBy <em>Is Performed By</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class FunctionImpl extends ExchangingElementImpl implements Function {
+public class FunctionImpl extends ExchangeElementImpl implements Function {
 	/**
 	 * The cached value of the '{@link #getHasPort() <em>Has Port</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -62,24 +53,24 @@ public class FunctionImpl extends ExchangingElementImpl implements Function {
 	protected Input hasInput;
 
 	/**
-	 * The cached value of the '{@link #getHasOutput() <em>Has Output</em>}' reference.
+	 * The cached value of the '{@link #getHasOuput() <em>Has Ouput</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getHasOutput()
+	 * @see #getHasOuput()
 	 * @generated
 	 * @ordered
 	 */
-	protected Output hasOutput;
+	protected Ouput hasOuput;
 
 	/**
-	 * The cached value of the '{@link #getIsPerformedBy() <em>Is Performed By</em>}' reference list.
+	 * The cached value of the '{@link #getIsPerformedBy() <em>Is Performed By</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getIsPerformedBy()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<PerformingElement> isPerformedBy;
+	protected PerformingElement isPerformedBy;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -241,17 +232,17 @@ public class FunctionImpl extends ExchangingElementImpl implements Function {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Output getHasOutput() {
-		if (hasOutput != null && hasOutput.eIsProxy()) {
-			InternalEObject oldHasOutput = (InternalEObject) hasOutput;
-			hasOutput = (Output) eResolveProxy(oldHasOutput);
-			if (hasOutput != oldHasOutput) {
+	public Ouput getHasOuput() {
+		if (hasOuput != null && hasOuput.eIsProxy()) {
+			InternalEObject oldHasOuput = (InternalEObject) hasOuput;
+			hasOuput = (Ouput) eResolveProxy(oldHasOuput);
+			if (hasOuput != oldHasOuput) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							ProjectSierraModelPackage.FUNCTION__HAS_OUTPUT, oldHasOutput, hasOutput));
+							ProjectSierraModelPackage.FUNCTION__HAS_OUPUT, oldHasOuput, hasOuput));
 			}
 		}
-		return hasOutput;
+		return hasOuput;
 	}
 
 	/**
@@ -259,8 +250,8 @@ public class FunctionImpl extends ExchangingElementImpl implements Function {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Output basicGetHasOutput() {
-		return hasOutput;
+	public Ouput basicGetHasOuput() {
+		return hasOuput;
 	}
 
 	/**
@@ -268,12 +259,12 @@ public class FunctionImpl extends ExchangingElementImpl implements Function {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetHasOutput(Output newHasOutput, NotificationChain msgs) {
-		Output oldHasOutput = hasOutput;
-		hasOutput = newHasOutput;
+	public NotificationChain basicSetHasOuput(Ouput newHasOuput, NotificationChain msgs) {
+		Ouput oldHasOuput = hasOuput;
+		hasOuput = newHasOuput;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					ProjectSierraModelPackage.FUNCTION__HAS_OUTPUT, oldHasOutput, newHasOutput);
+					ProjectSierraModelPackage.FUNCTION__HAS_OUPUT, oldHasOuput, newHasOuput);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -287,21 +278,21 @@ public class FunctionImpl extends ExchangingElementImpl implements Function {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setHasOutput(Output newHasOutput) {
-		if (newHasOutput != hasOutput) {
+	public void setHasOuput(Ouput newHasOuput) {
+		if (newHasOuput != hasOuput) {
 			NotificationChain msgs = null;
-			if (hasOutput != null)
-				msgs = ((InternalEObject) hasOutput).eInverseRemove(this,
-						ProjectSierraModelPackage.OUTPUT__IS_OUTPUT_OF, Output.class, msgs);
-			if (newHasOutput != null)
-				msgs = ((InternalEObject) newHasOutput).eInverseAdd(this,
-						ProjectSierraModelPackage.OUTPUT__IS_OUTPUT_OF, Output.class, msgs);
-			msgs = basicSetHasOutput(newHasOutput, msgs);
+			if (hasOuput != null)
+				msgs = ((InternalEObject) hasOuput).eInverseRemove(this, ProjectSierraModelPackage.OUPUT__IS_OUPUT_OF,
+						Ouput.class, msgs);
+			if (newHasOuput != null)
+				msgs = ((InternalEObject) newHasOuput).eInverseAdd(this, ProjectSierraModelPackage.OUPUT__IS_OUPUT_OF,
+						Ouput.class, msgs);
+			msgs = basicSetHasOuput(newHasOuput, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ProjectSierraModelPackage.FUNCTION__HAS_OUTPUT,
-					newHasOutput, newHasOutput));
+			eNotify(new ENotificationImpl(this, Notification.SET, ProjectSierraModelPackage.FUNCTION__HAS_OUPUT,
+					newHasOuput, newHasOuput));
 	}
 
 	/**
@@ -309,13 +300,67 @@ public class FunctionImpl extends ExchangingElementImpl implements Function {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<PerformingElement> getIsPerformedBy() {
-		if (isPerformedBy == null) {
-			isPerformedBy = new EObjectWithInverseResolvingEList.ManyInverse<PerformingElement>(PerformingElement.class,
-					this, ProjectSierraModelPackage.FUNCTION__IS_PERFORMED_BY,
-					ProjectSierraModelPackage.PERFORMING_ELEMENT__PERFORMS);
+	public PerformingElement getIsPerformedBy() {
+		if (isPerformedBy != null && isPerformedBy.eIsProxy()) {
+			InternalEObject oldIsPerformedBy = (InternalEObject) isPerformedBy;
+			isPerformedBy = (PerformingElement) eResolveProxy(oldIsPerformedBy);
+			if (isPerformedBy != oldIsPerformedBy) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							ProjectSierraModelPackage.FUNCTION__IS_PERFORMED_BY, oldIsPerformedBy, isPerformedBy));
+			}
 		}
 		return isPerformedBy;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PerformingElement basicGetIsPerformedBy() {
+		return isPerformedBy;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetIsPerformedBy(PerformingElement newIsPerformedBy, NotificationChain msgs) {
+		PerformingElement oldIsPerformedBy = isPerformedBy;
+		isPerformedBy = newIsPerformedBy;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					ProjectSierraModelPackage.FUNCTION__IS_PERFORMED_BY, oldIsPerformedBy, newIsPerformedBy);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIsPerformedBy(PerformingElement newIsPerformedBy) {
+		if (newIsPerformedBy != isPerformedBy) {
+			NotificationChain msgs = null;
+			if (isPerformedBy != null)
+				msgs = ((InternalEObject) isPerformedBy).eInverseRemove(this,
+						ProjectSierraModelPackage.PERFORMING_ELEMENT__PERFORMS, PerformingElement.class, msgs);
+			if (newIsPerformedBy != null)
+				msgs = ((InternalEObject) newIsPerformedBy).eInverseAdd(this,
+						ProjectSierraModelPackage.PERFORMING_ELEMENT__PERFORMS, PerformingElement.class, msgs);
+			msgs = basicSetIsPerformedBy(newIsPerformedBy, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ProjectSierraModelPackage.FUNCTION__IS_PERFORMED_BY,
+					newIsPerformedBy, newIsPerformedBy));
 	}
 
 	/**
@@ -337,13 +382,16 @@ public class FunctionImpl extends ExchangingElementImpl implements Function {
 				msgs = ((InternalEObject) hasInput).eInverseRemove(this, ProjectSierraModelPackage.INPUT__IS_INPUT_OF,
 						Input.class, msgs);
 			return basicSetHasInput((Input) otherEnd, msgs);
-		case ProjectSierraModelPackage.FUNCTION__HAS_OUTPUT:
-			if (hasOutput != null)
-				msgs = ((InternalEObject) hasOutput).eInverseRemove(this,
-						ProjectSierraModelPackage.OUTPUT__IS_OUTPUT_OF, Output.class, msgs);
-			return basicSetHasOutput((Output) otherEnd, msgs);
+		case ProjectSierraModelPackage.FUNCTION__HAS_OUPUT:
+			if (hasOuput != null)
+				msgs = ((InternalEObject) hasOuput).eInverseRemove(this, ProjectSierraModelPackage.OUPUT__IS_OUPUT_OF,
+						Ouput.class, msgs);
+			return basicSetHasOuput((Ouput) otherEnd, msgs);
 		case ProjectSierraModelPackage.FUNCTION__IS_PERFORMED_BY:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getIsPerformedBy()).basicAdd(otherEnd, msgs);
+			if (isPerformedBy != null)
+				msgs = ((InternalEObject) isPerformedBy).eInverseRemove(this,
+						ProjectSierraModelPackage.PERFORMING_ELEMENT__PERFORMS, PerformingElement.class, msgs);
+			return basicSetIsPerformedBy((PerformingElement) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -360,10 +408,10 @@ public class FunctionImpl extends ExchangingElementImpl implements Function {
 			return basicSetHasPort(null, msgs);
 		case ProjectSierraModelPackage.FUNCTION__HAS_INPUT:
 			return basicSetHasInput(null, msgs);
-		case ProjectSierraModelPackage.FUNCTION__HAS_OUTPUT:
-			return basicSetHasOutput(null, msgs);
+		case ProjectSierraModelPackage.FUNCTION__HAS_OUPUT:
+			return basicSetHasOuput(null, msgs);
 		case ProjectSierraModelPackage.FUNCTION__IS_PERFORMED_BY:
-			return ((InternalEList<?>) getIsPerformedBy()).basicRemove(otherEnd, msgs);
+			return basicSetIsPerformedBy(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -384,12 +432,14 @@ public class FunctionImpl extends ExchangingElementImpl implements Function {
 			if (resolve)
 				return getHasInput();
 			return basicGetHasInput();
-		case ProjectSierraModelPackage.FUNCTION__HAS_OUTPUT:
+		case ProjectSierraModelPackage.FUNCTION__HAS_OUPUT:
 			if (resolve)
-				return getHasOutput();
-			return basicGetHasOutput();
+				return getHasOuput();
+			return basicGetHasOuput();
 		case ProjectSierraModelPackage.FUNCTION__IS_PERFORMED_BY:
-			return getIsPerformedBy();
+			if (resolve)
+				return getIsPerformedBy();
+			return basicGetIsPerformedBy();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -409,12 +459,11 @@ public class FunctionImpl extends ExchangingElementImpl implements Function {
 		case ProjectSierraModelPackage.FUNCTION__HAS_INPUT:
 			setHasInput((Input) newValue);
 			return;
-		case ProjectSierraModelPackage.FUNCTION__HAS_OUTPUT:
-			setHasOutput((Output) newValue);
+		case ProjectSierraModelPackage.FUNCTION__HAS_OUPUT:
+			setHasOuput((Ouput) newValue);
 			return;
 		case ProjectSierraModelPackage.FUNCTION__IS_PERFORMED_BY:
-			getIsPerformedBy().clear();
-			getIsPerformedBy().addAll((Collection<? extends PerformingElement>) newValue);
+			setIsPerformedBy((PerformingElement) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -434,11 +483,11 @@ public class FunctionImpl extends ExchangingElementImpl implements Function {
 		case ProjectSierraModelPackage.FUNCTION__HAS_INPUT:
 			setHasInput((Input) null);
 			return;
-		case ProjectSierraModelPackage.FUNCTION__HAS_OUTPUT:
-			setHasOutput((Output) null);
+		case ProjectSierraModelPackage.FUNCTION__HAS_OUPUT:
+			setHasOuput((Ouput) null);
 			return;
 		case ProjectSierraModelPackage.FUNCTION__IS_PERFORMED_BY:
-			getIsPerformedBy().clear();
+			setIsPerformedBy((PerformingElement) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -456,10 +505,10 @@ public class FunctionImpl extends ExchangingElementImpl implements Function {
 			return hasPort != null;
 		case ProjectSierraModelPackage.FUNCTION__HAS_INPUT:
 			return hasInput != null;
-		case ProjectSierraModelPackage.FUNCTION__HAS_OUTPUT:
-			return hasOutput != null;
+		case ProjectSierraModelPackage.FUNCTION__HAS_OUPUT:
+			return hasOuput != null;
 		case ProjectSierraModelPackage.FUNCTION__IS_PERFORMED_BY:
-			return isPerformedBy != null && !isPerformedBy.isEmpty();
+			return isPerformedBy != null;
 		}
 		return super.eIsSet(featureID);
 	}

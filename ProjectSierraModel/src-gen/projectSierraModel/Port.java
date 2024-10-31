@@ -18,7 +18,7 @@ package projectSierraModel;
  * @model
  * @generated
  */
-public interface Port extends ExchangingElement {
+public interface Port extends ExchangeElement {
 	/**
 	 * Returns the value of the '<em><b>Is Port Of</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link projectSierraModel.Function#getHasPort <em>Has Port</em>}'.

@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link projectSierraModel.ContainableElement#getContains <em>Contains</em>}</li>
- *   <li>{@link projectSierraModel.ContainableElement#getContainedIn <em>Contained In</em>}</li>
+ *   <li>{@link projectSierraModel.ContainableElement#getIsContainedIn <em>Is Contained In</em>}</li>
  * </ul>
  *
  * @see projectSierraModel.ProjectSierraModelPackage#getContainableElement()
@@ -24,14 +24,14 @@ import org.eclipse.emf.ecore.EObject;
 public interface ContainableElement extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Contains</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link projectSierraModel.ContainableElement#getContainedIn <em>Contained In</em>}'.
+	 * It is bidirectional and its opposite is '{@link projectSierraModel.ContainableElement#getIsContainedIn <em>Is Contained In</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Contains</em>' reference.
 	 * @see #setContains(ContainableElement)
 	 * @see projectSierraModel.ProjectSierraModelPackage#getContainableElement_Contains()
-	 * @see projectSierraModel.ContainableElement#getContainedIn
-	 * @model opposite="containedIn"
+	 * @see projectSierraModel.ContainableElement#getIsContainedIn
+	 * @model opposite="isContainedIn" required="true"
 	 * @generated
 	 */
 	ContainableElement getContains();
@@ -47,27 +47,27 @@ public interface ContainableElement extends EObject {
 	void setContains(ContainableElement value);
 
 	/**
-	 * Returns the value of the '<em><b>Contained In</b></em>' reference.
+	 * Returns the value of the '<em><b>Is Contained In</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link projectSierraModel.ContainableElement#getContains <em>Contains</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Contained In</em>' reference.
-	 * @see #setContainedIn(ContainableElement)
-	 * @see projectSierraModel.ProjectSierraModelPackage#getContainableElement_ContainedIn()
+	 * @return the value of the '<em>Is Contained In</em>' reference.
+	 * @see #setIsContainedIn(ContainableElement)
+	 * @see projectSierraModel.ProjectSierraModelPackage#getContainableElement_IsContainedIn()
 	 * @see projectSierraModel.ContainableElement#getContains
 	 * @model opposite="contains"
 	 * @generated
 	 */
-	ContainableElement getContainedIn();
+	ContainableElement getIsContainedIn();
 
 	/**
-	 * Sets the value of the '{@link projectSierraModel.ContainableElement#getContainedIn <em>Contained In</em>}' reference.
+	 * Sets the value of the '{@link projectSierraModel.ContainableElement#getIsContainedIn <em>Is Contained In</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Contained In</em>' reference.
-	 * @see #getContainedIn()
+	 * @param value the new value of the '<em>Is Contained In</em>' reference.
+	 * @see #getIsContainedIn()
 	 * @generated
 	 */
-	void setContainedIn(ContainableElement value);
+	void setIsContainedIn(ContainableElement value);
 
 } // ContainableElement

@@ -51,7 +51,7 @@ public class SpecializableElementItemProvider extends ItemProviderAdapter implem
 			super.getPropertyDescriptors(object);
 
 			addSpecializesPropertyDescriptor(object);
-			addIsSpcecializedByPropertyDescriptor(object);
+			addIsSpecializedByPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -73,18 +73,18 @@ public class SpecializableElementItemProvider extends ItemProviderAdapter implem
 	}
 
 	/**
-	 * This adds a property descriptor for the Is Spcecialized By feature.
+	 * This adds a property descriptor for the Is Specialized By feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addIsSpcecializedByPropertyDescriptor(Object object) {
+	protected void addIsSpecializedByPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_SpecializableElement_isSpcecializedBy_feature"),
+						getResourceLocator(), getString("_UI_SpecializableElement_isSpecializedBy_feature"),
 						getString("_UI_PropertyDescriptor_description",
-								"_UI_SpecializableElement_isSpcecializedBy_feature", "_UI_SpecializableElement_type"),
-						ProjectSierraModelPackage.Literals.SPECIALIZABLE_ELEMENT__IS_SPCECIALIZED_BY, true, false, true,
+								"_UI_SpecializableElement_isSpecializedBy_feature", "_UI_SpecializableElement_type"),
+						ProjectSierraModelPackage.Literals.SPECIALIZABLE_ELEMENT__IS_SPECIALIZED_BY, true, false, true,
 						null, null, null));
 	}
 

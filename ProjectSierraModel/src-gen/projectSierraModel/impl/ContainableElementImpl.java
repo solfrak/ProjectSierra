@@ -23,7 +23,7 @@ import projectSierraModel.ProjectSierraModelPackage;
  * </p>
  * <ul>
  *   <li>{@link projectSierraModel.impl.ContainableElementImpl#getContains <em>Contains</em>}</li>
- *   <li>{@link projectSierraModel.impl.ContainableElementImpl#getContainedIn <em>Contained In</em>}</li>
+ *   <li>{@link projectSierraModel.impl.ContainableElementImpl#getIsContainedIn <em>Is Contained In</em>}</li>
  * </ul>
  *
  * @generated
@@ -40,14 +40,14 @@ public abstract class ContainableElementImpl extends MinimalEObjectImpl.Containe
 	protected ContainableElement contains;
 
 	/**
-	 * The cached value of the '{@link #getContainedIn() <em>Contained In</em>}' reference.
+	 * The cached value of the '{@link #getIsContainedIn() <em>Is Contained In</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getContainedIn()
+	 * @see #getIsContainedIn()
 	 * @generated
 	 * @ordered
 	 */
-	protected ContainableElement containedIn;
+	protected ContainableElement isContainedIn;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -124,10 +124,10 @@ public abstract class ContainableElementImpl extends MinimalEObjectImpl.Containe
 			NotificationChain msgs = null;
 			if (contains != null)
 				msgs = ((InternalEObject) contains).eInverseRemove(this,
-						ProjectSierraModelPackage.CONTAINABLE_ELEMENT__CONTAINED_IN, ContainableElement.class, msgs);
+						ProjectSierraModelPackage.CONTAINABLE_ELEMENT__IS_CONTAINED_IN, ContainableElement.class, msgs);
 			if (newContains != null)
 				msgs = ((InternalEObject) newContains).eInverseAdd(this,
-						ProjectSierraModelPackage.CONTAINABLE_ELEMENT__CONTAINED_IN, ContainableElement.class, msgs);
+						ProjectSierraModelPackage.CONTAINABLE_ELEMENT__IS_CONTAINED_IN, ContainableElement.class, msgs);
 			msgs = basicSetContains(newContains, msgs);
 			if (msgs != null)
 				msgs.dispatch();
@@ -141,17 +141,18 @@ public abstract class ContainableElementImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ContainableElement getContainedIn() {
-		if (containedIn != null && containedIn.eIsProxy()) {
-			InternalEObject oldContainedIn = (InternalEObject) containedIn;
-			containedIn = (ContainableElement) eResolveProxy(oldContainedIn);
-			if (containedIn != oldContainedIn) {
+	public ContainableElement getIsContainedIn() {
+		if (isContainedIn != null && isContainedIn.eIsProxy()) {
+			InternalEObject oldIsContainedIn = (InternalEObject) isContainedIn;
+			isContainedIn = (ContainableElement) eResolveProxy(oldIsContainedIn);
+			if (isContainedIn != oldIsContainedIn) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							ProjectSierraModelPackage.CONTAINABLE_ELEMENT__CONTAINED_IN, oldContainedIn, containedIn));
+							ProjectSierraModelPackage.CONTAINABLE_ELEMENT__IS_CONTAINED_IN, oldIsContainedIn,
+							isContainedIn));
 			}
 		}
-		return containedIn;
+		return isContainedIn;
 	}
 
 	/**
@@ -159,8 +160,8 @@ public abstract class ContainableElementImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ContainableElement basicGetContainedIn() {
-		return containedIn;
+	public ContainableElement basicGetIsContainedIn() {
+		return isContainedIn;
 	}
 
 	/**
@@ -168,12 +169,12 @@ public abstract class ContainableElementImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetContainedIn(ContainableElement newContainedIn, NotificationChain msgs) {
-		ContainableElement oldContainedIn = containedIn;
-		containedIn = newContainedIn;
+	public NotificationChain basicSetIsContainedIn(ContainableElement newIsContainedIn, NotificationChain msgs) {
+		ContainableElement oldIsContainedIn = isContainedIn;
+		isContainedIn = newIsContainedIn;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					ProjectSierraModelPackage.CONTAINABLE_ELEMENT__CONTAINED_IN, oldContainedIn, newContainedIn);
+					ProjectSierraModelPackage.CONTAINABLE_ELEMENT__IS_CONTAINED_IN, oldIsContainedIn, newIsContainedIn);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -187,21 +188,22 @@ public abstract class ContainableElementImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setContainedIn(ContainableElement newContainedIn) {
-		if (newContainedIn != containedIn) {
+	public void setIsContainedIn(ContainableElement newIsContainedIn) {
+		if (newIsContainedIn != isContainedIn) {
 			NotificationChain msgs = null;
-			if (containedIn != null)
-				msgs = ((InternalEObject) containedIn).eInverseRemove(this,
+			if (isContainedIn != null)
+				msgs = ((InternalEObject) isContainedIn).eInverseRemove(this,
 						ProjectSierraModelPackage.CONTAINABLE_ELEMENT__CONTAINS, ContainableElement.class, msgs);
-			if (newContainedIn != null)
-				msgs = ((InternalEObject) newContainedIn).eInverseAdd(this,
+			if (newIsContainedIn != null)
+				msgs = ((InternalEObject) newIsContainedIn).eInverseAdd(this,
 						ProjectSierraModelPackage.CONTAINABLE_ELEMENT__CONTAINS, ContainableElement.class, msgs);
-			msgs = basicSetContainedIn(newContainedIn, msgs);
+			msgs = basicSetIsContainedIn(newIsContainedIn, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					ProjectSierraModelPackage.CONTAINABLE_ELEMENT__CONTAINED_IN, newContainedIn, newContainedIn));
+					ProjectSierraModelPackage.CONTAINABLE_ELEMENT__IS_CONTAINED_IN, newIsContainedIn,
+					newIsContainedIn));
 	}
 
 	/**
@@ -215,13 +217,13 @@ public abstract class ContainableElementImpl extends MinimalEObjectImpl.Containe
 		case ProjectSierraModelPackage.CONTAINABLE_ELEMENT__CONTAINS:
 			if (contains != null)
 				msgs = ((InternalEObject) contains).eInverseRemove(this,
-						ProjectSierraModelPackage.CONTAINABLE_ELEMENT__CONTAINED_IN, ContainableElement.class, msgs);
+						ProjectSierraModelPackage.CONTAINABLE_ELEMENT__IS_CONTAINED_IN, ContainableElement.class, msgs);
 			return basicSetContains((ContainableElement) otherEnd, msgs);
-		case ProjectSierraModelPackage.CONTAINABLE_ELEMENT__CONTAINED_IN:
-			if (containedIn != null)
-				msgs = ((InternalEObject) containedIn).eInverseRemove(this,
+		case ProjectSierraModelPackage.CONTAINABLE_ELEMENT__IS_CONTAINED_IN:
+			if (isContainedIn != null)
+				msgs = ((InternalEObject) isContainedIn).eInverseRemove(this,
 						ProjectSierraModelPackage.CONTAINABLE_ELEMENT__CONTAINS, ContainableElement.class, msgs);
-			return basicSetContainedIn((ContainableElement) otherEnd, msgs);
+			return basicSetIsContainedIn((ContainableElement) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -236,8 +238,8 @@ public abstract class ContainableElementImpl extends MinimalEObjectImpl.Containe
 		switch (featureID) {
 		case ProjectSierraModelPackage.CONTAINABLE_ELEMENT__CONTAINS:
 			return basicSetContains(null, msgs);
-		case ProjectSierraModelPackage.CONTAINABLE_ELEMENT__CONTAINED_IN:
-			return basicSetContainedIn(null, msgs);
+		case ProjectSierraModelPackage.CONTAINABLE_ELEMENT__IS_CONTAINED_IN:
+			return basicSetIsContainedIn(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -254,10 +256,10 @@ public abstract class ContainableElementImpl extends MinimalEObjectImpl.Containe
 			if (resolve)
 				return getContains();
 			return basicGetContains();
-		case ProjectSierraModelPackage.CONTAINABLE_ELEMENT__CONTAINED_IN:
+		case ProjectSierraModelPackage.CONTAINABLE_ELEMENT__IS_CONTAINED_IN:
 			if (resolve)
-				return getContainedIn();
-			return basicGetContainedIn();
+				return getIsContainedIn();
+			return basicGetIsContainedIn();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -273,8 +275,8 @@ public abstract class ContainableElementImpl extends MinimalEObjectImpl.Containe
 		case ProjectSierraModelPackage.CONTAINABLE_ELEMENT__CONTAINS:
 			setContains((ContainableElement) newValue);
 			return;
-		case ProjectSierraModelPackage.CONTAINABLE_ELEMENT__CONTAINED_IN:
-			setContainedIn((ContainableElement) newValue);
+		case ProjectSierraModelPackage.CONTAINABLE_ELEMENT__IS_CONTAINED_IN:
+			setIsContainedIn((ContainableElement) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -291,8 +293,8 @@ public abstract class ContainableElementImpl extends MinimalEObjectImpl.Containe
 		case ProjectSierraModelPackage.CONTAINABLE_ELEMENT__CONTAINS:
 			setContains((ContainableElement) null);
 			return;
-		case ProjectSierraModelPackage.CONTAINABLE_ELEMENT__CONTAINED_IN:
-			setContainedIn((ContainableElement) null);
+		case ProjectSierraModelPackage.CONTAINABLE_ELEMENT__IS_CONTAINED_IN:
+			setIsContainedIn((ContainableElement) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -308,8 +310,8 @@ public abstract class ContainableElementImpl extends MinimalEObjectImpl.Containe
 		switch (featureID) {
 		case ProjectSierraModelPackage.CONTAINABLE_ELEMENT__CONTAINS:
 			return contains != null;
-		case ProjectSierraModelPackage.CONTAINABLE_ELEMENT__CONTAINED_IN:
-			return containedIn != null;
+		case ProjectSierraModelPackage.CONTAINABLE_ELEMENT__IS_CONTAINED_IN:
+			return isContainedIn != null;
 		}
 		return super.eIsSet(featureID);
 	}

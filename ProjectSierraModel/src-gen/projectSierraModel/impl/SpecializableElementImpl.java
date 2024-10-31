@@ -2,22 +2,13 @@
  */
 package projectSierraModel.impl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
 import projectSierraModel.ProjectSierraModelPackage;
 import projectSierraModel.SpecializableElement;
 
@@ -30,7 +21,7 @@ import projectSierraModel.SpecializableElement;
  * </p>
  * <ul>
  *   <li>{@link projectSierraModel.impl.SpecializableElementImpl#getSpecializes <em>Specializes</em>}</li>
- *   <li>{@link projectSierraModel.impl.SpecializableElementImpl#getIsSpcecializedBy <em>Is Spcecialized By</em>}</li>
+ *   <li>{@link projectSierraModel.impl.SpecializableElementImpl#getIsSpecializedBy <em>Is Specialized By</em>}</li>
  * </ul>
  *
  * @generated
@@ -47,14 +38,14 @@ public abstract class SpecializableElementImpl extends MinimalEObjectImpl.Contai
 	protected SpecializableElement specializes;
 
 	/**
-	 * The cached value of the '{@link #getIsSpcecializedBy() <em>Is Spcecialized By</em>}' reference list.
+	 * The cached value of the '{@link #getIsSpecializedBy() <em>Is Specialized By</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIsSpcecializedBy()
+	 * @see #getIsSpecializedBy()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<SpecializableElement> isSpcecializedBy;
+	protected SpecializableElement isSpecializedBy;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -131,11 +122,11 @@ public abstract class SpecializableElementImpl extends MinimalEObjectImpl.Contai
 			NotificationChain msgs = null;
 			if (specializes != null)
 				msgs = ((InternalEObject) specializes).eInverseRemove(this,
-						ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__IS_SPCECIALIZED_BY, SpecializableElement.class,
+						ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__IS_SPECIALIZED_BY, SpecializableElement.class,
 						msgs);
 			if (newSpecializes != null)
 				msgs = ((InternalEObject) newSpecializes).eInverseAdd(this,
-						ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__IS_SPCECIALIZED_BY, SpecializableElement.class,
+						ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__IS_SPECIALIZED_BY, SpecializableElement.class,
 						msgs);
 			msgs = basicSetSpecializes(newSpecializes, msgs);
 			if (msgs != null)
@@ -150,13 +141,70 @@ public abstract class SpecializableElementImpl extends MinimalEObjectImpl.Contai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<SpecializableElement> getIsSpcecializedBy() {
-		if (isSpcecializedBy == null) {
-			isSpcecializedBy = new EObjectWithInverseResolvingEList<SpecializableElement>(SpecializableElement.class,
-					this, ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__IS_SPCECIALIZED_BY,
-					ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__SPECIALIZES);
+	public SpecializableElement getIsSpecializedBy() {
+		if (isSpecializedBy != null && isSpecializedBy.eIsProxy()) {
+			InternalEObject oldIsSpecializedBy = (InternalEObject) isSpecializedBy;
+			isSpecializedBy = (SpecializableElement) eResolveProxy(oldIsSpecializedBy);
+			if (isSpecializedBy != oldIsSpecializedBy) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__IS_SPECIALIZED_BY, oldIsSpecializedBy,
+							isSpecializedBy));
+			}
 		}
-		return isSpcecializedBy;
+		return isSpecializedBy;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SpecializableElement basicGetIsSpecializedBy() {
+		return isSpecializedBy;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetIsSpecializedBy(SpecializableElement newIsSpecializedBy, NotificationChain msgs) {
+		SpecializableElement oldIsSpecializedBy = isSpecializedBy;
+		isSpecializedBy = newIsSpecializedBy;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__IS_SPECIALIZED_BY, oldIsSpecializedBy,
+					newIsSpecializedBy);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIsSpecializedBy(SpecializableElement newIsSpecializedBy) {
+		if (newIsSpecializedBy != isSpecializedBy) {
+			NotificationChain msgs = null;
+			if (isSpecializedBy != null)
+				msgs = ((InternalEObject) isSpecializedBy).eInverseRemove(this,
+						ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__SPECIALIZES, SpecializableElement.class, msgs);
+			if (newIsSpecializedBy != null)
+				msgs = ((InternalEObject) newIsSpecializedBy).eInverseAdd(this,
+						ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__SPECIALIZES, SpecializableElement.class, msgs);
+			msgs = basicSetIsSpecializedBy(newIsSpecializedBy, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__IS_SPECIALIZED_BY, newIsSpecializedBy,
+					newIsSpecializedBy));
 	}
 
 	/**
@@ -171,11 +219,14 @@ public abstract class SpecializableElementImpl extends MinimalEObjectImpl.Contai
 		case ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__SPECIALIZES:
 			if (specializes != null)
 				msgs = ((InternalEObject) specializes).eInverseRemove(this,
-						ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__IS_SPCECIALIZED_BY, SpecializableElement.class,
+						ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__IS_SPECIALIZED_BY, SpecializableElement.class,
 						msgs);
 			return basicSetSpecializes((SpecializableElement) otherEnd, msgs);
-		case ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__IS_SPCECIALIZED_BY:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getIsSpcecializedBy()).basicAdd(otherEnd, msgs);
+		case ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__IS_SPECIALIZED_BY:
+			if (isSpecializedBy != null)
+				msgs = ((InternalEObject) isSpecializedBy).eInverseRemove(this,
+						ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__SPECIALIZES, SpecializableElement.class, msgs);
+			return basicSetIsSpecializedBy((SpecializableElement) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -190,8 +241,8 @@ public abstract class SpecializableElementImpl extends MinimalEObjectImpl.Contai
 		switch (featureID) {
 		case ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__SPECIALIZES:
 			return basicSetSpecializes(null, msgs);
-		case ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__IS_SPCECIALIZED_BY:
-			return ((InternalEList<?>) getIsSpcecializedBy()).basicRemove(otherEnd, msgs);
+		case ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__IS_SPECIALIZED_BY:
+			return basicSetIsSpecializedBy(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -208,8 +259,10 @@ public abstract class SpecializableElementImpl extends MinimalEObjectImpl.Contai
 			if (resolve)
 				return getSpecializes();
 			return basicGetSpecializes();
-		case ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__IS_SPCECIALIZED_BY:
-			return getIsSpcecializedBy();
+		case ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__IS_SPECIALIZED_BY:
+			if (resolve)
+				return getIsSpecializedBy();
+			return basicGetIsSpecializedBy();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -226,9 +279,8 @@ public abstract class SpecializableElementImpl extends MinimalEObjectImpl.Contai
 		case ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__SPECIALIZES:
 			setSpecializes((SpecializableElement) newValue);
 			return;
-		case ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__IS_SPCECIALIZED_BY:
-			getIsSpcecializedBy().clear();
-			getIsSpcecializedBy().addAll((Collection<? extends SpecializableElement>) newValue);
+		case ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__IS_SPECIALIZED_BY:
+			setIsSpecializedBy((SpecializableElement) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -245,8 +297,8 @@ public abstract class SpecializableElementImpl extends MinimalEObjectImpl.Contai
 		case ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__SPECIALIZES:
 			setSpecializes((SpecializableElement) null);
 			return;
-		case ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__IS_SPCECIALIZED_BY:
-			getIsSpcecializedBy().clear();
+		case ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__IS_SPECIALIZED_BY:
+			setIsSpecializedBy((SpecializableElement) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -262,8 +314,8 @@ public abstract class SpecializableElementImpl extends MinimalEObjectImpl.Contai
 		switch (featureID) {
 		case ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__SPECIALIZES:
 			return specializes != null;
-		case ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__IS_SPCECIALIZED_BY:
-			return isSpcecializedBy != null && !isSpcecializedBy.isEmpty();
+		case ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__IS_SPECIALIZED_BY:
+			return isSpecializedBy != null;
 		}
 		return super.eIsSet(featureID);
 	}

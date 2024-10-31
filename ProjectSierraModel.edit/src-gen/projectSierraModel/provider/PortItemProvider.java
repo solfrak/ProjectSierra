@@ -19,7 +19,7 @@ import projectSierraModel.ProjectSierraModelPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class PortItemProvider extends ExchangingElementItemProvider {
+public class PortItemProvider extends ExchangeElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

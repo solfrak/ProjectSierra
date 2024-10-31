@@ -73,49 +73,49 @@ public class ProjectSierraModelItemProviderAdapterFactory extends ProjectSierraM
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link projectSierraModel.Constraint} instances.
+	 * This keeps track of the one adapter used for all {@link projectSierraModel.Capabilitty} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ConstraintItemProvider constraintItemProvider;
+	protected CapabilittyItemProvider capabilittyItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link projectSierraModel.Constraint}.
+	 * This creates an adapter for a {@link projectSierraModel.Capabilitty}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createConstraintAdapter() {
-		if (constraintItemProvider == null) {
-			constraintItemProvider = new ConstraintItemProvider(this);
+	public Adapter createCapabilittyAdapter() {
+		if (capabilittyItemProvider == null) {
+			capabilittyItemProvider = new CapabilittyItemProvider(this);
 		}
 
-		return constraintItemProvider;
+		return capabilittyItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link projectSierraModel.Capability} instances.
+	 * This keeps track of the one adapter used for all {@link projectSierraModel.ActivityDiagram} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CapabilityItemProvider capabilityItemProvider;
+	protected ActivityDiagramItemProvider activityDiagramItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link projectSierraModel.Capability}.
+	 * This creates an adapter for a {@link projectSierraModel.ActivityDiagram}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createCapabilityAdapter() {
-		if (capabilityItemProvider == null) {
-			capabilityItemProvider = new CapabilityItemProvider(this);
+	public Adapter createActivityDiagramAdapter() {
+		if (activityDiagramItemProvider == null) {
+			activityDiagramItemProvider = new ActivityDiagramItemProvider(this);
 		}
 
-		return capabilityItemProvider;
+		return activityDiagramItemProvider;
 	}
 
 	/**
@@ -162,52 +162,6 @@ public class ProjectSierraModelItemProviderAdapterFactory extends ProjectSierraM
 		}
 
 		return entityItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link projectSierraModel.Component} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ComponentItemProvider componentItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link projectSierraModel.Component}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createComponentAdapter() {
-		if (componentItemProvider == null) {
-			componentItemProvider = new ComponentItemProvider(this);
-		}
-
-		return componentItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link projectSierraModel.System} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SystemItemProvider systemItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link projectSierraModel.System}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSystemAdapter() {
-		if (systemItemProvider == null) {
-			systemItemProvider = new SystemItemProvider(this);
-		}
-
-		return systemItemProvider;
 	}
 
 	/**
@@ -326,26 +280,26 @@ public class ProjectSierraModelItemProviderAdapterFactory extends ProjectSierraM
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link projectSierraModel.Output} instances.
+	 * This keeps track of the one adapter used for all {@link projectSierraModel.Ouput} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected OutputItemProvider outputItemProvider;
+	protected OuputItemProvider ouputItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link projectSierraModel.Output}.
+	 * This creates an adapter for a {@link projectSierraModel.Ouput}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createOutputAdapter() {
-		if (outputItemProvider == null) {
-			outputItemProvider = new OutputItemProvider(this);
+	public Adapter createOuputAdapter() {
+		if (ouputItemProvider == null) {
+			ouputItemProvider = new OuputItemProvider(this);
 		}
 
-		return outputItemProvider;
+		return ouputItemProvider;
 	}
 
 	/**
@@ -369,29 +323,6 @@ public class ProjectSierraModelItemProviderAdapterFactory extends ProjectSierraM
 		}
 
 		return exchangeItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link projectSierraModel.Requirement} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected RequirementItemProvider requirementItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link projectSierraModel.Requirement}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRequirementAdapter() {
-		if (requirementItemProvider == null) {
-			requirementItemProvider = new RequirementItemProvider(this);
-		}
-
-		return requirementItemProvider;
 	}
 
 	/**
@@ -493,34 +424,28 @@ public class ProjectSierraModelItemProviderAdapterFactory extends ProjectSierraM
 	 * @generated
 	 */
 	public void dispose() {
-		if (constraintItemProvider != null)
-			constraintItemProvider.dispose();
-		if (capabilityItemProvider != null)
-			capabilityItemProvider.dispose();
-		if (actorItemProvider != null)
-			actorItemProvider.dispose();
-		if (entityItemProvider != null)
-			entityItemProvider.dispose();
-		if (componentItemProvider != null)
-			componentItemProvider.dispose();
-		if (systemItemProvider != null)
-			systemItemProvider.dispose();
-		if (functionItemProvider != null)
-			functionItemProvider.dispose();
+		if (capabilittyItemProvider != null)
+			capabilittyItemProvider.dispose();
+		if (activityDiagramItemProvider != null)
+			activityDiagramItemProvider.dispose();
+		if (exchangeItemProvider != null)
+			exchangeItemProvider.dispose();
 		if (itemItemProvider != null)
 			itemItemProvider.dispose();
-		if (chainItemProvider != null)
-			chainItemProvider.dispose();
+		if (functionItemProvider != null)
+			functionItemProvider.dispose();
 		if (portItemProvider != null)
 			portItemProvider.dispose();
 		if (inputItemProvider != null)
 			inputItemProvider.dispose();
-		if (outputItemProvider != null)
-			outputItemProvider.dispose();
-		if (exchangeItemProvider != null)
-			exchangeItemProvider.dispose();
-		if (requirementItemProvider != null)
-			requirementItemProvider.dispose();
+		if (ouputItemProvider != null)
+			ouputItemProvider.dispose();
+		if (actorItemProvider != null)
+			actorItemProvider.dispose();
+		if (entityItemProvider != null)
+			entityItemProvider.dispose();
+		if (chainItemProvider != null)
+			chainItemProvider.dispose();
 	}
 
 }

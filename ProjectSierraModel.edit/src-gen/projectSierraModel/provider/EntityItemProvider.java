@@ -8,7 +8,9 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import projectSierraModel.ProjectSierraModelPackage;
 
 /**
  * This is the item provider adapter for a {@link projectSierraModel.Entity} object.
@@ -16,7 +18,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
  * <!-- end-user-doc -->
  * @generated
  */
-public class EntityItemProvider extends InvolvableElementItemProvider {
+public class EntityItemProvider extends InvolveableElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -38,8 +40,24 @@ public class EntityItemProvider extends InvolvableElementItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addPerformsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Performs feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPerformsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_PerformingElement_performs_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_PerformingElement_performs_feature",
+						"_UI_PerformingElement_type"),
+				ProjectSierraModelPackage.Literals.PERFORMING_ELEMENT__PERFORMS, true, false, true, null, null, null));
 	}
 
 	/**

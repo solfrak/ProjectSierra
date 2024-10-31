@@ -2,8 +2,6 @@
  */
 package projectSierraModel;
 
-import org.eclipse.emf.common.util.EList;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Exchange</b></em>'.
@@ -13,8 +11,9 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link projectSierraModel.Exchange#getSendsTo <em>Sends To</em>}</li>
  *   <li>{@link projectSierraModel.Exchange#getReceivesFrom <em>Receives From</em>}</li>
- *   <li>{@link projectSierraModel.Exchange#getIsConveyedBy <em>Is Conveyed By</em>}</li>
+ *   <li>{@link projectSierraModel.Exchange#getConveys <em>Conveys</em>}</li>
  * </ul>
  *
  * @see projectSierraModel.ProjectSierraModelPackage#getExchange()
@@ -23,16 +22,38 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Exchange extends ContainableElement {
 	/**
+	 * Returns the value of the '<em><b>Sends To</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Sends To</em>' reference.
+	 * @see #setSendsTo(ExchangeElement)
+	 * @see projectSierraModel.ProjectSierraModelPackage#getExchange_SendsTo()
+	 * @model required="true"
+	 * @generated
+	 */
+	ExchangeElement getSendsTo();
+
+	/**
+	 * Sets the value of the '{@link projectSierraModel.Exchange#getSendsTo <em>Sends To</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Sends To</em>' reference.
+	 * @see #getSendsTo()
+	 * @generated
+	 */
+	void setSendsTo(ExchangeElement value);
+
+	/**
 	 * Returns the value of the '<em><b>Receives From</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Receives From</em>' reference.
-	 * @see #setReceivesFrom(ExchangingElement)
+	 * @see #setReceivesFrom(ExchangeElement)
 	 * @see projectSierraModel.ProjectSierraModelPackage#getExchange_ReceivesFrom()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
-	ExchangingElement getReceivesFrom();
+	ExchangeElement getReceivesFrom();
 
 	/**
 	 * Sets the value of the '{@link projectSierraModel.Exchange#getReceivesFrom <em>Receives From</em>}' reference.
@@ -42,20 +63,28 @@ public interface Exchange extends ContainableElement {
 	 * @see #getReceivesFrom()
 	 * @generated
 	 */
-	void setReceivesFrom(ExchangingElement value);
+	void setReceivesFrom(ExchangeElement value);
 
 	/**
-	 * Returns the value of the '<em><b>Is Conveyed By</b></em>' reference list.
-	 * The list contents are of type {@link projectSierraModel.Item}.
-	 * It is bidirectional and its opposite is '{@link projectSierraModel.Item#getConveys <em>Conveys</em>}'.
+	 * Returns the value of the '<em><b>Conveys</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Is Conveyed By</em>' reference list.
-	 * @see projectSierraModel.ProjectSierraModelPackage#getExchange_IsConveyedBy()
-	 * @see projectSierraModel.Item#getConveys
-	 * @model opposite="conveys"
+	 * @return the value of the '<em>Conveys</em>' containment reference.
+	 * @see #setConveys(Item)
+	 * @see projectSierraModel.ProjectSierraModelPackage#getExchange_Conveys()
+	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Item> getIsConveyedBy();
+	Item getConveys();
+
+	/**
+	 * Sets the value of the '{@link projectSierraModel.Exchange#getConveys <em>Conveys</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Conveys</em>' containment reference.
+	 * @see #getConveys()
+	 * @generated
+	 */
+	void setConveys(Item value);
 
 } // Exchange

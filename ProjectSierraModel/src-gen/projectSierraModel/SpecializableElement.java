@@ -2,8 +2,6 @@
  */
 package projectSierraModel;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -16,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link projectSierraModel.SpecializableElement#getSpecializes <em>Specializes</em>}</li>
- *   <li>{@link projectSierraModel.SpecializableElement#getIsSpcecializedBy <em>Is Spcecialized By</em>}</li>
+ *   <li>{@link projectSierraModel.SpecializableElement#getIsSpecializedBy <em>Is Specialized By</em>}</li>
  * </ul>
  *
  * @see projectSierraModel.ProjectSierraModelPackage#getSpecializableElement()
@@ -26,14 +24,14 @@ import org.eclipse.emf.ecore.EObject;
 public interface SpecializableElement extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Specializes</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link projectSierraModel.SpecializableElement#getIsSpcecializedBy <em>Is Spcecialized By</em>}'.
+	 * It is bidirectional and its opposite is '{@link projectSierraModel.SpecializableElement#getIsSpecializedBy <em>Is Specialized By</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Specializes</em>' reference.
 	 * @see #setSpecializes(SpecializableElement)
 	 * @see projectSierraModel.ProjectSierraModelPackage#getSpecializableElement_Specializes()
-	 * @see projectSierraModel.SpecializableElement#getIsSpcecializedBy
-	 * @model opposite="isSpcecializedBy" transient="true"
+	 * @see projectSierraModel.SpecializableElement#getIsSpecializedBy
+	 * @model opposite="isSpecializedBy"
 	 * @generated
 	 */
 	SpecializableElement getSpecializes();
@@ -49,17 +47,27 @@ public interface SpecializableElement extends EObject {
 	void setSpecializes(SpecializableElement value);
 
 	/**
-	 * Returns the value of the '<em><b>Is Spcecialized By</b></em>' reference list.
-	 * The list contents are of type {@link projectSierraModel.SpecializableElement}.
+	 * Returns the value of the '<em><b>Is Specialized By</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link projectSierraModel.SpecializableElement#getSpecializes <em>Specializes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Is Spcecialized By</em>' reference list.
-	 * @see projectSierraModel.ProjectSierraModelPackage#getSpecializableElement_IsSpcecializedBy()
+	 * @return the value of the '<em>Is Specialized By</em>' reference.
+	 * @see #setIsSpecializedBy(SpecializableElement)
+	 * @see projectSierraModel.ProjectSierraModelPackage#getSpecializableElement_IsSpecializedBy()
 	 * @see projectSierraModel.SpecializableElement#getSpecializes
-	 * @model opposite="specializes" transient="true"
+	 * @model opposite="specializes"
 	 * @generated
 	 */
-	EList<SpecializableElement> getIsSpcecializedBy();
+	SpecializableElement getIsSpecializedBy();
+
+	/**
+	 * Sets the value of the '{@link projectSierraModel.SpecializableElement#getIsSpecializedBy <em>Is Specialized By</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is Specialized By</em>' reference.
+	 * @see #getIsSpecializedBy()
+	 * @generated
+	 */
+	void setIsSpecializedBy(SpecializableElement value);
 
 } // SpecializableElement

@@ -27,7 +27,7 @@ import projectSierraModel.ProjectSierraModelPackage;
  *
  * @generated
  */
-public class PortImpl extends ExchangingElementImpl implements Port {
+public class PortImpl extends ExchangeElementImpl implements Port {
 	/**
 	 * The cached value of the '{@link #getIsPortOf() <em>Is Port Of</em>}' reference.
 	 * <!-- begin-user-doc -->

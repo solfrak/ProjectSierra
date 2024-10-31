@@ -7,26 +7,7 @@ import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
-import projectSierraModel.Actor;
-import projectSierraModel.Capability;
-import projectSierraModel.Chain;
-import projectSierraModel.Component;
-import projectSierraModel.Constraint;
-import projectSierraModel.ContainableElement;
-import projectSierraModel.DesignElement;
-import projectSierraModel.Entity;
-import projectSierraModel.Exchange;
-import projectSierraModel.ExchangingElement;
-import projectSierraModel.Function;
-import projectSierraModel.Input;
-import projectSierraModel.InvolvableElement;
-import projectSierraModel.Item;
-import projectSierraModel.Output;
-import projectSierraModel.PerformingElement;
-import projectSierraModel.Port;
-import projectSierraModel.ProjectSierraModelPackage;
-import projectSierraModel.Requirement;
-import projectSierraModel.SpecializableElement;
+import projectSierraModel.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -85,6 +66,15 @@ public class ProjectSierraModelSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
+		case ProjectSierraModelPackage.CAPABILITTY: {
+			Capabilitty capabilitty = (Capabilitty) theEObject;
+			T result = caseCapabilitty(capabilitty);
+			if (result == null)
+				result = caseSpecializableElement(capabilitty);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT: {
 			SpecializableElement specializableElement = (SpecializableElement) theEObject;
 			T result = caseSpecializableElement(specializableElement);
@@ -99,149 +89,16 @@ public class ProjectSierraModelSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case ProjectSierraModelPackage.CONSTRAINT: {
-			Constraint constraint = (Constraint) theEObject;
-			T result = caseConstraint(constraint);
+		case ProjectSierraModelPackage.ACTIVITY_DIAGRAM: {
+			ActivityDiagram activityDiagram = (ActivityDiagram) theEObject;
+			T result = caseActivityDiagram(activityDiagram);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case ProjectSierraModelPackage.CAPABILITY: {
-			Capability capability = (Capability) theEObject;
-			T result = caseCapability(capability);
-			if (result == null)
-				result = caseSpecializableElement(capability);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case ProjectSierraModelPackage.INVOLVABLE_ELEMENT: {
-			InvolvableElement involvableElement = (InvolvableElement) theEObject;
-			T result = caseInvolvableElement(involvableElement);
-			if (result == null)
-				result = caseSpecializableElement(involvableElement);
-			if (result == null)
-				result = casePerformingElement(involvableElement);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case ProjectSierraModelPackage.ACTOR: {
-			Actor actor = (Actor) theEObject;
-			T result = caseActor(actor);
-			if (result == null)
-				result = caseInvolvableElement(actor);
-			if (result == null)
-				result = caseSpecializableElement(actor);
-			if (result == null)
-				result = casePerformingElement(actor);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case ProjectSierraModelPackage.ENTITY: {
-			Entity entity = (Entity) theEObject;
-			T result = caseEntity(entity);
-			if (result == null)
-				result = caseInvolvableElement(entity);
-			if (result == null)
-				result = caseSpecializableElement(entity);
-			if (result == null)
-				result = casePerformingElement(entity);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case ProjectSierraModelPackage.COMPONENT: {
-			Component component = (Component) theEObject;
-			T result = caseComponent(component);
-			if (result == null)
-				result = caseContainableElement(component);
-			if (result == null)
-				result = casePerformingElement(component);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case ProjectSierraModelPackage.SYSTEM: {
-			projectSierraModel.System system = (projectSierraModel.System) theEObject;
-			T result = caseSystem(system);
-			if (result == null)
-				result = caseComponent(system);
-			if (result == null)
-				result = caseContainableElement(system);
-			if (result == null)
-				result = casePerformingElement(system);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case ProjectSierraModelPackage.PERFORMING_ELEMENT: {
-			PerformingElement performingElement = (PerformingElement) theEObject;
-			T result = casePerformingElement(performingElement);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case ProjectSierraModelPackage.EXCHANGING_ELEMENT: {
-			ExchangingElement exchangingElement = (ExchangingElement) theEObject;
-			T result = caseExchangingElement(exchangingElement);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case ProjectSierraModelPackage.FUNCTION: {
-			Function function = (Function) theEObject;
-			T result = caseFunction(function);
-			if (result == null)
-				result = caseExchangingElement(function);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case ProjectSierraModelPackage.ITEM: {
-			Item item = (Item) theEObject;
-			T result = caseItem(item);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case ProjectSierraModelPackage.CHAIN: {
-			Chain chain = (Chain) theEObject;
-			T result = caseChain(chain);
-			if (result == null)
-				result = caseContainableElement(chain);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case ProjectSierraModelPackage.PORT: {
-			Port port = (Port) theEObject;
-			T result = casePort(port);
-			if (result == null)
-				result = caseExchangingElement(port);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case ProjectSierraModelPackage.INPUT: {
-			Input input = (Input) theEObject;
-			T result = caseInput(input);
-			if (result == null)
-				result = casePort(input);
-			if (result == null)
-				result = caseExchangingElement(input);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case ProjectSierraModelPackage.OUTPUT: {
-			Output output = (Output) theEObject;
-			T result = caseOutput(output);
-			if (result == null)
-				result = casePort(output);
-			if (result == null)
-				result = caseExchangingElement(output);
+		case ProjectSierraModelPackage.EXCHANGE_ELEMENT: {
+			ExchangeElement exchangeElement = (ExchangeElement) theEObject;
+			T result = caseExchangeElement(exchangeElement);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -255,18 +112,100 @@ public class ProjectSierraModelSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case ProjectSierraModelPackage.REQUIREMENT: {
-			Requirement requirement = (Requirement) theEObject;
-			T result = caseRequirement(requirement);
-			if (result == null)
-				result = caseContainableElement(requirement);
+		case ProjectSierraModelPackage.ITEM: {
+			Item item = (Item) theEObject;
+			T result = caseItem(item);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case ProjectSierraModelPackage.DESIGN_ELEMENT: {
-			DesignElement designElement = (DesignElement) theEObject;
-			T result = caseDesignElement(designElement);
+		case ProjectSierraModelPackage.FUNCTION: {
+			Function function = (Function) theEObject;
+			T result = caseFunction(function);
+			if (result == null)
+				result = caseExchangeElement(function);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ProjectSierraModelPackage.PORT: {
+			Port port = (Port) theEObject;
+			T result = casePort(port);
+			if (result == null)
+				result = caseExchangeElement(port);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ProjectSierraModelPackage.INPUT: {
+			Input input = (Input) theEObject;
+			T result = caseInput(input);
+			if (result == null)
+				result = casePort(input);
+			if (result == null)
+				result = caseExchangeElement(input);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ProjectSierraModelPackage.OUPUT: {
+			Ouput ouput = (Ouput) theEObject;
+			T result = caseOuput(ouput);
+			if (result == null)
+				result = casePort(ouput);
+			if (result == null)
+				result = caseExchangeElement(ouput);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ProjectSierraModelPackage.PERFORMING_ELEMENT: {
+			PerformingElement performingElement = (PerformingElement) theEObject;
+			T result = casePerformingElement(performingElement);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ProjectSierraModelPackage.INVOLVEABLE_ELEMENT: {
+			InvolveableElement involveableElement = (InvolveableElement) theEObject;
+			T result = caseInvolveableElement(involveableElement);
+			if (result == null)
+				result = caseSpecializableElement(involveableElement);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ProjectSierraModelPackage.ACTOR: {
+			Actor actor = (Actor) theEObject;
+			T result = caseActor(actor);
+			if (result == null)
+				result = caseInvolveableElement(actor);
+			if (result == null)
+				result = casePerformingElement(actor);
+			if (result == null)
+				result = caseSpecializableElement(actor);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ProjectSierraModelPackage.ENTITY: {
+			Entity entity = (Entity) theEObject;
+			T result = caseEntity(entity);
+			if (result == null)
+				result = caseInvolveableElement(entity);
+			if (result == null)
+				result = casePerformingElement(entity);
+			if (result == null)
+				result = caseSpecializableElement(entity);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ProjectSierraModelPackage.CHAIN: {
+			Chain chain = (Chain) theEObject;
+			T result = caseChain(chain);
+			if (result == null)
+				result = caseContainableElement(chain);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -274,6 +213,21 @@ public class ProjectSierraModelSwitch<T> extends Switch<T> {
 		default:
 			return defaultCase(theEObject);
 		}
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Capabilitty</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Capabilitty</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCapabilitty(Capabilitty object) {
+		return null;
 	}
 
 	/**
@@ -307,47 +261,32 @@ public class ProjectSierraModelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Constraint</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Activity Diagram</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Constraint</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Activity Diagram</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseConstraint(Constraint object) {
+	public T caseActivityDiagram(ActivityDiagram object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Capability</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Exchange Element</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Capability</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Exchange Element</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseCapability(Capability object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Involvable Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Involvable Element</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseInvolvableElement(InvolvableElement object) {
+	public T caseExchangeElement(ExchangeElement object) {
 		return null;
 	}
 
@@ -382,36 +321,6 @@ public class ProjectSierraModelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Component</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Component</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseComponent(Component object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>System</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>System</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSystem(projectSierraModel.System object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Performing Element</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -427,17 +336,17 @@ public class ProjectSierraModelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Exchanging Element</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Involveable Element</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Exchanging Element</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Involveable Element</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseExchangingElement(ExchangingElement object) {
+	public T caseInvolveableElement(InvolveableElement object) {
 		return null;
 	}
 
@@ -517,17 +426,17 @@ public class ProjectSierraModelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Output</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Ouput</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Output</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Ouput</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseOutput(Output object) {
+	public T caseOuput(Ouput object) {
 		return null;
 	}
 
@@ -543,36 +452,6 @@ public class ProjectSierraModelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseExchange(Exchange object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Requirement</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Requirement</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseRequirement(Requirement object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Design Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Design Element</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDesignElement(DesignElement object) {
 		return null;
 	}
 

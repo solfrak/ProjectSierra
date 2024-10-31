@@ -2,33 +2,29 @@
  */
 package projectSierraModel.impl;
 
-import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import projectSierraModel.ActivityDiagram;
 import projectSierraModel.Actor;
-import projectSierraModel.Capability;
+import projectSierraModel.Capabilitty;
 import projectSierraModel.Chain;
-import projectSierraModel.Component;
-import projectSierraModel.Constraint;
 import projectSierraModel.ContainableElement;
-import projectSierraModel.DesignElement;
 import projectSierraModel.Entity;
 import projectSierraModel.Exchange;
-import projectSierraModel.ExchangingElement;
+import projectSierraModel.ExchangeElement;
 import projectSierraModel.Function;
 import projectSierraModel.Input;
-import projectSierraModel.InvolvableElement;
+import projectSierraModel.InvolveableElement;
 import projectSierraModel.Item;
-import projectSierraModel.Output;
+import projectSierraModel.Ouput;
 import projectSierraModel.PerformingElement;
 import projectSierraModel.Port;
 import projectSierraModel.ProjectSierraModelFactory;
 import projectSierraModel.ProjectSierraModelPackage;
-import projectSierraModel.Requirement;
 import projectSierraModel.SpecializableElement;
 
 /**
@@ -38,6 +34,13 @@ import projectSierraModel.SpecializableElement;
  * @generated
  */
 public class ProjectSierraModelPackageImpl extends EPackageImpl implements ProjectSierraModelPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass capabilittyEClass = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -57,21 +60,14 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass constraintEClass = null;
+	private EClass activityDiagramEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass capabilityEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass involvableElementEClass = null;
+	private EClass exchangeElementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -92,20 +88,6 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass componentEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass systemEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass performingElementEClass = null;
 
 	/**
@@ -113,7 +95,7 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass exchangingElementEClass = null;
+	private EClass involveableElementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -155,7 +137,7 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass outputEClass = null;
+	private EClass ouputEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -163,20 +145,6 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 	 * @generated
 	 */
 	private EClass exchangeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass requirementEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass designElementEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -248,6 +216,69 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getCapabilitty() {
+		return capabilittyEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCapabilitty_Includes() {
+		return (EReference) capabilittyEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCapabilitty_IsIncludedIn() {
+		return (EReference) capabilittyEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCapabilitty_Extends() {
+		return (EReference) capabilittyEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCapabilitty_IsExtendedBy() {
+		return (EReference) capabilittyEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCapabilitty_IsImplementedBy() {
+		return (EReference) capabilittyEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCapabilitty_Involves() {
+		return (EReference) capabilittyEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getSpecializableElement() {
 		return specializableElementEClass;
 	}
@@ -266,7 +297,7 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSpecializableElement_IsSpcecializedBy() {
+	public EReference getSpecializableElement_IsSpecializedBy() {
 		return (EReference) specializableElementEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -293,7 +324,7 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getContainableElement_ContainedIn() {
+	public EReference getContainableElement_IsContainedIn() {
 		return (EReference) containableElementEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -302,8 +333,8 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getConstraint() {
-		return constraintEClass;
+	public EClass getActivityDiagram() {
+		return activityDiagramEClass;
 	}
 
 	/**
@@ -311,8 +342,8 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getConstraint_HasExpression() {
-		return (EAttribute) constraintEClass.getEStructuralFeatures().get(0);
+	public EReference getActivityDiagram_ContainableElements() {
+		return (EReference) activityDiagramEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -320,8 +351,8 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getConstraint_IsExpressedIn() {
-		return (EAttribute) constraintEClass.getEStructuralFeatures().get(1);
+	public EReference getActivityDiagram_SpecializableElements() {
+		return (EReference) activityDiagramEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -329,8 +360,8 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getCapability() {
-		return capabilityEClass;
+	public EReference getActivityDiagram_ExchangeElements() {
+		return (EReference) activityDiagramEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -338,8 +369,8 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCapability_Involves() {
-		return (EReference) capabilityEClass.getEStructuralFeatures().get(0);
+	public EReference getActivityDiagram_PerformingElements() {
+		return (EReference) activityDiagramEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -347,71 +378,8 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCapability_Includes() {
-		return (EReference) capabilityEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getCapability_IsIncludedIn() {
-		return (EReference) capabilityEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getCapability_Extends() {
-		return (EReference) capabilityEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getCapability_IsExtendedBy() {
-		return (EReference) capabilityEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getCapability_IsSupportedBy() {
-		return (EReference) capabilityEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getCapability_Implements() {
-		return (EReference) capabilityEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getInvolvableElement() {
-		return involvableElementEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getInvolvableElement_InvolvedIn() {
-		return (EReference) involvableElementEClass.getEStructuralFeatures().get(0);
+	public EClass getExchangeElement() {
+		return exchangeElementEClass;
 	}
 
 	/**
@@ -437,33 +405,6 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getComponent() {
-		return componentEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getSystem() {
-		return systemEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSystem_Support() {
-		return (EReference) systemEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getPerformingElement() {
 		return performingElementEClass;
 	}
@@ -482,8 +423,8 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getExchangingElement() {
-		return exchangingElementEClass;
+	public EClass getInvolveableElement() {
+		return involveableElementEClass;
 	}
 
 	/**
@@ -491,8 +432,8 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getExchangingElement_SendsTo() {
-		return (EReference) exchangingElementEClass.getEStructuralFeatures().get(0);
+	public EReference getInvolveableElement_IsInvolvedIn() {
+		return (EReference) involveableElementEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -527,7 +468,7 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getFunction_HasOutput() {
+	public EReference getFunction_HasOuput() {
 		return (EReference) functionEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -554,15 +495,6 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getItem_Conveys() {
-		return (EReference) itemEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getChain() {
 		return chainEClass;
 	}
@@ -572,7 +504,7 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getChain_IsImplementedBy() {
+	public EReference getChain_Implements() {
 		return (EReference) chainEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -617,8 +549,8 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getOutput() {
-		return outputEClass;
+	public EClass getOuput() {
+		return ouputEClass;
 	}
 
 	/**
@@ -626,8 +558,8 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getOutput_IsOutputOf() {
-		return (EReference) outputEClass.getEStructuralFeatures().get(0);
+	public EReference getOuput_IsOuputOf() {
+		return (EReference) ouputEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -644,7 +576,7 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getExchange_ReceivesFrom() {
+	public EReference getExchange_SendsTo() {
 		return (EReference) exchangeEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -653,7 +585,7 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getExchange_IsConveyedBy() {
+	public EReference getExchange_ReceivesFrom() {
 		return (EReference) exchangeEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -662,107 +594,8 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getRequirement() {
-		return requirementEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getRequirement_HasRationale() {
-		return (EAttribute) requirementEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getRequirement_HasConstraint() {
-		return (EReference) requirementEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getRequirement_Derives() {
-		return (EReference) requirementEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getRequirement_IsDerivedFrom() {
-		return (EReference) requirementEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getRequirement_Refines() {
-		return (EReference) requirementEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getRequirement_IsRefinedBy() {
-		return (EReference) requirementEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getRequirement_Specifies() {
-		return (EReference) requirementEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getRequirement_Justifies() {
-		return (EReference) requirementEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getDesignElement() {
-		return designElementEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getDesignElement_IsSpecifiedBy() {
-		return (EReference) designElementEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getDesignElement_IsJustifiedBy() {
-		return (EReference) designElementEClass.getEStructuralFeatures().get(1);
+	public EReference getExchange_Conveys() {
+		return (EReference) exchangeEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -794,56 +627,42 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 		isCreated = true;
 
 		// Create classes and their features
+		capabilittyEClass = createEClass(CAPABILITTY);
+		createEReference(capabilittyEClass, CAPABILITTY__INCLUDES);
+		createEReference(capabilittyEClass, CAPABILITTY__IS_INCLUDED_IN);
+		createEReference(capabilittyEClass, CAPABILITTY__EXTENDS);
+		createEReference(capabilittyEClass, CAPABILITTY__IS_EXTENDED_BY);
+		createEReference(capabilittyEClass, CAPABILITTY__IS_IMPLEMENTED_BY);
+		createEReference(capabilittyEClass, CAPABILITTY__INVOLVES);
+
 		specializableElementEClass = createEClass(SPECIALIZABLE_ELEMENT);
 		createEReference(specializableElementEClass, SPECIALIZABLE_ELEMENT__SPECIALIZES);
-		createEReference(specializableElementEClass, SPECIALIZABLE_ELEMENT__IS_SPCECIALIZED_BY);
+		createEReference(specializableElementEClass, SPECIALIZABLE_ELEMENT__IS_SPECIALIZED_BY);
 
 		containableElementEClass = createEClass(CONTAINABLE_ELEMENT);
 		createEReference(containableElementEClass, CONTAINABLE_ELEMENT__CONTAINS);
-		createEReference(containableElementEClass, CONTAINABLE_ELEMENT__CONTAINED_IN);
+		createEReference(containableElementEClass, CONTAINABLE_ELEMENT__IS_CONTAINED_IN);
 
-		constraintEClass = createEClass(CONSTRAINT);
-		createEAttribute(constraintEClass, CONSTRAINT__HAS_EXPRESSION);
-		createEAttribute(constraintEClass, CONSTRAINT__IS_EXPRESSED_IN);
+		activityDiagramEClass = createEClass(ACTIVITY_DIAGRAM);
+		createEReference(activityDiagramEClass, ACTIVITY_DIAGRAM__CONTAINABLE_ELEMENTS);
+		createEReference(activityDiagramEClass, ACTIVITY_DIAGRAM__SPECIALIZABLE_ELEMENTS);
+		createEReference(activityDiagramEClass, ACTIVITY_DIAGRAM__EXCHANGE_ELEMENTS);
+		createEReference(activityDiagramEClass, ACTIVITY_DIAGRAM__PERFORMING_ELEMENTS);
 
-		capabilityEClass = createEClass(CAPABILITY);
-		createEReference(capabilityEClass, CAPABILITY__INVOLVES);
-		createEReference(capabilityEClass, CAPABILITY__INCLUDES);
-		createEReference(capabilityEClass, CAPABILITY__IS_INCLUDED_IN);
-		createEReference(capabilityEClass, CAPABILITY__EXTENDS);
-		createEReference(capabilityEClass, CAPABILITY__IS_EXTENDED_BY);
-		createEReference(capabilityEClass, CAPABILITY__IS_SUPPORTED_BY);
-		createEReference(capabilityEClass, CAPABILITY__IMPLEMENTS);
+		exchangeElementEClass = createEClass(EXCHANGE_ELEMENT);
 
-		involvableElementEClass = createEClass(INVOLVABLE_ELEMENT);
-		createEReference(involvableElementEClass, INVOLVABLE_ELEMENT__INVOLVED_IN);
+		exchangeEClass = createEClass(EXCHANGE);
+		createEReference(exchangeEClass, EXCHANGE__SENDS_TO);
+		createEReference(exchangeEClass, EXCHANGE__RECEIVES_FROM);
+		createEReference(exchangeEClass, EXCHANGE__CONVEYS);
 
-		actorEClass = createEClass(ACTOR);
-
-		entityEClass = createEClass(ENTITY);
-
-		componentEClass = createEClass(COMPONENT);
-
-		systemEClass = createEClass(SYSTEM);
-		createEReference(systemEClass, SYSTEM__SUPPORT);
-
-		performingElementEClass = createEClass(PERFORMING_ELEMENT);
-		createEReference(performingElementEClass, PERFORMING_ELEMENT__PERFORMS);
-
-		exchangingElementEClass = createEClass(EXCHANGING_ELEMENT);
-		createEReference(exchangingElementEClass, EXCHANGING_ELEMENT__SENDS_TO);
+		itemEClass = createEClass(ITEM);
 
 		functionEClass = createEClass(FUNCTION);
 		createEReference(functionEClass, FUNCTION__HAS_PORT);
 		createEReference(functionEClass, FUNCTION__HAS_INPUT);
-		createEReference(functionEClass, FUNCTION__HAS_OUTPUT);
+		createEReference(functionEClass, FUNCTION__HAS_OUPUT);
 		createEReference(functionEClass, FUNCTION__IS_PERFORMED_BY);
-
-		itemEClass = createEClass(ITEM);
-		createEReference(itemEClass, ITEM__CONVEYS);
-
-		chainEClass = createEClass(CHAIN);
-		createEReference(chainEClass, CHAIN__IS_IMPLEMENTED_BY);
 
 		portEClass = createEClass(PORT);
 		createEReference(portEClass, PORT__IS_PORT_OF);
@@ -851,26 +670,21 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 		inputEClass = createEClass(INPUT);
 		createEReference(inputEClass, INPUT__IS_INPUT_OF);
 
-		outputEClass = createEClass(OUTPUT);
-		createEReference(outputEClass, OUTPUT__IS_OUTPUT_OF);
+		ouputEClass = createEClass(OUPUT);
+		createEReference(ouputEClass, OUPUT__IS_OUPUT_OF);
 
-		exchangeEClass = createEClass(EXCHANGE);
-		createEReference(exchangeEClass, EXCHANGE__RECEIVES_FROM);
-		createEReference(exchangeEClass, EXCHANGE__IS_CONVEYED_BY);
+		performingElementEClass = createEClass(PERFORMING_ELEMENT);
+		createEReference(performingElementEClass, PERFORMING_ELEMENT__PERFORMS);
 
-		requirementEClass = createEClass(REQUIREMENT);
-		createEAttribute(requirementEClass, REQUIREMENT__HAS_RATIONALE);
-		createEReference(requirementEClass, REQUIREMENT__HAS_CONSTRAINT);
-		createEReference(requirementEClass, REQUIREMENT__DERIVES);
-		createEReference(requirementEClass, REQUIREMENT__IS_DERIVED_FROM);
-		createEReference(requirementEClass, REQUIREMENT__REFINES);
-		createEReference(requirementEClass, REQUIREMENT__IS_REFINED_BY);
-		createEReference(requirementEClass, REQUIREMENT__SPECIFIES);
-		createEReference(requirementEClass, REQUIREMENT__JUSTIFIES);
+		involveableElementEClass = createEClass(INVOLVEABLE_ELEMENT);
+		createEReference(involveableElementEClass, INVOLVEABLE_ELEMENT__IS_INVOLVED_IN);
 
-		designElementEClass = createEClass(DESIGN_ELEMENT);
-		createEReference(designElementEClass, DESIGN_ELEMENT__IS_SPECIFIED_BY);
-		createEReference(designElementEClass, DESIGN_ELEMENT__IS_JUSTIFIED_BY);
+		actorEClass = createEClass(ACTOR);
+
+		entityEClass = createEClass(ENTITY);
+
+		chainEClass = createEClass(CHAIN);
+		createEReference(chainEClass, CHAIN__IMPLEMENTS);
 	}
 
 	/**
@@ -902,108 +716,95 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		capabilityEClass.getESuperTypes().add(this.getSpecializableElement());
-		involvableElementEClass.getESuperTypes().add(this.getSpecializableElement());
-		involvableElementEClass.getESuperTypes().add(this.getPerformingElement());
-		actorEClass.getESuperTypes().add(this.getInvolvableElement());
-		entityEClass.getESuperTypes().add(this.getInvolvableElement());
-		componentEClass.getESuperTypes().add(this.getContainableElement());
-		componentEClass.getESuperTypes().add(this.getPerformingElement());
-		systemEClass.getESuperTypes().add(this.getComponent());
-		functionEClass.getESuperTypes().add(this.getExchangingElement());
-		chainEClass.getESuperTypes().add(this.getContainableElement());
-		portEClass.getESuperTypes().add(this.getExchangingElement());
-		inputEClass.getESuperTypes().add(this.getPort());
-		outputEClass.getESuperTypes().add(this.getPort());
+		capabilittyEClass.getESuperTypes().add(this.getSpecializableElement());
 		exchangeEClass.getESuperTypes().add(this.getContainableElement());
-		requirementEClass.getESuperTypes().add(this.getContainableElement());
+		functionEClass.getESuperTypes().add(this.getExchangeElement());
+		portEClass.getESuperTypes().add(this.getExchangeElement());
+		inputEClass.getESuperTypes().add(this.getPort());
+		ouputEClass.getESuperTypes().add(this.getPort());
+		involveableElementEClass.getESuperTypes().add(this.getSpecializableElement());
+		actorEClass.getESuperTypes().add(this.getInvolveableElement());
+		actorEClass.getESuperTypes().add(this.getPerformingElement());
+		entityEClass.getESuperTypes().add(this.getInvolveableElement());
+		entityEClass.getESuperTypes().add(this.getPerformingElement());
+		chainEClass.getESuperTypes().add(this.getContainableElement());
 
 		// Initialize classes, features, and operations; add parameters
+		initEClass(capabilittyEClass, Capabilitty.class, "Capabilitty", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCapabilitty_Includes(), this.getCapabilitty(), this.getCapabilitty_IsIncludedIn(), "includes",
+				null, 0, -1, Capabilitty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCapabilitty_IsIncludedIn(), this.getCapabilitty(), this.getCapabilitty_Includes(),
+				"isIncludedIn", null, 0, 1, Capabilitty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCapabilitty_Extends(), this.getCapabilitty(), this.getCapabilitty_IsExtendedBy(), "extends",
+				null, 0, 1, Capabilitty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCapabilitty_IsExtendedBy(), this.getCapabilitty(), this.getCapabilitty_Extends(),
+				"isExtendedBy", null, 0, -1, Capabilitty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCapabilitty_IsImplementedBy(), this.getChain(), this.getChain_Implements(), "isImplementedBy",
+				null, 1, 1, Capabilitty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCapabilitty_Involves(), this.getInvolveableElement(),
+				this.getInvolveableElement_IsInvolvedIn(), "involves", null, 1, -1, Capabilitty.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+
 		initEClass(specializableElementEClass, SpecializableElement.class, "SpecializableElement", IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSpecializableElement_Specializes(), this.getSpecializableElement(),
-				this.getSpecializableElement_IsSpcecializedBy(), "specializes", null, 0, 1, SpecializableElement.class,
-				IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEReference(getSpecializableElement_IsSpcecializedBy(), this.getSpecializableElement(),
-				this.getSpecializableElement_Specializes(), "isSpcecializedBy", null, 0, -1, SpecializableElement.class,
-				IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
+				this.getSpecializableElement_IsSpecializedBy(), "specializes", null, 0, 1, SpecializableElement.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSpecializableElement_IsSpecializedBy(), this.getSpecializableElement(),
+				this.getSpecializableElement_Specializes(), "isSpecializedBy", null, 0, 1, SpecializableElement.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(containableElementEClass, ContainableElement.class, "ContainableElement", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getContainableElement_Contains(), this.getContainableElement(),
-				this.getContainableElement_ContainedIn(), "contains", null, 0, 1, ContainableElement.class,
+				this.getContainableElement_IsContainedIn(), "contains", null, 1, 1, ContainableElement.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getContainableElement_ContainedIn(), this.getContainableElement(),
-				this.getContainableElement_Contains(), "containedIn", null, 0, 1, ContainableElement.class,
+		initEReference(getContainableElement_IsContainedIn(), this.getContainableElement(),
+				this.getContainableElement_Contains(), "isContainedIn", null, 0, 1, ContainableElement.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(constraintEClass, Constraint.class, "Constraint", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(activityDiagramEClass, ActivityDiagram.class, "ActivityDiagram", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getConstraint_HasExpression(), ecorePackage.getEString(), "hasExpression", null, 0, 1,
-				Constraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getConstraint_IsExpressedIn(), ecorePackage.getEString(), "isExpressedIn", null, 0, 1,
-				Constraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
+		initEReference(getActivityDiagram_ContainableElements(), this.getContainableElement(), null,
+				"containableElements", null, 0, -1, ActivityDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getActivityDiagram_SpecializableElements(), this.getSpecializableElement(), null,
+				"specializableElements", null, 0, -1, ActivityDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getActivityDiagram_ExchangeElements(), this.getExchangeElement(), null, "exchangeElements", null,
+				0, -1, ActivityDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getActivityDiagram_PerformingElements(), this.getPerformingElement(), null, "performingElements",
+				null, 0, -1, ActivityDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(capabilityEClass, Capability.class, "Capability", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(exchangeElementEClass, ExchangeElement.class, "ExchangeElement", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCapability_Involves(), this.getInvolvableElement(), this.getInvolvableElement_InvolvedIn(),
-				"involves", null, 0, -1, Capability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCapability_Includes(), this.getCapability(), this.getCapability_IsIncludedIn(), "includes",
-				null, 0, 1, Capability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCapability_IsIncludedIn(), this.getCapability(), this.getCapability_Includes(),
-				"isIncludedIn", null, 0, 1, Capability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCapability_Extends(), this.getCapability(), this.getCapability_IsExtendedBy(), "extends",
-				null, 0, -1, Capability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCapability_IsExtendedBy(), this.getCapability(), this.getCapability_Extends(), "isExtendedBy",
-				null, 0, -1, Capability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCapability_IsSupportedBy(), this.getSystem(), this.getSystem_Support(), "isSupportedBy", null,
-				0, 1, Capability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+
+		initEClass(exchangeEClass, Exchange.class, "Exchange", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getExchange_SendsTo(), this.getExchangeElement(), null, "sendsTo", null, 1, 1, Exchange.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getExchange_ReceivesFrom(), this.getExchangeElement(), null, "receivesFrom", null, 1, 1,
+				Exchange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCapability_Implements(), this.getChain(), this.getChain_IsImplementedBy(), "implements", null,
-				0, 1, Capability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getExchange_Conveys(), this.getItem(), null, "conveys", null, 0, 1, Exchange.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(involvableElementEClass, InvolvableElement.class, "InvolvableElement", IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getInvolvableElement_InvolvedIn(), this.getCapability(), this.getCapability_Involves(),
-				"involvedIn", null, 0, -1, InvolvableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(actorEClass, Actor.class, "Actor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(entityEClass, Entity.class, "Entity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(componentEClass, Component.class, "Component", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(systemEClass, projectSierraModel.System.class, "System", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSystem_Support(), this.getCapability(), this.getCapability_IsSupportedBy(), "support", null,
-				0, 1, projectSierraModel.System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(performingElementEClass, PerformingElement.class, "PerformingElement", IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPerformingElement_Performs(), this.getFunction(), this.getFunction_IsPerformedBy(),
-				"performs", null, 0, -1, PerformingElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(exchangingElementEClass, ExchangingElement.class, "ExchangingElement", IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getExchangingElement_SendsTo(), this.getExchange(), null, "sendsTo", null, 0, 1,
-				ExchangingElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(itemEClass, Item.class, "Item", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(functionEClass, Function.class, "Function", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1013,21 +814,11 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 		initEReference(getFunction_HasInput(), this.getInput(), this.getInput_IsInputOf(), "hasInput", null, 0, 1,
 				Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFunction_HasOutput(), this.getOutput(), this.getOutput_IsOutputOf(), "hasOutput", null, 0, 1,
+		initEReference(getFunction_HasOuput(), this.getOuput(), this.getOuput_IsOuputOf(), "hasOuput", null, 0, 1,
 				Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFunction_IsPerformedBy(), this.getPerformingElement(), this.getPerformingElement_Performs(),
-				"isPerformedBy", null, 0, -1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(itemEClass, Item.class, "Item", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getItem_Conveys(), this.getExchange(), this.getExchange_IsConveyedBy(), "conveys", null, 0, 1,
-				Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(chainEClass, Chain.class, "Chain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getChain_IsImplementedBy(), this.getCapability(), this.getCapability_Implements(),
-				"isImplementedBy", null, 0, 1, Chain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				"isPerformedBy", null, 1, 1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(portEClass, Port.class, "Port", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1040,55 +831,31 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 				Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(outputEClass, Output.class, "Output", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getOutput_IsOutputOf(), this.getFunction(), this.getFunction_HasOutput(), "isOutputOf", null, 0,
-				1, Output.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+		initEClass(ouputEClass, Ouput.class, "Ouput", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getOuput_IsOuputOf(), this.getFunction(), this.getFunction_HasOuput(), "isOuputOf", null, 0, 1,
+				Ouput.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(exchangeEClass, Exchange.class, "Exchange", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(performingElementEClass, PerformingElement.class, "PerformingElement", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getExchange_ReceivesFrom(), this.getExchangingElement(), null, "receivesFrom", null, 0, 1,
-				Exchange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getExchange_IsConveyedBy(), this.getItem(), this.getItem_Conveys(), "isConveyedBy", null, 0, -1,
-				Exchange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPerformingElement_Performs(), this.getFunction(), this.getFunction_IsPerformedBy(),
+				"performs", null, 0, 1, PerformingElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(requirementEClass, Requirement.class, "Requirement", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(involveableElementEClass, InvolveableElement.class, "InvolveableElement", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getRequirement_HasRationale(), ecorePackage.getEString(), "hasRationale", null, 0, 1,
-				Requirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEReference(getRequirement_HasConstraint(), this.getConstraint(), null, "hasConstraint", null, 0, 1,
-				Requirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRequirement_Derives(), this.getRequirement(), this.getRequirement_IsDerivedFrom(), "derives",
-				null, 0, 1, Requirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRequirement_IsDerivedFrom(), this.getRequirement(), this.getRequirement_Derives(),
-				"isDerivedFrom", null, 0, 1, Requirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+		initEReference(getInvolveableElement_IsInvolvedIn(), this.getCapabilitty(), this.getCapabilitty_Involves(),
+				"isInvolvedIn", null, 1, 1, InvolveableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRequirement_Refines(), this.getRequirement(), this.getRequirement_IsRefinedBy(), "refines",
-				null, 0, 1, Requirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRequirement_IsRefinedBy(), this.getRequirement(), this.getRequirement_Refines(),
-				"isRefinedBy", null, 0, 1, Requirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRequirement_Specifies(), this.getDesignElement(), this.getDesignElement_IsSpecifiedBy(),
-				"specifies", null, 0, 1, Requirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRequirement_Justifies(), this.getDesignElement(), this.getDesignElement_IsJustifiedBy(),
-				"justifies", null, 0, 1, Requirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(designElementEClass, DesignElement.class, "DesignElement", IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDesignElement_IsSpecifiedBy(), this.getRequirement(), this.getRequirement_Specifies(),
-				"isSpecifiedBy", null, 0, 1, DesignElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDesignElement_IsJustifiedBy(), this.getRequirement(), this.getRequirement_Justifies(),
-				"isJustifiedBy", null, 0, 1, DesignElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(actorEClass, Actor.class, "Actor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(entityEClass, Entity.class, "Entity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(chainEClass, Chain.class, "Chain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getChain_Implements(), this.getCapabilitty(), this.getCapabilitty_IsImplementedBy(),
+				"implements", null, 0, 1, Chain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

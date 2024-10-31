@@ -51,7 +51,7 @@ public class ContainableElementItemProvider extends ItemProviderAdapter implemen
 			super.getPropertyDescriptors(object);
 
 			addContainsPropertyDescriptor(object);
-			addContainedInPropertyDescriptor(object);
+			addIsContainedInPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -72,19 +72,19 @@ public class ContainableElementItemProvider extends ItemProviderAdapter implemen
 	}
 
 	/**
-	 * This adds a property descriptor for the Contained In feature.
+	 * This adds a property descriptor for the Is Contained In feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addContainedInPropertyDescriptor(Object object) {
+	protected void addIsContainedInPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_ContainableElement_containedIn_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_ContainableElement_containedIn_feature",
+						getResourceLocator(), getString("_UI_ContainableElement_isContainedIn_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ContainableElement_isContainedIn_feature",
 								"_UI_ContainableElement_type"),
-						ProjectSierraModelPackage.Literals.CONTAINABLE_ELEMENT__CONTAINED_IN, true, false, true, null,
-						null, null));
+						ProjectSierraModelPackage.Literals.CONTAINABLE_ELEMENT__IS_CONTAINED_IN, true, false, true,
+						null, null, null));
 	}
 
 	/**

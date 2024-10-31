@@ -10,21 +10,7 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import projectSierraModel.Actor;
-import projectSierraModel.Capability;
-import projectSierraModel.Chain;
-import projectSierraModel.Component;
-import projectSierraModel.Constraint;
-import projectSierraModel.Entity;
-import projectSierraModel.Exchange;
-import projectSierraModel.Function;
-import projectSierraModel.Input;
-import projectSierraModel.Item;
-import projectSierraModel.Output;
-import projectSierraModel.Port;
-import projectSierraModel.ProjectSierraModelFactory;
-import projectSierraModel.ProjectSierraModelPackage;
-import projectSierraModel.Requirement;
+import projectSierraModel.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -70,34 +56,28 @@ public class ProjectSierraModelFactoryImpl extends EFactoryImpl implements Proje
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-		case ProjectSierraModelPackage.CONSTRAINT:
-			return createConstraint();
-		case ProjectSierraModelPackage.CAPABILITY:
-			return createCapability();
-		case ProjectSierraModelPackage.ACTOR:
-			return createActor();
-		case ProjectSierraModelPackage.ENTITY:
-			return createEntity();
-		case ProjectSierraModelPackage.COMPONENT:
-			return createComponent();
-		case ProjectSierraModelPackage.SYSTEM:
-			return createSystem();
-		case ProjectSierraModelPackage.FUNCTION:
-			return createFunction();
+		case ProjectSierraModelPackage.CAPABILITTY:
+			return createCapabilitty();
+		case ProjectSierraModelPackage.ACTIVITY_DIAGRAM:
+			return createActivityDiagram();
+		case ProjectSierraModelPackage.EXCHANGE:
+			return createExchange();
 		case ProjectSierraModelPackage.ITEM:
 			return createItem();
-		case ProjectSierraModelPackage.CHAIN:
-			return createChain();
+		case ProjectSierraModelPackage.FUNCTION:
+			return createFunction();
 		case ProjectSierraModelPackage.PORT:
 			return createPort();
 		case ProjectSierraModelPackage.INPUT:
 			return createInput();
-		case ProjectSierraModelPackage.OUTPUT:
-			return createOutput();
-		case ProjectSierraModelPackage.EXCHANGE:
-			return createExchange();
-		case ProjectSierraModelPackage.REQUIREMENT:
-			return createRequirement();
+		case ProjectSierraModelPackage.OUPUT:
+			return createOuput();
+		case ProjectSierraModelPackage.ACTOR:
+			return createActor();
+		case ProjectSierraModelPackage.ENTITY:
+			return createEntity();
+		case ProjectSierraModelPackage.CHAIN:
+			return createChain();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -108,9 +88,9 @@ public class ProjectSierraModelFactoryImpl extends EFactoryImpl implements Proje
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Constraint createConstraint() {
-		ConstraintImpl constraint = new ConstraintImpl();
-		return constraint;
+	public Capabilitty createCapabilitty() {
+		CapabilittyImpl capabilitty = new CapabilittyImpl();
+		return capabilitty;
 	}
 
 	/**
@@ -118,9 +98,9 @@ public class ProjectSierraModelFactoryImpl extends EFactoryImpl implements Proje
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Capability createCapability() {
-		CapabilityImpl capability = new CapabilityImpl();
-		return capability;
+	public ActivityDiagram createActivityDiagram() {
+		ActivityDiagramImpl activityDiagram = new ActivityDiagramImpl();
+		return activityDiagram;
 	}
 
 	/**
@@ -141,26 +121,6 @@ public class ProjectSierraModelFactoryImpl extends EFactoryImpl implements Proje
 	public Entity createEntity() {
 		EntityImpl entity = new EntityImpl();
 		return entity;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Component createComponent() {
-		ComponentImpl component = new ComponentImpl();
-		return component;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public projectSierraModel.System createSystem() {
-		SystemImpl system = new SystemImpl();
-		return system;
 	}
 
 	/**
@@ -218,9 +178,9 @@ public class ProjectSierraModelFactoryImpl extends EFactoryImpl implements Proje
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Output createOutput() {
-		OutputImpl output = new OutputImpl();
-		return output;
+	public Ouput createOuput() {
+		OuputImpl ouput = new OuputImpl();
+		return ouput;
 	}
 
 	/**
@@ -231,16 +191,6 @@ public class ProjectSierraModelFactoryImpl extends EFactoryImpl implements Proje
 	public Exchange createExchange() {
 		ExchangeImpl exchange = new ExchangeImpl();
 		return exchange;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Requirement createRequirement() {
-		RequirementImpl requirement = new RequirementImpl();
-		return requirement;
 	}
 
 	/**

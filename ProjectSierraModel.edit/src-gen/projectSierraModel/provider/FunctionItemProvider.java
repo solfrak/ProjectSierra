@@ -19,7 +19,7 @@ import projectSierraModel.ProjectSierraModelPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class FunctionItemProvider extends ExchangingElementItemProvider {
+public class FunctionItemProvider extends ExchangeElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -43,7 +43,7 @@ public class FunctionItemProvider extends ExchangingElementItemProvider {
 
 			addHasPortPropertyDescriptor(object);
 			addHasInputPropertyDescriptor(object);
-			addHasOutputPropertyDescriptor(object);
+			addHasOuputPropertyDescriptor(object);
 			addIsPerformedByPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -80,18 +80,18 @@ public class FunctionItemProvider extends ExchangingElementItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Has Output feature.
+	 * This adds a property descriptor for the Has Ouput feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addHasOutputPropertyDescriptor(Object object) {
+	protected void addHasOuputPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Function_hasOutput_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Function_hasOutput_feature",
+						getResourceLocator(), getString("_UI_Function_hasOuput_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Function_hasOuput_feature",
 								"_UI_Function_type"),
-						ProjectSierraModelPackage.Literals.FUNCTION__HAS_OUTPUT, true, false, true, null, null, null));
+						ProjectSierraModelPackage.Literals.FUNCTION__HAS_OUPUT, true, false, true, null, null, null));
 	}
 
 	/**
