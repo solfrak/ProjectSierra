@@ -11,6 +11,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
+import projectSierraModel.Chain;
 import projectSierraModel.ProjectSierraModelPackage;
 
 /**
@@ -90,7 +91,9 @@ public class ChainItemProvider extends ContainableElementItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Chain_type");
+		String label = ((Chain) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_Chain_type")
+				: getString("_UI_Chain_type") + " " + label;
 	}
 
 	/**

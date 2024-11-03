@@ -11,6 +11,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
+import projectSierraModel.Capabilitty;
 import projectSierraModel.ProjectSierraModelPackage;
 
 /**
@@ -173,7 +174,9 @@ public class CapabilittyItemProvider extends SpecializableElementItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Capabilitty_type");
+		String label = ((Capabilitty) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_Capabilitty_type")
+				: getString("_UI_Capabilitty_type") + " " + label;
 	}
 
 	/**

@@ -21,12 +21,14 @@
         eOpposite="#//SpecializableElement/isSpecializedBy"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="isSpecializedBy" eType="#//SpecializableElement"
         eOpposite="#//SpecializableElement/specializes"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ContainableElement" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="contains" lowerBound="1"
         eType="#//ContainableElement" eOpposite="#//ContainableElement/isContainedIn"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="isContainedIn" eType="#//ContainableElement"
         eOpposite="#//ContainableElement/contains"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ActivityDiagram">
     <eStructuralFeatures xsi:type="ecore:EReference" name="containableElements" upperBound="-1"
@@ -38,7 +40,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="performingElements" upperBound="-1"
         eType="#//PerformingElement" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ExchangeElement" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExchangeElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Exchange" eSuperTypes="#//ContainableElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="sendsTo" lowerBound="1"
         eType="#//ExchangeElement"/>
@@ -71,8 +75,8 @@
         eOpposite="#//Function/hasOuput"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PerformingElement" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="performs" eType="#//Function"
-        eOpposite="#//Function/isPerformedBy"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="performs" upperBound="-1"
+        eType="#//Function" eOpposite="#//Function/isPerformedBy"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InvolveableElement" abstract="true"
       eSuperTypes="#//SpecializableElement">

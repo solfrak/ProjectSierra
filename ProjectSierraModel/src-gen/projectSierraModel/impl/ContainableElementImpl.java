@@ -24,6 +24,7 @@ import projectSierraModel.ProjectSierraModelPackage;
  * <ul>
  *   <li>{@link projectSierraModel.impl.ContainableElementImpl#getContains <em>Contains</em>}</li>
  *   <li>{@link projectSierraModel.impl.ContainableElementImpl#getIsContainedIn <em>Is Contained In</em>}</li>
+ *   <li>{@link projectSierraModel.impl.ContainableElementImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -48,6 +49,26 @@ public abstract class ContainableElementImpl extends MinimalEObjectImpl.Containe
 	 * @ordered
 	 */
 	protected ContainableElement isContainedIn;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -211,6 +232,28 @@ public abstract class ContainableElementImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ProjectSierraModelPackage.CONTAINABLE_ELEMENT__NAME,
+					oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -260,6 +303,8 @@ public abstract class ContainableElementImpl extends MinimalEObjectImpl.Containe
 			if (resolve)
 				return getIsContainedIn();
 			return basicGetIsContainedIn();
+		case ProjectSierraModelPackage.CONTAINABLE_ELEMENT__NAME:
+			return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -277,6 +322,9 @@ public abstract class ContainableElementImpl extends MinimalEObjectImpl.Containe
 			return;
 		case ProjectSierraModelPackage.CONTAINABLE_ELEMENT__IS_CONTAINED_IN:
 			setIsContainedIn((ContainableElement) newValue);
+			return;
+		case ProjectSierraModelPackage.CONTAINABLE_ELEMENT__NAME:
+			setName((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -296,6 +344,9 @@ public abstract class ContainableElementImpl extends MinimalEObjectImpl.Containe
 		case ProjectSierraModelPackage.CONTAINABLE_ELEMENT__IS_CONTAINED_IN:
 			setIsContainedIn((ContainableElement) null);
 			return;
+		case ProjectSierraModelPackage.CONTAINABLE_ELEMENT__NAME:
+			setName(NAME_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -312,8 +363,27 @@ public abstract class ContainableElementImpl extends MinimalEObjectImpl.Containe
 			return contains != null;
 		case ProjectSierraModelPackage.CONTAINABLE_ELEMENT__IS_CONTAINED_IN:
 			return isContainedIn != null;
+		case ProjectSierraModelPackage.CONTAINABLE_ELEMENT__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //ContainableElementImpl

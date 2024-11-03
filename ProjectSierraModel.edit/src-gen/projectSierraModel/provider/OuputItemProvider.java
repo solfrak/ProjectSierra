@@ -11,6 +11,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
+import projectSierraModel.Ouput;
 import projectSierraModel.ProjectSierraModelPackage;
 
 /**
@@ -90,7 +91,9 @@ public class OuputItemProvider extends PortItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Ouput_type");
+		String label = ((Ouput) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_Ouput_type")
+				: getString("_UI_Ouput_type") + " " + label;
 	}
 
 	/**

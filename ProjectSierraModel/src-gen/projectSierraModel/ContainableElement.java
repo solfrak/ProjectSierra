@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link projectSierraModel.ContainableElement#getContains <em>Contains</em>}</li>
  *   <li>{@link projectSierraModel.ContainableElement#getIsContainedIn <em>Is Contained In</em>}</li>
+ *   <li>{@link projectSierraModel.ContainableElement#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see projectSierraModel.ProjectSierraModelPackage#getContainableElement()
@@ -69,5 +70,27 @@ public interface ContainableElement extends EObject {
 	 * @generated
 	 */
 	void setIsContainedIn(ContainableElement value);
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see projectSierraModel.ProjectSierraModelPackage#getContainableElement_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link projectSierraModel.ContainableElement#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
 
 } // ContainableElement

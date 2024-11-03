@@ -22,6 +22,7 @@ import projectSierraModel.SpecializableElement;
  * <ul>
  *   <li>{@link projectSierraModel.impl.SpecializableElementImpl#getSpecializes <em>Specializes</em>}</li>
  *   <li>{@link projectSierraModel.impl.SpecializableElementImpl#getIsSpecializedBy <em>Is Specialized By</em>}</li>
+ *   <li>{@link projectSierraModel.impl.SpecializableElementImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -46,6 +47,26 @@ public abstract class SpecializableElementImpl extends MinimalEObjectImpl.Contai
 	 * @ordered
 	 */
 	protected SpecializableElement isSpecializedBy;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -212,6 +233,28 @@ public abstract class SpecializableElementImpl extends MinimalEObjectImpl.Contai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__NAME,
+					oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -263,6 +306,8 @@ public abstract class SpecializableElementImpl extends MinimalEObjectImpl.Contai
 			if (resolve)
 				return getIsSpecializedBy();
 			return basicGetIsSpecializedBy();
+		case ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__NAME:
+			return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -282,6 +327,9 @@ public abstract class SpecializableElementImpl extends MinimalEObjectImpl.Contai
 		case ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__IS_SPECIALIZED_BY:
 			setIsSpecializedBy((SpecializableElement) newValue);
 			return;
+		case ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__NAME:
+			setName((String) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -300,6 +348,9 @@ public abstract class SpecializableElementImpl extends MinimalEObjectImpl.Contai
 		case ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__IS_SPECIALIZED_BY:
 			setIsSpecializedBy((SpecializableElement) null);
 			return;
+		case ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__NAME:
+			setName(NAME_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -316,8 +367,27 @@ public abstract class SpecializableElementImpl extends MinimalEObjectImpl.Contai
 			return specializes != null;
 		case ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__IS_SPECIALIZED_BY:
 			return isSpecializedBy != null;
+		case ProjectSierraModelPackage.SPECIALIZABLE_ELEMENT__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //SpecializableElementImpl

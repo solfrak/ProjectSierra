@@ -141,7 +141,9 @@ public class ExchangeItemProvider extends ContainableElementItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Exchange_type");
+		String label = ((Exchange) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_Exchange_type")
+				: getString("_UI_Exchange_type") + " " + label;
 	}
 
 	/**

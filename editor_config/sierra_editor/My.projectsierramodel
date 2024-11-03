@@ -1,2 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<projectSierraModel:ActivityDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:projectSierraModel="http://www.example.org/projectSierraModel"/>
+<projectSierraModel:ActivityDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:projectSierraModel="http://www.example.org/projectSierraModel">
+  <containableElements xsi:type="projectSierraModel:Exchange" isContainedIn="//@containableElements.1" name="Exchange1" sendsTo="//@exchangeElements.0" receivesFrom="//@exchangeElements.1"/>
+  <containableElements xsi:type="projectSierraModel:Chain" contains="//@containableElements.0" name="Provide_24h_Visibility" implements="//@specializableElements.0"/>
+  <specializableElements xsi:type="projectSierraModel:Capabilitty" name="Provide_24h_Visibility" isImplementedBy="//@containableElements.1" involves="//@specializableElements.2 //@specializableElements.1"/>
+  <specializableElements xsi:type="projectSierraModel:Actor" name="User" isInvolvedIn="//@specializableElements.0" performs="//@exchangeElements.2 //@exchangeElements.0"/>
+  <specializableElements xsi:type="projectSierraModel:Actor" name="Charger" isInvolvedIn="//@specializableElements.0" performs="//@exchangeElements.1"/>
+  <exchangeElements xsi:type="projectSierraModel:Function" name="Locate_Charger" isPerformedBy="//@specializableElements.1"/>
+  <exchangeElements xsi:type="projectSierraModel:Function" name="Illuminate_At_Night" isPerformedBy="//@specializableElements.2"/>
+  <exchangeElements xsi:type="projectSierraModel:Function" name="Connect_Device" isPerformedBy="//@specializableElements.1"/>
+</projectSierraModel:ActivityDiagram>

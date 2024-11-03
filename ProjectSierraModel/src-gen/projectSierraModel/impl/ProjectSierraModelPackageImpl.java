@@ -2,6 +2,7 @@
  */
 package projectSierraModel.impl;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -306,6 +307,15 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getSpecializableElement_Name() {
+		return (EAttribute) specializableElementEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getContainableElement() {
 		return containableElementEClass;
 	}
@@ -326,6 +336,15 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 	 */
 	public EReference getContainableElement_IsContainedIn() {
 		return (EReference) containableElementEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getContainableElement_Name() {
+		return (EAttribute) containableElementEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -380,6 +399,15 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 	 */
 	public EClass getExchangeElement() {
 		return exchangeElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExchangeElement_Name() {
+		return (EAttribute) exchangeElementEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -638,10 +666,12 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 		specializableElementEClass = createEClass(SPECIALIZABLE_ELEMENT);
 		createEReference(specializableElementEClass, SPECIALIZABLE_ELEMENT__SPECIALIZES);
 		createEReference(specializableElementEClass, SPECIALIZABLE_ELEMENT__IS_SPECIALIZED_BY);
+		createEAttribute(specializableElementEClass, SPECIALIZABLE_ELEMENT__NAME);
 
 		containableElementEClass = createEClass(CONTAINABLE_ELEMENT);
 		createEReference(containableElementEClass, CONTAINABLE_ELEMENT__CONTAINS);
 		createEReference(containableElementEClass, CONTAINABLE_ELEMENT__IS_CONTAINED_IN);
+		createEAttribute(containableElementEClass, CONTAINABLE_ELEMENT__NAME);
 
 		activityDiagramEClass = createEClass(ACTIVITY_DIAGRAM);
 		createEReference(activityDiagramEClass, ACTIVITY_DIAGRAM__CONTAINABLE_ELEMENTS);
@@ -650,6 +680,7 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 		createEReference(activityDiagramEClass, ACTIVITY_DIAGRAM__PERFORMING_ELEMENTS);
 
 		exchangeElementEClass = createEClass(EXCHANGE_ELEMENT);
+		createEAttribute(exchangeElementEClass, EXCHANGE_ELEMENT__NAME);
 
 		exchangeEClass = createEClass(EXCHANGE);
 		createEReference(exchangeEClass, EXCHANGE__SENDS_TO);
@@ -762,6 +793,9 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 				this.getSpecializableElement_Specializes(), "isSpecializedBy", null, 0, 1, SpecializableElement.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSpecializableElement_Name(), ecorePackage.getEString(), "name", null, 0, 1,
+				SpecializableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(containableElementEClass, ContainableElement.class, "ContainableElement", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -773,6 +807,9 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 				this.getContainableElement_Contains(), "isContainedIn", null, 0, 1, ContainableElement.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getContainableElement_Name(), ecorePackage.getEString(), "name", null, 0, 1,
+				ContainableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(activityDiagramEClass, ActivityDiagram.class, "ActivityDiagram", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -791,6 +828,8 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 
 		initEClass(exchangeElementEClass, ExchangeElement.class, "ExchangeElement", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getExchangeElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, ExchangeElement.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(exchangeEClass, Exchange.class, "Exchange", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -839,7 +878,7 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 		initEClass(performingElementEClass, PerformingElement.class, "PerformingElement", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPerformingElement_Performs(), this.getFunction(), this.getFunction_IsPerformedBy(),
-				"performs", null, 0, 1, PerformingElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				"performs", null, 0, -1, PerformingElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(involveableElementEClass, InvolveableElement.class, "InvolveableElement", IS_ABSTRACT, !IS_INTERFACE,

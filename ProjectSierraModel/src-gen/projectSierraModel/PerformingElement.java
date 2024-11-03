@@ -2,6 +2,7 @@
  */
 package projectSierraModel;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -22,27 +23,17 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface PerformingElement extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Performs</b></em>' reference.
+	 * Returns the value of the '<em><b>Performs</b></em>' reference list.
+	 * The list contents are of type {@link projectSierraModel.Function}.
 	 * It is bidirectional and its opposite is '{@link projectSierraModel.Function#getIsPerformedBy <em>Is Performed By</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Performs</em>' reference.
-	 * @see #setPerforms(Function)
+	 * @return the value of the '<em>Performs</em>' reference list.
 	 * @see projectSierraModel.ProjectSierraModelPackage#getPerformingElement_Performs()
 	 * @see projectSierraModel.Function#getIsPerformedBy
 	 * @model opposite="isPerformedBy"
 	 * @generated
 	 */
-	Function getPerforms();
-
-	/**
-	 * Sets the value of the '{@link projectSierraModel.PerformingElement#getPerforms <em>Performs</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Performs</em>' reference.
-	 * @see #getPerforms()
-	 * @generated
-	 */
-	void setPerforms(Function value);
+	EList<Function> getPerforms();
 
 } // PerformingElement

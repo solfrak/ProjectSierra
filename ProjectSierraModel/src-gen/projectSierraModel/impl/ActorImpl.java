@@ -2,12 +2,14 @@
  */
 package projectSierraModel.impl;
 
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 import projectSierraModel.Actor;
 import projectSierraModel.Function;
 import projectSierraModel.PerformingElement;
@@ -28,14 +30,14 @@ import projectSierraModel.ProjectSierraModelPackage;
  */
 public class ActorImpl extends InvolveableElementImpl implements Actor {
 	/**
-	 * The cached value of the '{@link #getPerforms() <em>Performs</em>}' reference.
+	 * The cached value of the '{@link #getPerforms() <em>Performs</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getPerforms()
 	 * @generated
 	 * @ordered
 	 */
-	protected Function performs;
+	protected EList<Function> performs;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -61,15 +63,10 @@ public class ActorImpl extends InvolveableElementImpl implements Actor {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Function getPerforms() {
-		if (performs != null && performs.eIsProxy()) {
-			InternalEObject oldPerforms = (InternalEObject) performs;
-			performs = (Function) eResolveProxy(oldPerforms);
-			if (performs != oldPerforms) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ProjectSierraModelPackage.ACTOR__PERFORMS,
-							oldPerforms, performs));
-			}
+	public EList<Function> getPerforms() {
+		if (performs == null) {
+			performs = new EObjectWithInverseResolvingEList<Function>(Function.class, this,
+					ProjectSierraModelPackage.ACTOR__PERFORMS, ProjectSierraModelPackage.FUNCTION__IS_PERFORMED_BY);
 		}
 		return performs;
 	}
@@ -79,64 +76,12 @@ public class ActorImpl extends InvolveableElementImpl implements Actor {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Function basicGetPerforms() {
-		return performs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetPerforms(Function newPerforms, NotificationChain msgs) {
-		Function oldPerforms = performs;
-		performs = newPerforms;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					ProjectSierraModelPackage.ACTOR__PERFORMS, oldPerforms, newPerforms);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPerforms(Function newPerforms) {
-		if (newPerforms != performs) {
-			NotificationChain msgs = null;
-			if (performs != null)
-				msgs = ((InternalEObject) performs).eInverseRemove(this,
-						ProjectSierraModelPackage.FUNCTION__IS_PERFORMED_BY, Function.class, msgs);
-			if (newPerforms != null)
-				msgs = ((InternalEObject) newPerforms).eInverseAdd(this,
-						ProjectSierraModelPackage.FUNCTION__IS_PERFORMED_BY, Function.class, msgs);
-			msgs = basicSetPerforms(newPerforms, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ProjectSierraModelPackage.ACTOR__PERFORMS,
-					newPerforms, newPerforms));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case ProjectSierraModelPackage.ACTOR__PERFORMS:
-			if (performs != null)
-				msgs = ((InternalEObject) performs).eInverseRemove(this,
-						ProjectSierraModelPackage.FUNCTION__IS_PERFORMED_BY, Function.class, msgs);
-			return basicSetPerforms((Function) otherEnd, msgs);
+			return ((InternalEList<InternalEObject>) (InternalEList<?>) getPerforms()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -150,7 +95,7 @@ public class ActorImpl extends InvolveableElementImpl implements Actor {
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case ProjectSierraModelPackage.ACTOR__PERFORMS:
-			return basicSetPerforms(null, msgs);
+			return ((InternalEList<?>) getPerforms()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -164,9 +109,7 @@ public class ActorImpl extends InvolveableElementImpl implements Actor {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case ProjectSierraModelPackage.ACTOR__PERFORMS:
-			if (resolve)
-				return getPerforms();
-			return basicGetPerforms();
+			return getPerforms();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -176,11 +119,13 @@ public class ActorImpl extends InvolveableElementImpl implements Actor {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case ProjectSierraModelPackage.ACTOR__PERFORMS:
-			setPerforms((Function) newValue);
+			getPerforms().clear();
+			getPerforms().addAll((Collection<? extends Function>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -195,7 +140,7 @@ public class ActorImpl extends InvolveableElementImpl implements Actor {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 		case ProjectSierraModelPackage.ACTOR__PERFORMS:
-			setPerforms((Function) null);
+			getPerforms().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -210,7 +155,7 @@ public class ActorImpl extends InvolveableElementImpl implements Actor {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case ProjectSierraModelPackage.ACTOR__PERFORMS:
-			return performs != null;
+			return performs != null && !performs.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

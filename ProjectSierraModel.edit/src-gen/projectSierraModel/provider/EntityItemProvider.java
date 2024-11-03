@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import projectSierraModel.Entity;
 import projectSierraModel.ProjectSierraModelPackage;
 
 /**
@@ -89,7 +90,9 @@ public class EntityItemProvider extends InvolveableElementItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Entity_type");
+		String label = ((Entity) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_Entity_type")
+				: getString("_UI_Entity_type") + " " + label;
 	}
 
 	/**

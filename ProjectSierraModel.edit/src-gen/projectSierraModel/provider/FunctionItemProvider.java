@@ -11,6 +11,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
+import projectSierraModel.Function;
 import projectSierraModel.ProjectSierraModelPackage;
 
 /**
@@ -139,7 +140,9 @@ public class FunctionItemProvider extends ExchangeElementItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Function_type");
+		String label = ((Function) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_Function_type")
+				: getString("_UI_Function_type") + " " + label;
 	}
 
 	/**

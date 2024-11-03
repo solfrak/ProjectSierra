@@ -11,6 +11,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
+import projectSierraModel.Port;
 import projectSierraModel.ProjectSierraModelPackage;
 
 /**
@@ -89,7 +90,9 @@ public class PortItemProvider extends ExchangeElementItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Port_type");
+		String label = ((Port) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_Port_type")
+				: getString("_UI_Port_type") + " " + label;
 	}
 
 	/**

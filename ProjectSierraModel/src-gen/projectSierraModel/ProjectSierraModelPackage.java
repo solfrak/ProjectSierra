@@ -2,6 +2,7 @@
  */
 package projectSierraModel;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -84,13 +85,22 @@ public interface ProjectSierraModelPackage extends EPackage {
 	int SPECIALIZABLE_ELEMENT__IS_SPECIALIZED_BY = 1;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIALIZABLE_ELEMENT__NAME = 2;
+
+	/**
 	 * The number of structural features of the '<em>Specializable Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIALIZABLE_ELEMENT_FEATURE_COUNT = 2;
+	int SPECIALIZABLE_ELEMENT_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Specializable Element</em>' class.
@@ -128,6 +138,15 @@ public interface ProjectSierraModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int CAPABILITTY__IS_SPECIALIZED_BY = SPECIALIZABLE_ELEMENT__IS_SPECIALIZED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITTY__NAME = SPECIALIZABLE_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Includes</b></em>' reference list.
@@ -230,13 +249,22 @@ public interface ProjectSierraModelPackage extends EPackage {
 	int CONTAINABLE_ELEMENT__IS_CONTAINED_IN = 1;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINABLE_ELEMENT__NAME = 2;
+
+	/**
 	 * The number of structural features of the '<em>Containable Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINABLE_ELEMENT_FEATURE_COUNT = 2;
+	int CONTAINABLE_ELEMENT_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Containable Element</em>' class.
@@ -322,13 +350,22 @@ public interface ProjectSierraModelPackage extends EPackage {
 	int EXCHANGE_ELEMENT = 4;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXCHANGE_ELEMENT__NAME = 0;
+
+	/**
 	 * The number of structural features of the '<em>Exchange Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXCHANGE_ELEMENT_FEATURE_COUNT = 0;
+	int EXCHANGE_ELEMENT_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Exchange Element</em>' class.
@@ -544,6 +581,15 @@ public interface ProjectSierraModelPackage extends EPackage {
 	int EXCHANGE__IS_CONTAINED_IN = CONTAINABLE_ELEMENT__IS_CONTAINED_IN;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXCHANGE__NAME = CONTAINABLE_ELEMENT__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Sends To</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -607,6 +653,15 @@ public interface ProjectSierraModelPackage extends EPackage {
 	int ITEM_OPERATION_COUNT = 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION__NAME = EXCHANGE_ELEMENT__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Has Port</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -661,6 +716,15 @@ public interface ProjectSierraModelPackage extends EPackage {
 	int FUNCTION_OPERATION_COUNT = EXCHANGE_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PORT__NAME = EXCHANGE_ELEMENT__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Is Port Of</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -686,6 +750,15 @@ public interface ProjectSierraModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int PORT_OPERATION_COUNT = EXCHANGE_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT__NAME = PORT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Is Port Of</b></em>' reference.
@@ -724,6 +797,15 @@ public interface ProjectSierraModelPackage extends EPackage {
 	int INPUT_OPERATION_COUNT = PORT_OPERATION_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUPUT__NAME = PORT__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Is Port Of</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -760,7 +842,7 @@ public interface ProjectSierraModelPackage extends EPackage {
 	int OUPUT_OPERATION_COUNT = PORT_OPERATION_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Performs</b></em>' reference.
+	 * The feature id for the '<em><b>Performs</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -803,6 +885,15 @@ public interface ProjectSierraModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int INVOLVEABLE_ELEMENT__IS_SPECIALIZED_BY = SPECIALIZABLE_ELEMENT__IS_SPECIALIZED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INVOLVEABLE_ELEMENT__NAME = SPECIALIZABLE_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Is Involved In</b></em>' reference.
@@ -850,6 +941,15 @@ public interface ProjectSierraModelPackage extends EPackage {
 	int ACTOR__IS_SPECIALIZED_BY = INVOLVEABLE_ELEMENT__IS_SPECIALIZED_BY;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTOR__NAME = INVOLVEABLE_ELEMENT__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Is Involved In</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -859,7 +959,7 @@ public interface ProjectSierraModelPackage extends EPackage {
 	int ACTOR__IS_INVOLVED_IN = INVOLVEABLE_ELEMENT__IS_INVOLVED_IN;
 
 	/**
-	 * The feature id for the '<em><b>Performs</b></em>' reference.
+	 * The feature id for the '<em><b>Performs</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -904,6 +1004,15 @@ public interface ProjectSierraModelPackage extends EPackage {
 	int ENTITY__IS_SPECIALIZED_BY = INVOLVEABLE_ELEMENT__IS_SPECIALIZED_BY;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__NAME = INVOLVEABLE_ELEMENT__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Is Involved In</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -913,7 +1022,7 @@ public interface ProjectSierraModelPackage extends EPackage {
 	int ENTITY__IS_INVOLVED_IN = INVOLVEABLE_ELEMENT__IS_INVOLVED_IN;
 
 	/**
-	 * The feature id for the '<em><b>Performs</b></em>' reference.
+	 * The feature id for the '<em><b>Performs</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -956,6 +1065,15 @@ public interface ProjectSierraModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int CHAIN__IS_CONTAINED_IN = CONTAINABLE_ELEMENT__IS_CONTAINED_IN;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHAIN__NAME = CONTAINABLE_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Implements</b></em>' reference.
@@ -1017,6 +1135,17 @@ public interface ProjectSierraModelPackage extends EPackage {
 	EReference getSpecializableElement_IsSpecializedBy();
 
 	/**
+	 * Returns the meta object for the attribute '{@link projectSierraModel.SpecializableElement#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see projectSierraModel.SpecializableElement#getName()
+	 * @see #getSpecializableElement()
+	 * @generated
+	 */
+	EAttribute getSpecializableElement_Name();
+
+	/**
 	 * Returns the meta object for class '{@link projectSierraModel.ContainableElement <em>Containable Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1047,6 +1176,17 @@ public interface ProjectSierraModelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getContainableElement_IsContainedIn();
+
+	/**
+	 * Returns the meta object for the attribute '{@link projectSierraModel.ContainableElement#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see projectSierraModel.ContainableElement#getName()
+	 * @see #getContainableElement()
+	 * @generated
+	 */
+	EAttribute getContainableElement_Name();
 
 	/**
 	 * Returns the meta object for class '{@link projectSierraModel.ActivityDiagram <em>Activity Diagram</em>}'.
@@ -1113,6 +1253,17 @@ public interface ProjectSierraModelPackage extends EPackage {
 	EClass getExchangeElement();
 
 	/**
+	 * Returns the meta object for the attribute '{@link projectSierraModel.ExchangeElement#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see projectSierraModel.ExchangeElement#getName()
+	 * @see #getExchangeElement()
+	 * @generated
+	 */
+	EAttribute getExchangeElement_Name();
+
+	/**
 	 * Returns the meta object for class '{@link projectSierraModel.Actor <em>Actor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1143,10 +1294,10 @@ public interface ProjectSierraModelPackage extends EPackage {
 	EClass getPerformingElement();
 
 	/**
-	 * Returns the meta object for the reference '{@link projectSierraModel.PerformingElement#getPerforms <em>Performs</em>}'.
+	 * Returns the meta object for the reference list '{@link projectSierraModel.PerformingElement#getPerforms <em>Performs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Performs</em>'.
+	 * @return the meta object for the reference list '<em>Performs</em>'.
 	 * @see projectSierraModel.PerformingElement#getPerforms()
 	 * @see #getPerformingElement()
 	 * @generated
@@ -1473,6 +1624,14 @@ public interface ProjectSierraModelPackage extends EPackage {
 		EReference SPECIALIZABLE_ELEMENT__IS_SPECIALIZED_BY = eINSTANCE.getSpecializableElement_IsSpecializedBy();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SPECIALIZABLE_ELEMENT__NAME = eINSTANCE.getSpecializableElement_Name();
+
+		/**
 		 * The meta object literal for the '{@link projectSierraModel.impl.ContainableElementImpl <em>Containable Element</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1497,6 +1656,14 @@ public interface ProjectSierraModelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CONTAINABLE_ELEMENT__IS_CONTAINED_IN = eINSTANCE.getContainableElement_IsContainedIn();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONTAINABLE_ELEMENT__NAME = eINSTANCE.getContainableElement_Name();
 
 		/**
 		 * The meta object literal for the '{@link projectSierraModel.impl.ActivityDiagramImpl <em>Activity Diagram</em>}' class.
@@ -1551,6 +1718,14 @@ public interface ProjectSierraModelPackage extends EPackage {
 		EClass EXCHANGE_ELEMENT = eINSTANCE.getExchangeElement();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXCHANGE_ELEMENT__NAME = eINSTANCE.getExchangeElement_Name();
+
+		/**
 		 * The meta object literal for the '{@link projectSierraModel.impl.ActorImpl <em>Actor</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1581,7 +1756,7 @@ public interface ProjectSierraModelPackage extends EPackage {
 		EClass PERFORMING_ELEMENT = eINSTANCE.getPerformingElement();
 
 		/**
-		 * The meta object literal for the '<em><b>Performs</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Performs</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

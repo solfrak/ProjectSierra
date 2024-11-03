@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link projectSierraModel.SpecializableElement#getSpecializes <em>Specializes</em>}</li>
  *   <li>{@link projectSierraModel.SpecializableElement#getIsSpecializedBy <em>Is Specialized By</em>}</li>
+ *   <li>{@link projectSierraModel.SpecializableElement#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see projectSierraModel.ProjectSierraModelPackage#getSpecializableElement()
@@ -69,5 +70,27 @@ public interface SpecializableElement extends EObject {
 	 * @generated
 	 */
 	void setIsSpecializedBy(SpecializableElement value);
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see projectSierraModel.ProjectSierraModelPackage#getSpecializableElement_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link projectSierraModel.SpecializableElement#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
 
 } // SpecializableElement

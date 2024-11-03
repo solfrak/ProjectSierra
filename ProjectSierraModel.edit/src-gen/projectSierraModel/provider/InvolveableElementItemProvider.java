@@ -11,6 +11,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
+import projectSierraModel.InvolveableElement;
 import projectSierraModel.ProjectSierraModelPackage;
 
 /**
@@ -91,7 +92,9 @@ public class InvolveableElementItemProvider extends SpecializableElementItemProv
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_InvolveableElement_type");
+		String label = ((InvolveableElement) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_InvolveableElement_type")
+				: getString("_UI_InvolveableElement_type") + " " + label;
 	}
 
 	/**
