@@ -304,22 +304,13 @@ public interface ProjectSierraModelPackage extends EPackage {
 	int ACTIVITY_DIAGRAM__SPECIALIZABLE_ELEMENTS = 1;
 
 	/**
-	 * The feature id for the '<em><b>Exchange Elements</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITY_DIAGRAM__EXCHANGE_ELEMENTS = 2;
-
-	/**
 	 * The feature id for the '<em><b>Performing Elements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY_DIAGRAM__PERFORMING_ELEMENTS = 3;
+	int ACTIVITY_DIAGRAM__PERFORMING_ELEMENTS = 2;
 
 	/**
 	 * The number of structural features of the '<em>Activity Diagram</em>' class.
@@ -328,7 +319,7 @@ public interface ProjectSierraModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY_DIAGRAM_FEATURE_COUNT = 4;
+	int ACTIVITY_DIAGRAM_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Activity Diagram</em>' class.
@@ -851,13 +842,22 @@ public interface ProjectSierraModelPackage extends EPackage {
 	int PERFORMING_ELEMENT__PERFORMS = 0;
 
 	/**
+	 * The feature id for the '<em><b>Exchange Elements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERFORMING_ELEMENT__EXCHANGE_ELEMENTS = 1;
+
+	/**
 	 * The number of structural features of the '<em>Performing Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PERFORMING_ELEMENT_FEATURE_COUNT = 1;
+	int PERFORMING_ELEMENT_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Performing Element</em>' class.
@@ -968,13 +968,22 @@ public interface ProjectSierraModelPackage extends EPackage {
 	int ACTOR__PERFORMS = INVOLVEABLE_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Exchange Elements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTOR__EXCHANGE_ELEMENTS = INVOLVEABLE_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Actor</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTOR_FEATURE_COUNT = INVOLVEABLE_ELEMENT_FEATURE_COUNT + 1;
+	int ACTOR_FEATURE_COUNT = INVOLVEABLE_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Actor</em>' class.
@@ -1031,13 +1040,22 @@ public interface ProjectSierraModelPackage extends EPackage {
 	int ENTITY__PERFORMS = INVOLVEABLE_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Exchange Elements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__EXCHANGE_ELEMENTS = INVOLVEABLE_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Entity</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE_COUNT = INVOLVEABLE_ELEMENT_FEATURE_COUNT + 1;
+	int ENTITY_FEATURE_COUNT = INVOLVEABLE_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Entity</em>' class.
@@ -1221,17 +1239,6 @@ public interface ProjectSierraModelPackage extends EPackage {
 	EReference getActivityDiagram_SpecializableElements();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link projectSierraModel.ActivityDiagram#getExchangeElements <em>Exchange Elements</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Exchange Elements</em>'.
-	 * @see projectSierraModel.ActivityDiagram#getExchangeElements()
-	 * @see #getActivityDiagram()
-	 * @generated
-	 */
-	EReference getActivityDiagram_ExchangeElements();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link projectSierraModel.ActivityDiagram#getPerformingElements <em>Performing Elements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1303,6 +1310,17 @@ public interface ProjectSierraModelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPerformingElement_Performs();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link projectSierraModel.PerformingElement#getExchangeElements <em>Exchange Elements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Exchange Elements</em>'.
+	 * @see projectSierraModel.PerformingElement#getExchangeElements()
+	 * @see #getPerformingElement()
+	 * @generated
+	 */
+	EReference getPerformingElement_ExchangeElements();
 
 	/**
 	 * Returns the meta object for class '{@link projectSierraModel.InvolveableElement <em>Involveable Element</em>}'.
@@ -1692,14 +1710,6 @@ public interface ProjectSierraModelPackage extends EPackage {
 		EReference ACTIVITY_DIAGRAM__SPECIALIZABLE_ELEMENTS = eINSTANCE.getActivityDiagram_SpecializableElements();
 
 		/**
-		 * The meta object literal for the '<em><b>Exchange Elements</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ACTIVITY_DIAGRAM__EXCHANGE_ELEMENTS = eINSTANCE.getActivityDiagram_ExchangeElements();
-
-		/**
 		 * The meta object literal for the '<em><b>Performing Elements</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1762,6 +1772,14 @@ public interface ProjectSierraModelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PERFORMING_ELEMENT__PERFORMS = eINSTANCE.getPerformingElement_Performs();
+
+		/**
+		 * The meta object literal for the '<em><b>Exchange Elements</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PERFORMING_ELEMENT__EXCHANGE_ELEMENTS = eINSTANCE.getPerformingElement_ExchangeElements();
 
 		/**
 		 * The meta object literal for the '{@link projectSierraModel.impl.InvolveableElementImpl <em>Involveable Element</em>}' class.

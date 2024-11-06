@@ -17,7 +17,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link projectSierraModel.ActivityDiagram#getContainableElements <em>Containable Elements</em>}</li>
  *   <li>{@link projectSierraModel.ActivityDiagram#getSpecializableElements <em>Specializable Elements</em>}</li>
- *   <li>{@link projectSierraModel.ActivityDiagram#getExchangeElements <em>Exchange Elements</em>}</li>
  *   <li>{@link projectSierraModel.ActivityDiagram#getPerformingElements <em>Performing Elements</em>}</li>
  * </ul>
  *
@@ -49,18 +48,6 @@ public interface ActivityDiagram extends EObject {
 	 * @generated
 	 */
 	EList<SpecializableElement> getSpecializableElements();
-
-	/**
-	 * Returns the value of the '<em><b>Exchange Elements</b></em>' containment reference list.
-	 * The list contents are of type {@link projectSierraModel.ExchangeElement}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Exchange Elements</em>' containment reference list.
-	 * @see projectSierraModel.ProjectSierraModelPackage#getActivityDiagram_ExchangeElements()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<ExchangeElement> getExchangeElements();
 
 	/**
 	 * Returns the value of the '<em><b>Performing Elements</b></em>' containment reference list.

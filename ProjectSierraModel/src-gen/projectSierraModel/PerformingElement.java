@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link projectSierraModel.PerformingElement#getPerforms <em>Performs</em>}</li>
+ *   <li>{@link projectSierraModel.PerformingElement#getExchangeElements <em>Exchange Elements</em>}</li>
  * </ul>
  *
  * @see projectSierraModel.ProjectSierraModelPackage#getPerformingElement()
@@ -35,5 +36,17 @@ public interface PerformingElement extends EObject {
 	 * @generated
 	 */
 	EList<Function> getPerforms();
+
+	/**
+	 * Returns the value of the '<em><b>Exchange Elements</b></em>' containment reference list.
+	 * The list contents are of type {@link projectSierraModel.ExchangeElement}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Exchange Elements</em>' containment reference list.
+	 * @see projectSierraModel.ProjectSierraModelPackage#getPerformingElement_ExchangeElements()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<ExchangeElement> getExchangeElements();
 
 } // PerformingElement

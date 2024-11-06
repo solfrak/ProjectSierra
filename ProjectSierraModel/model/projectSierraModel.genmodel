@@ -30,7 +30,6 @@
     <genClasses ecoreClass="projectSierraModel.ecore#//ActivityDiagram">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//ActivityDiagram/containableElements"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//ActivityDiagram/specializableElements"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//ActivityDiagram/exchangeElements"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//ActivityDiagram/performingElements"/>
     </genClasses>
     <genClasses ecoreClass="projectSierraModel.ecore#//ExchangeElement">
@@ -59,6 +58,7 @@
     </genClasses>
     <genClasses ecoreClass="projectSierraModel.ecore#//PerformingElement">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//PerformingElement/performs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//PerformingElement/exchangeElements"/>
     </genClasses>
     <genClasses ecoreClass="projectSierraModel.ecore#//InvolveableElement">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//InvolveableElement/isInvolvedIn"/>

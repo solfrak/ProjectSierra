@@ -18,7 +18,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import projectSierraModel.ActivityDiagram;
 import projectSierraModel.ContainableElement;
-import projectSierraModel.ExchangeElement;
 import projectSierraModel.PerformingElement;
 import projectSierraModel.ProjectSierraModelPackage;
 import projectSierraModel.SpecializableElement;
@@ -33,7 +32,6 @@ import projectSierraModel.SpecializableElement;
  * <ul>
  *   <li>{@link projectSierraModel.impl.ActivityDiagramImpl#getContainableElements <em>Containable Elements</em>}</li>
  *   <li>{@link projectSierraModel.impl.ActivityDiagramImpl#getSpecializableElements <em>Specializable Elements</em>}</li>
- *   <li>{@link projectSierraModel.impl.ActivityDiagramImpl#getExchangeElements <em>Exchange Elements</em>}</li>
  *   <li>{@link projectSierraModel.impl.ActivityDiagramImpl#getPerformingElements <em>Performing Elements</em>}</li>
  * </ul>
  *
@@ -59,16 +57,6 @@ public class ActivityDiagramImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected EList<SpecializableElement> specializableElements;
-
-	/**
-	 * The cached value of the '{@link #getExchangeElements() <em>Exchange Elements</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExchangeElements()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ExchangeElement> exchangeElements;
 
 	/**
 	 * The cached value of the '{@link #getPerformingElements() <em>Performing Elements</em>}' containment reference list.
@@ -130,19 +118,6 @@ public class ActivityDiagramImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ExchangeElement> getExchangeElements() {
-		if (exchangeElements == null) {
-			exchangeElements = new EObjectContainmentEList<ExchangeElement>(ExchangeElement.class, this,
-					ProjectSierraModelPackage.ACTIVITY_DIAGRAM__EXCHANGE_ELEMENTS);
-		}
-		return exchangeElements;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<PerformingElement> getPerformingElements() {
 		if (performingElements == null) {
 			performingElements = new EObjectContainmentEList<PerformingElement>(PerformingElement.class, this,
@@ -163,8 +138,6 @@ public class ActivityDiagramImpl extends MinimalEObjectImpl.Container implements
 			return ((InternalEList<?>) getContainableElements()).basicRemove(otherEnd, msgs);
 		case ProjectSierraModelPackage.ACTIVITY_DIAGRAM__SPECIALIZABLE_ELEMENTS:
 			return ((InternalEList<?>) getSpecializableElements()).basicRemove(otherEnd, msgs);
-		case ProjectSierraModelPackage.ACTIVITY_DIAGRAM__EXCHANGE_ELEMENTS:
-			return ((InternalEList<?>) getExchangeElements()).basicRemove(otherEnd, msgs);
 		case ProjectSierraModelPackage.ACTIVITY_DIAGRAM__PERFORMING_ELEMENTS:
 			return ((InternalEList<?>) getPerformingElements()).basicRemove(otherEnd, msgs);
 		}
@@ -183,8 +156,6 @@ public class ActivityDiagramImpl extends MinimalEObjectImpl.Container implements
 			return getContainableElements();
 		case ProjectSierraModelPackage.ACTIVITY_DIAGRAM__SPECIALIZABLE_ELEMENTS:
 			return getSpecializableElements();
-		case ProjectSierraModelPackage.ACTIVITY_DIAGRAM__EXCHANGE_ELEMENTS:
-			return getExchangeElements();
 		case ProjectSierraModelPackage.ACTIVITY_DIAGRAM__PERFORMING_ELEMENTS:
 			return getPerformingElements();
 		}
@@ -208,10 +179,6 @@ public class ActivityDiagramImpl extends MinimalEObjectImpl.Container implements
 			getSpecializableElements().clear();
 			getSpecializableElements().addAll((Collection<? extends SpecializableElement>) newValue);
 			return;
-		case ProjectSierraModelPackage.ACTIVITY_DIAGRAM__EXCHANGE_ELEMENTS:
-			getExchangeElements().clear();
-			getExchangeElements().addAll((Collection<? extends ExchangeElement>) newValue);
-			return;
 		case ProjectSierraModelPackage.ACTIVITY_DIAGRAM__PERFORMING_ELEMENTS:
 			getPerformingElements().clear();
 			getPerformingElements().addAll((Collection<? extends PerformingElement>) newValue);
@@ -234,9 +201,6 @@ public class ActivityDiagramImpl extends MinimalEObjectImpl.Container implements
 		case ProjectSierraModelPackage.ACTIVITY_DIAGRAM__SPECIALIZABLE_ELEMENTS:
 			getSpecializableElements().clear();
 			return;
-		case ProjectSierraModelPackage.ACTIVITY_DIAGRAM__EXCHANGE_ELEMENTS:
-			getExchangeElements().clear();
-			return;
 		case ProjectSierraModelPackage.ACTIVITY_DIAGRAM__PERFORMING_ELEMENTS:
 			getPerformingElements().clear();
 			return;
@@ -256,8 +220,6 @@ public class ActivityDiagramImpl extends MinimalEObjectImpl.Container implements
 			return containableElements != null && !containableElements.isEmpty();
 		case ProjectSierraModelPackage.ACTIVITY_DIAGRAM__SPECIALIZABLE_ELEMENTS:
 			return specializableElements != null && !specializableElements.isEmpty();
-		case ProjectSierraModelPackage.ACTIVITY_DIAGRAM__EXCHANGE_ELEMENTS:
-			return exchangeElements != null && !exchangeElements.isEmpty();
 		case ProjectSierraModelPackage.ACTIVITY_DIAGRAM__PERFORMING_ELEMENTS:
 			return performingElements != null && !performingElements.isEmpty();
 		}

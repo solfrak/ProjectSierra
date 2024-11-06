@@ -379,17 +379,8 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getActivityDiagram_ExchangeElements() {
-		return (EReference) activityDiagramEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getActivityDiagram_PerformingElements() {
-		return (EReference) activityDiagramEClass.getEStructuralFeatures().get(3);
+		return (EReference) activityDiagramEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -444,6 +435,15 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 	 */
 	public EReference getPerformingElement_Performs() {
 		return (EReference) performingElementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPerformingElement_ExchangeElements() {
+		return (EReference) performingElementEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -676,7 +676,6 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 		activityDiagramEClass = createEClass(ACTIVITY_DIAGRAM);
 		createEReference(activityDiagramEClass, ACTIVITY_DIAGRAM__CONTAINABLE_ELEMENTS);
 		createEReference(activityDiagramEClass, ACTIVITY_DIAGRAM__SPECIALIZABLE_ELEMENTS);
-		createEReference(activityDiagramEClass, ACTIVITY_DIAGRAM__EXCHANGE_ELEMENTS);
 		createEReference(activityDiagramEClass, ACTIVITY_DIAGRAM__PERFORMING_ELEMENTS);
 
 		exchangeElementEClass = createEClass(EXCHANGE_ELEMENT);
@@ -706,6 +705,7 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 
 		performingElementEClass = createEClass(PERFORMING_ELEMENT);
 		createEReference(performingElementEClass, PERFORMING_ELEMENT__PERFORMS);
+		createEReference(performingElementEClass, PERFORMING_ELEMENT__EXCHANGE_ELEMENTS);
 
 		involveableElementEClass = createEClass(INVOLVEABLE_ELEMENT);
 		createEReference(involveableElementEClass, INVOLVEABLE_ELEMENT__IS_INVOLVED_IN);
@@ -819,9 +819,6 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 		initEReference(getActivityDiagram_SpecializableElements(), this.getSpecializableElement(), null,
 				"specializableElements", null, 0, -1, ActivityDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getActivityDiagram_ExchangeElements(), this.getExchangeElement(), null, "exchangeElements", null,
-				0, -1, ActivityDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getActivityDiagram_PerformingElements(), this.getPerformingElement(), null, "performingElements",
 				null, 0, -1, ActivityDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -880,6 +877,9 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 		initEReference(getPerformingElement_Performs(), this.getFunction(), this.getFunction_IsPerformedBy(),
 				"performs", null, 0, -1, PerformingElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPerformingElement_ExchangeElements(), this.getExchangeElement(), null, "exchangeElements",
+				null, 0, -1, PerformingElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(involveableElementEClass, InvolveableElement.class, "InvolveableElement", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

@@ -35,8 +35,6 @@
         eType="#//ContainableElement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="specializableElements"
         upperBound="-1" eType="#//SpecializableElement" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="exchangeElements" upperBound="-1"
-        eType="#//ExchangeElement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="performingElements" upperBound="-1"
         eType="#//PerformingElement" containment="true"/>
   </eClassifiers>
@@ -77,6 +75,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="PerformingElement" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="performs" upperBound="-1"
         eType="#//Function" eOpposite="#//Function/isPerformedBy"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exchangeElements" upperBound="-1"
+        eType="#//ExchangeElement" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InvolveableElement" abstract="true"
       eSuperTypes="#//SpecializableElement">

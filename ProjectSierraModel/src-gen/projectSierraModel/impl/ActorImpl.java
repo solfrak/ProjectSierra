@@ -8,9 +8,11 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import projectSierraModel.Actor;
+import projectSierraModel.ExchangeElement;
 import projectSierraModel.Function;
 import projectSierraModel.PerformingElement;
 import projectSierraModel.ProjectSierraModelPackage;
@@ -24,6 +26,7 @@ import projectSierraModel.ProjectSierraModelPackage;
  * </p>
  * <ul>
  *   <li>{@link projectSierraModel.impl.ActorImpl#getPerforms <em>Performs</em>}</li>
+ *   <li>{@link projectSierraModel.impl.ActorImpl#getExchangeElements <em>Exchange Elements</em>}</li>
  * </ul>
  *
  * @generated
@@ -38,6 +41,16 @@ public class ActorImpl extends InvolveableElementImpl implements Actor {
 	 * @ordered
 	 */
 	protected EList<Function> performs;
+
+	/**
+	 * The cached value of the '{@link #getExchangeElements() <em>Exchange Elements</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getExchangeElements()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ExchangeElement> exchangeElements;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -76,6 +89,19 @@ public class ActorImpl extends InvolveableElementImpl implements Actor {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<ExchangeElement> getExchangeElements() {
+		if (exchangeElements == null) {
+			exchangeElements = new EObjectContainmentEList<ExchangeElement>(ExchangeElement.class, this,
+					ProjectSierraModelPackage.ACTOR__EXCHANGE_ELEMENTS);
+		}
+		return exchangeElements;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -96,6 +122,8 @@ public class ActorImpl extends InvolveableElementImpl implements Actor {
 		switch (featureID) {
 		case ProjectSierraModelPackage.ACTOR__PERFORMS:
 			return ((InternalEList<?>) getPerforms()).basicRemove(otherEnd, msgs);
+		case ProjectSierraModelPackage.ACTOR__EXCHANGE_ELEMENTS:
+			return ((InternalEList<?>) getExchangeElements()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -110,6 +138,8 @@ public class ActorImpl extends InvolveableElementImpl implements Actor {
 		switch (featureID) {
 		case ProjectSierraModelPackage.ACTOR__PERFORMS:
 			return getPerforms();
+		case ProjectSierraModelPackage.ACTOR__EXCHANGE_ELEMENTS:
+			return getExchangeElements();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -127,6 +157,10 @@ public class ActorImpl extends InvolveableElementImpl implements Actor {
 			getPerforms().clear();
 			getPerforms().addAll((Collection<? extends Function>) newValue);
 			return;
+		case ProjectSierraModelPackage.ACTOR__EXCHANGE_ELEMENTS:
+			getExchangeElements().clear();
+			getExchangeElements().addAll((Collection<? extends ExchangeElement>) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -142,6 +176,9 @@ public class ActorImpl extends InvolveableElementImpl implements Actor {
 		case ProjectSierraModelPackage.ACTOR__PERFORMS:
 			getPerforms().clear();
 			return;
+		case ProjectSierraModelPackage.ACTOR__EXCHANGE_ELEMENTS:
+			getExchangeElements().clear();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -156,6 +193,8 @@ public class ActorImpl extends InvolveableElementImpl implements Actor {
 		switch (featureID) {
 		case ProjectSierraModelPackage.ACTOR__PERFORMS:
 			return performs != null && !performs.isEmpty();
+		case ProjectSierraModelPackage.ACTOR__EXCHANGE_ELEMENTS:
+			return exchangeElements != null && !exchangeElements.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -171,6 +210,8 @@ public class ActorImpl extends InvolveableElementImpl implements Actor {
 			switch (derivedFeatureID) {
 			case ProjectSierraModelPackage.ACTOR__PERFORMS:
 				return ProjectSierraModelPackage.PERFORMING_ELEMENT__PERFORMS;
+			case ProjectSierraModelPackage.ACTOR__EXCHANGE_ELEMENTS:
+				return ProjectSierraModelPackage.PERFORMING_ELEMENT__EXCHANGE_ELEMENTS;
 			default:
 				return -1;
 			}
@@ -189,6 +230,8 @@ public class ActorImpl extends InvolveableElementImpl implements Actor {
 			switch (baseFeatureID) {
 			case ProjectSierraModelPackage.PERFORMING_ELEMENT__PERFORMS:
 				return ProjectSierraModelPackage.ACTOR__PERFORMS;
+			case ProjectSierraModelPackage.PERFORMING_ELEMENT__EXCHANGE_ELEMENTS:
+				return ProjectSierraModelPackage.ACTOR__EXCHANGE_ELEMENTS;
 			default:
 				return -1;
 			}

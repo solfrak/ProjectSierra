@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" name="project" version="12.0.0.2017041100">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="project" version="12.0.0.2017041100">
   <ownedViewpoints name="MyViewpoint" modelFileExtension="projectsierramodel">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Operationnal Activity Diagram" domainClass="projectSierraModel::ActivityDiagram" enablePopupBars="true">
       <metamodel href="http://www.example.org/projectSierraModel#/"/>
       <defaultLayer name="Default">
-        <edgeMappings sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@containerMappings[name='Actor']/@subNodeMappings[name='Function']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@containerMappings[name='Actor']/@subNodeMappings[name='Function']" targetFinderExpression="aql:self.eContainer().eAllContents(projectSierraModel::Exchange)->select(e | e.receivesFrom = self).sendsTo">
+        <edgeMappings sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@containerMappings[name='Actor']/@subNodeMappings[name='Function'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='Function']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@containerMappings[name='Actor']/@subNodeMappings[name='Function'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='Function']" targetFinderExpression="aql:self.ancestors()->select(a | a.oclIsTypeOf(projectSierraModel::ActivityDiagram)).eAllContents(projectSierraModel::Exchange)->select(e | e.receivesFrom = self).sendsTo&#xA;">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">
@@ -12,7 +12,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <containerMappings name="Actor" domainClass="projectSierraModel::Actor">
+        <containerMappings name="Actor" domainClass="projectSierraModel::Actor" dropDescriptions="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='']">
           <subNodeMappings name="Function" semanticCandidatesExpression="aql:self.performs" domainClass="projectSierraModel::Function">
             <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -27,6 +27,81 @@
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
           </style>
         </containerMappings>
+        <containerMappings name="Entity" domainClass="projectSierraModel::Entity" dropDescriptions="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='']">
+          <subNodeMappings name="Function" semanticCandidatesExpression="aql:self.performs" domainClass="projectSierraModel::Function">
+            <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Performer">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Actor" containerMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@containerMappings[name='Actor']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="projectSierraModel::Actor" referenceName="specializableElements"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Entity" containerMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@containerMappings[name='Entity']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="projectSierraModel::Entity" referenceName="specializableElements"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerDropDescription" forceRefresh="true" mappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@containerMappings[name='Actor']/@subNodeMappings[name='Function'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='Function']">
+            <oldContainer name="oldSemanticContainer"/>
+            <newContainer name="newSemanticContainer"/>
+            <element name="element"/>
+            <newViewContainer name="newContainerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="isPerformedBy" valueExpression="var:newSemanticContainer">
+                  <subModelOperations xsi:type="tool_1:MoveElement" newContainerExpression="var:newSemanticContainer" featureName="exchangeElements"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Operation">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Function" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@containerMappings[name='Actor']/@subNodeMappings[name='Function'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='Function']" extraMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@containerMappings[name='Actor'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@containerMappings[name='Entity']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="projectSierraModel::Function" referenceName="exchangeElements">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="isPerformedBy" valueExpression="var:container"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Relation Between Function" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@edgeMappings[name='']" extraSourceMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@containerMappings[name='Actor']/@subNodeMappings[name='Function'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='Function']" extraTargetMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@containerMappings[name='Actor']/@subNodeMappings[name='Function'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='Function']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.ancestors()->select(q | q.oclIsTypeOf(projectSierraModel::ActivityDiagram))->first()">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="projectSierraModel::Exchange" referenceName="containableElements">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="sendsTo" valueExpression="var:target"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="receivesFrom" valueExpression="var:source"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
       </defaultLayer>
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="my.project.design.Services"/>

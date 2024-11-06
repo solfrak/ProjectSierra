@@ -72,7 +72,6 @@ public class ActivityDiagramItemProvider extends ItemProviderAdapter implements 
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ProjectSierraModelPackage.Literals.ACTIVITY_DIAGRAM__CONTAINABLE_ELEMENTS);
 			childrenFeatures.add(ProjectSierraModelPackage.Literals.ACTIVITY_DIAGRAM__SPECIALIZABLE_ELEMENTS);
-			childrenFeatures.add(ProjectSierraModelPackage.Literals.ACTIVITY_DIAGRAM__EXCHANGE_ELEMENTS);
 			childrenFeatures.add(ProjectSierraModelPackage.Literals.ACTIVITY_DIAGRAM__PERFORMING_ELEMENTS);
 		}
 		return childrenFeatures;
@@ -137,7 +136,6 @@ public class ActivityDiagramItemProvider extends ItemProviderAdapter implements 
 		switch (notification.getFeatureID(ActivityDiagram.class)) {
 		case ProjectSierraModelPackage.ACTIVITY_DIAGRAM__CONTAINABLE_ELEMENTS:
 		case ProjectSierraModelPackage.ACTIVITY_DIAGRAM__SPECIALIZABLE_ELEMENTS:
-		case ProjectSierraModelPackage.ACTIVITY_DIAGRAM__EXCHANGE_ELEMENTS:
 		case ProjectSierraModelPackage.ACTIVITY_DIAGRAM__PERFORMING_ELEMENTS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
@@ -175,22 +173,6 @@ public class ActivityDiagramItemProvider extends ItemProviderAdapter implements 
 		newChildDescriptors
 				.add(createChildParameter(ProjectSierraModelPackage.Literals.ACTIVITY_DIAGRAM__SPECIALIZABLE_ELEMENTS,
 						ProjectSierraModelFactory.eINSTANCE.createEntity()));
-
-		newChildDescriptors
-				.add(createChildParameter(ProjectSierraModelPackage.Literals.ACTIVITY_DIAGRAM__EXCHANGE_ELEMENTS,
-						ProjectSierraModelFactory.eINSTANCE.createFunction()));
-
-		newChildDescriptors
-				.add(createChildParameter(ProjectSierraModelPackage.Literals.ACTIVITY_DIAGRAM__EXCHANGE_ELEMENTS,
-						ProjectSierraModelFactory.eINSTANCE.createPort()));
-
-		newChildDescriptors
-				.add(createChildParameter(ProjectSierraModelPackage.Literals.ACTIVITY_DIAGRAM__EXCHANGE_ELEMENTS,
-						ProjectSierraModelFactory.eINSTANCE.createInput()));
-
-		newChildDescriptors
-				.add(createChildParameter(ProjectSierraModelPackage.Literals.ACTIVITY_DIAGRAM__EXCHANGE_ELEMENTS,
-						ProjectSierraModelFactory.eINSTANCE.createOuput()));
 
 		newChildDescriptors
 				.add(createChildParameter(ProjectSierraModelPackage.Literals.ACTIVITY_DIAGRAM__PERFORMING_ELEMENTS,
