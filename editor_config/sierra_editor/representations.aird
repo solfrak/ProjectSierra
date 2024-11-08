@@ -4,7 +4,7 @@
     <semanticResources>My.projectsierramodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_FJjLEJoAEe-HeusnhYMRTg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_FdieEJoAEe-HeusnhYMRTg" name="new Operationnal Activity Diagram" repPath="#_FdQxQJoAEe-HeusnhYMRTg" changeId="1730930353175">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_FdieEJoAEe-HeusnhYMRTg" name="new Operationnal Activity Diagram" repPath="#_FdQxQJoAEe-HeusnhYMRTg" changeId="1731081861898">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']"/>
         <target xmi:type="projectSierraModel:ActivityDiagram" href="My.projectsierramodel#/"/>
       </ownedRepresentationDescriptors>
@@ -13,102 +13,139 @@
   <diagram:DSemanticDiagram uid="_FdQxQJoAEe-HeusnhYMRTg">
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_FdurUJoAEe-HeusnhYMRTg" source="GMF_DIAGRAMS">
       <data xmi:type="notation:Diagram" xmi:id="_FdurUZoAEe-HeusnhYMRTg" type="Sirius" element="_FdQxQJoAEe-HeusnhYMRTg" measurementUnit="Pixel">
-        <children xmi:type="notation:Node" xmi:id="_y7RNAJyBEe-HAYC48u75bA" type="2002" element="_y6KZwJyBEe-HAYC48u75bA">
-          <children xmi:type="notation:Node" xmi:id="_y7VecJyBEe-HAYC48u75bA" type="5006"/>
-          <children xmi:type="notation:Node" xmi:id="_y7WFgJyBEe-HAYC48u75bA" type="7001">
-            <children xmi:type="notation:Node" xmi:id="_DXV94JyCEe-HAYC48u75bA" type="3007" element="_DXSTgJyCEe-HAYC48u75bA">
-              <children xmi:type="notation:Node" xmi:id="_DXWk8JyCEe-HAYC48u75bA" type="5003">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_DXWk8ZyCEe-HAYC48u75bA" y="5"/>
+        <children xmi:type="notation:Node" xmi:id="_h2T34J3ZEe-8XqbQy2Yisg" type="2002" element="_h2KG4J3ZEe-8XqbQy2Yisg">
+          <children xmi:type="notation:Node" xmi:id="_h2VGAJ3ZEe-8XqbQy2Yisg" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_h2VtEJ3ZEe-8XqbQy2Yisg" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_mSKYIJ3ZEe-8XqbQy2Yisg" type="3007" element="_mSGtwJ3ZEe-8XqbQy2Yisg">
+              <children xmi:type="notation:Node" xmi:id="_mSK_MJ3ZEe-8XqbQy2Yisg" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_mSK_MZ3ZEe-8XqbQy2Yisg" y="5"/>
               </children>
-              <children xmi:type="notation:Node" xmi:id="_DXWk8pyCEe-HAYC48u75bA" type="3003" element="_DXSTgZyCEe-HAYC48u75bA">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_DXWk85yCEe-HAYC48u75bA" fontName="Ubuntu Sans"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DXWk9JyCEe-HAYC48u75bA"/>
+              <children xmi:type="notation:Node" xmi:id="_mSK_Mp3ZEe-8XqbQy2Yisg" type="3003" element="_mSGtwZ3ZEe-8XqbQy2Yisg">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_mSK_M53ZEe-8XqbQy2Yisg" fontName="Ubuntu Sans"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mSK_NJ3ZEe-8XqbQy2Yisg"/>
               </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_DXV94ZyCEe-HAYC48u75bA" fontName="Ubuntu Sans" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DXV94pyCEe-HAYC48u75bA" x="55" y="42" width="169" height="55"/>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_mSKYIZ3ZEe-8XqbQy2Yisg" fontName="Ubuntu Sans" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mSKYIp3ZEe-8XqbQy2Yisg" x="55" y="66" width="157" height="30"/>
             </children>
-            <styles xmi:type="notation:SortingStyle" xmi:id="_y7WFgZyBEe-HAYC48u75bA"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_y7WFgpyBEe-HAYC48u75bA"/>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_h2VtEZ3ZEe-8XqbQy2Yisg"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_h2VtEp3ZEe-8XqbQy2Yisg"/>
           </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_y7RNAZyBEe-HAYC48u75bA" fontName="Ubuntu Sans" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_y7RNApyBEe-HAYC48u75bA" x="156" y="72" width="555" height="255"/>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_h2T34Z3ZEe-8XqbQy2Yisg" fontName="Ubuntu Sans" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_h2T34p3ZEe-8XqbQy2Yisg" x="540" y="120" width="375" height="147"/>
         </children>
-        <children xmi:type="notation:Node" xmi:id="_4WLWgJyBEe-HAYC48u75bA" type="2002" element="_4VsOUpyBEe-HAYC48u75bA">
-          <children xmi:type="notation:Node" xmi:id="_4WLWg5yBEe-HAYC48u75bA" type="5006"/>
-          <children xmi:type="notation:Node" xmi:id="_4WL9kJyBEe-HAYC48u75bA" type="7001">
-            <children xmi:type="notation:Node" xmi:id="_BKeoQJyDEe-HAYC48u75bA" type="3007" element="_BKPXsJyDEe-HAYC48u75bA">
-              <children xmi:type="notation:Node" xmi:id="_BKfPUJyDEe-HAYC48u75bA" type="5003">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_BKfPUZyDEe-HAYC48u75bA" y="5"/>
+        <children xmi:type="notation:Node" xmi:id="_jBtUAJ3ZEe-8XqbQy2Yisg" type="2002" element="_jBqQsJ3ZEe-8XqbQy2Yisg">
+          <children xmi:type="notation:Node" xmi:id="_jBt7EJ3ZEe-8XqbQy2Yisg" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_jBt7EZ3ZEe-8XqbQy2Yisg" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_kfv_UJ3ZEe-8XqbQy2Yisg" type="3007" element="_kfrt4J3ZEe-8XqbQy2Yisg">
+              <children xmi:type="notation:Node" xmi:id="_kfxNcJ3ZEe-8XqbQy2Yisg" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_kfxNcZ3ZEe-8XqbQy2Yisg" y="5"/>
               </children>
-              <children xmi:type="notation:Node" xmi:id="_BKfPUpyDEe-HAYC48u75bA" type="3003" element="_BKPXsZyDEe-HAYC48u75bA">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_BKfPU5yDEe-HAYC48u75bA" fontName="Ubuntu Sans"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BKfPVJyDEe-HAYC48u75bA"/>
+              <children xmi:type="notation:Node" xmi:id="_kfx0gJ3ZEe-8XqbQy2Yisg" type="3003" element="_kfrt4Z3ZEe-8XqbQy2Yisg">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_kfx0gZ3ZEe-8XqbQy2Yisg" fontName="Ubuntu Sans"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kfx0gp3ZEe-8XqbQy2Yisg"/>
               </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_BKeoQZyDEe-HAYC48u75bA" fontName="Ubuntu Sans" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BKeoQpyDEe-HAYC48u75bA" x="7" y="42" width="164" height="79"/>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_kfv_UZ3ZEe-8XqbQy2Yisg" fontName="Ubuntu Sans" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kfwmYJ3ZEe-8XqbQy2Yisg" x="19" y="54" width="169" height="30"/>
             </children>
-            <children xmi:type="notation:Node" xmi:id="_WpULlpyHEe-HAYC48u75bA" type="3007" element="_WpSWYJyHEe-HAYC48u75bA">
-              <children xmi:type="notation:Node" xmi:id="_WpUyoJyHEe-HAYC48u75bA" type="5003">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_WpUyoZyHEe-HAYC48u75bA" y="5"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_WpUyopyHEe-HAYC48u75bA" type="3003" element="_WpSWYZyHEe-HAYC48u75bA">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_WpUyo5yHEe-HAYC48u75bA" fontName="Ubuntu Sans"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WpUypJyHEe-HAYC48u75bA"/>
-              </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_WpULl5yHEe-HAYC48u75bA" fontName="Ubuntu Sans" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WpULmJyHEe-HAYC48u75bA" x="271" y="120" width="121" height="30"/>
-            </children>
-            <styles xmi:type="notation:SortingStyle" xmi:id="_4WL9kZyBEe-HAYC48u75bA"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_4WL9kpyBEe-HAYC48u75bA"/>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_jBt7Ep3ZEe-8XqbQy2Yisg"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_jBt7E53ZEe-8XqbQy2Yisg"/>
           </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_4WLWgZyBEe-HAYC48u75bA" fontName="Ubuntu Sans" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4WLWgpyBEe-HAYC48u75bA" x="156" y="396" width="555" height="207"/>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_jBtUAZ3ZEe-8XqbQy2Yisg" fontName="Ubuntu Sans" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jBtUAp3ZEe-8XqbQy2Yisg" x="540" y="360" width="363" height="159"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_KxVq8J3aEe-8XqbQy2Yisg" type="2001" element="_KxQLYJ3aEe-8XqbQy2Yisg">
+          <children xmi:type="notation:Node" xmi:id="_KxWSAJ3aEe-8XqbQy2Yisg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_KxWSAZ3aEe-8XqbQy2Yisg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_KxWSAp3aEe-8XqbQy2Yisg" type="3004" element="_KxQycJ3aEe-8XqbQy2Yisg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_KxWSA53aEe-8XqbQy2Yisg" fontName="Ubuntu Sans"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KxWSBJ3aEe-8XqbQy2Yisg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_KxVq8Z3aEe-8XqbQy2Yisg" fontName="Ubuntu Sans" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KxVq8p3aEe-8XqbQy2Yisg" x="192" y="648" width="313" height="73"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_YUtS4J3mEe-214fDMDOw-Q" type="2001" element="_YUrdsZ3mEe-214fDMDOw-Q">
+          <children xmi:type="notation:Node" xmi:id="_YUt58J3mEe-214fDMDOw-Q" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_YUt58Z3mEe-214fDMDOw-Q" y="5"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_YUtS4Z3mEe-214fDMDOw-Q" fontName="Ubuntu Sans"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YUtS4p3mEe-214fDMDOw-Q" x="672" y="324" width="20" height="20"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_FdurUpoAEe-HeusnhYMRTg"/>
+        <edges xmi:type="notation:Edge" xmi:id="_YUuhAJ3mEe-214fDMDOw-Q" type="4001" element="_YUsEx53mEe-214fDMDOw-Q" source="_kfv_UJ3ZEe-8XqbQy2Yisg" target="_mSKYIJ3ZEe-8XqbQy2Yisg">
+          <children xmi:type="notation:Node" xmi:id="_YUuhBJ3mEe-214fDMDOw-Q" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YUuhBZ3mEe-214fDMDOw-Q" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_YUuhBp3mEe-214fDMDOw-Q" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YUuhB53mEe-214fDMDOw-Q" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_YUuhCJ3mEe-214fDMDOw-Q" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YUuhCZ3mEe-214fDMDOw-Q" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_YUuhAZ3mEe-214fDMDOw-Q"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_YUuhAp3mEe-214fDMDOw-Q" fontName="Ubuntu Sans" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_YUuhA53mEe-214fDMDOw-Q" points="[0, 0, -60, 198]$[60, -198, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_YUuhCp3mEe-214fDMDOw-Q" id="(0.4260355029585799,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_YUuhC53mEe-214fDMDOw-Q" id="(0.6114649681528662,1.0)"/>
+        </edges>
       </data>
     </ownedAnnotationEntries>
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_Fd1ZAJoAEe-HeusnhYMRTg" source="DANNOTATION_CUSTOMIZATION_KEY">
       <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_Fd2nIJoAEe-HeusnhYMRTg"/>
     </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_y6KZwJyBEe-HAYC48u75bA" name="User">
-      <target xmi:type="projectSierraModel:Actor" href="My.projectsierramodel#//@performingElements.0"/>
-      <semanticElements xmi:type="projectSierraModel:Actor" href="My.projectsierramodel#//@performingElements.0"/>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_y6TjsJyBEe-HAYC48u75bA" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_h2KG4J3ZEe-8XqbQy2Yisg" name="User">
+      <target xmi:type="projectSierraModel:Actor" href="My.projectsierramodel#//@specializableElements.0"/>
+      <semanticElements xmi:type="projectSierraModel:Actor" href="My.projectsierramodel#//@specializableElements.0"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_h2Kt8J3ZEe-8XqbQy2Yisg" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@containerMappings[name='Actor']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@containerMappings[name='Actor']"/>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_DXSTgJyCEe-HAYC48u75bA" name="Locate charger" width="3" height="3" resizeKind="NSEW">
-        <target xmi:type="projectSierraModel:Function" href="My.projectsierramodel#//@performingElements.0/@exchangeElements.0"/>
-        <semanticElements xmi:type="projectSierraModel:Function" href="My.projectsierramodel#//@performingElements.0/@exchangeElements.0"/>
-        <ownedStyle xmi:type="diagram:Square" uid="_DXSTgZyCEe-HAYC48u75bA" labelSize="12" labelPosition="node">
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_mSGtwJ3ZEe-8XqbQy2Yisg" name="Locate Charger" incomingEdges="_YUsEx53mEe-214fDMDOw-Q" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="projectSierraModel:Function" href="My.projectsierramodel#//@specializableElements.0/@exchangeElements.0"/>
+        <semanticElements xmi:type="projectSierraModel:Function" href="My.projectsierramodel#//@specializableElements.0/@exchangeElements.0"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_mSGtwZ3ZEe-8XqbQy2Yisg" labelSize="12" labelPosition="node">
           <description xmi:type="style:SquareDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@containerMappings[name='Actor']/@subNodeMappings[name='Function']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@containerMappings[name='Actor']/@subNodeMappings[name='Function']"/>
       </ownedDiagramElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_4VsOUpyBEe-HAYC48u75bA" name="Charger">
-      <target xmi:type="projectSierraModel:Entity" href="My.projectsierramodel#//@performingElements.1"/>
-      <semanticElements xmi:type="projectSierraModel:Entity" href="My.projectsierramodel#//@performingElements.1"/>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_4Vs1YJyBEe-HAYC48u75bA" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_jBqQsJ3ZEe-8XqbQy2Yisg" name="Charger">
+      <target xmi:type="projectSierraModel:Entity" href="My.projectsierramodel#//@specializableElements.1"/>
+      <semanticElements xmi:type="projectSierraModel:Entity" href="My.projectsierramodel#//@specializableElements.1"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_jBqQsZ3ZEe-8XqbQy2Yisg" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@containerMappings[name='Entity']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@containerMappings[name='Entity']"/>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_BKPXsJyDEe-HAYC48u75bA" name="Illuminate at night" width="3" height="3" resizeKind="NSEW">
-        <target xmi:type="projectSierraModel:Function" href="My.projectsierramodel#//@performingElements.1/@exchangeElements.0"/>
-        <semanticElements xmi:type="projectSierraModel:Function" href="My.projectsierramodel#//@performingElements.1/@exchangeElements.0"/>
-        <ownedStyle xmi:type="diagram:Square" uid="_BKPXsZyDEe-HAYC48u75bA" labelSize="12" labelPosition="node">
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_kfrt4J3ZEe-8XqbQy2Yisg" name="Illuminate at night" outgoingEdges="_YUsEx53mEe-214fDMDOw-Q" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="projectSierraModel:Function" href="My.projectsierramodel#//@specializableElements.1/@exchangeElements.0"/>
+        <semanticElements xmi:type="projectSierraModel:Function" href="My.projectsierramodel#//@specializableElements.1/@exchangeElements.0"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_kfrt4Z3ZEe-8XqbQy2Yisg" labelSize="12" labelPosition="node">
           <description xmi:type="style:SquareDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='Function']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='Function']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_WpSWYJyHEe-HAYC48u75bA" name="Test" width="3" height="3" resizeKind="NSEW">
-        <target xmi:type="projectSierraModel:Function" href="My.projectsierramodel#//@performingElements.1/@exchangeElements.1"/>
-        <semanticElements xmi:type="projectSierraModel:Function" href="My.projectsierramodel#//@performingElements.1/@exchangeElements.1"/>
-        <ownedStyle xmi:type="diagram:Square" uid="_WpSWYZyHEe-HAYC48u75bA" labelSize="12" labelPosition="node">
-          <description xmi:type="style:SquareDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='Function']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='Function']"/>
-      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_KxQLYJ3aEe-8XqbQy2Yisg" name="Provide 24h visibility" tooltipText="Provide 24h visibility" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="projectSierraModel:Capabilitty" href="My.projectsierramodel#//@specializableElements.2"/>
+      <semanticElements xmi:type="projectSierraModel:Capabilitty" href="My.projectsierramodel#//@specializableElements.2"/>
+      <ownedStyle xmi:type="diagram:BundledImage" uid="_KxQycJ3aEe-8XqbQy2Yisg" labelSize="12" labelPosition="node" color="255,255,255">
+        <description xmi:type="style:BundledImageDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@nodeMappings[name='Capability']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@nodeMappings[name='Capability']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_YUrdsZ3mEe-214fDMDOw-Q">
+      <target xmi:type="projectSierraModel:Exchange" href="My.projectsierramodel#//@containableElements.0"/>
+      <semanticElements xmi:type="projectSierraModel:Exchange" href="My.projectsierramodel#//@containableElements.0"/>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@nodeMappings[name='exchange']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_YUsEx53mEe-214fDMDOw-Q" name="Charger Light" sourceNode="_kfrt4J3ZEe-8XqbQy2Yisg" targetNode="_mSGtwJ3ZEe-8XqbQy2Yisg">
+      <target xmi:type="projectSierraModel:Exchange" href="My.projectsierramodel#//@containableElements.0"/>
+      <semanticElements xmi:type="projectSierraModel:Exchange" href="My.projectsierramodel#//@containableElements.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_YUsr0J3mEe-214fDMDOw-Q" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@edgeMappings[name='Exchange%20Link']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_YUsr0Z3mEe-214fDMDOw-Q" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@edgeMappings[name='Exchange%20Link']"/>
     </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']"/>
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_FdbwYJoAEe-HeusnhYMRTg"/>

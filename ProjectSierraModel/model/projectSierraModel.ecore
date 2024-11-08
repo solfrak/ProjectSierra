@@ -49,7 +49,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="conveys" eType="#//Item"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Item"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Item">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Function" eSuperTypes="#//ExchangeElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="hasPort" eType="#//Port"
         eOpposite="#//Port/isPortOf"/>

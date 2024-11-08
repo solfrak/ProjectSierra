@@ -5,7 +5,7 @@
     <semanticResources>projectSierraModel.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_xX3KQIGKEe-rQPUV19-5CA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_9FK9gYJcEe-spfYI0cINkA" name="class diagram" repPath="#_9FKWcIJcEe-spfYI0cINkA" changeId="1730926218554">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_9FK9gYJcEe-spfYI0cINkA" name="class diagram" repPath="#_9FKWcIJcEe-spfYI0cINkA" changeId="1731075473072">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="projectSierraModel.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -83,6 +83,10 @@
         <children xmi:type="notation:Node" xmi:id="_oQZ1gJeOEe-Uv8L3Th0aDw" type="2003" element="_oQNBMJeOEe-Uv8L3Th0aDw">
           <children xmi:type="notation:Node" xmi:id="_oQackJeOEe-Uv8L3Th0aDw" type="5007"/>
           <children xmi:type="notation:Node" xmi:id="_oQackZeOEe-Uv8L3Th0aDw" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_MvyCsJ3cEe-KJ7A8Aojp7Q" type="3010" element="_MvH7YJ3cEe-KJ7A8Aojp7Q">
+              <styles xmi:type="notation:FontStyle" xmi:id="_MvyCsZ3cEe-KJ7A8Aojp7Q" fontColor="2697711" fontName="Ubuntu Sans" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_MvyCsp3cEe-KJ7A8Aojp7Q"/>
+            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_oQackpeOEe-Uv8L3Th0aDw"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_oQack5eOEe-Uv8L3Th0aDw"/>
           </children>
@@ -857,10 +861,18 @@
     <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_oQNBMJeOEe-Uv8L3Th0aDw" name="Item" tooltipText="" incomingEdges="_p5nPDJeOEe-Uv8L3Th0aDw" width="12" height="10">
       <target xmi:type="ecore:EClass" href="projectSierraModel.ecore#//Item"/>
       <semanticElements xmi:type="ecore:EClass" href="projectSierraModel.ecore#//Item"/>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_oQNoQJeOEe-Uv8L3Th0aDw" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_PgCj1Z3cEe-KJ7A8Aojp7Q" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_MvH7YJ3cEe-KJ7A8Aojp7Q" name="name : EString" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="projectSierraModel.ecore#//Item/name"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="projectSierraModel.ecore#//Item/name"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_PgFAEp3cEe-KJ7A8Aojp7Q" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_p5nPDJeOEe-Uv8L3Th0aDw" name="[0..1] conveys" sourceNode="_dH7sQJeOEe-Uv8L3Th0aDw" targetNode="_oQNBMJeOEe-Uv8L3Th0aDw">
       <target xmi:type="ecore:EReference" href="projectSierraModel.ecore#//Exchange/conveys"/>

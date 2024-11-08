@@ -40,7 +40,9 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Exchange/receivesFrom"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Exchange/conveys"/>
     </genClasses>
-    <genClasses ecoreClass="projectSierraModel.ecore#//Item"/>
+    <genClasses ecoreClass="projectSierraModel.ecore#//Item">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projectSierraModel.ecore#//Item/name"/>
+    </genClasses>
     <genClasses ecoreClass="projectSierraModel.ecore#//Function">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Function/hasPort"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projectSierraModel.ecore#//Function/hasInput"/>

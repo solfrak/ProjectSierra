@@ -626,13 +626,22 @@ public interface ProjectSierraModelPackage extends EPackage {
 	int EXCHANGE_OPERATION_COUNT = CONTAINABLE_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ITEM__NAME = 0;
+
+	/**
 	 * The number of structural features of the '<em>Item</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ITEM_FEATURE_COUNT = 0;
+	int ITEM_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Item</em>' class.
@@ -1408,6 +1417,17 @@ public interface ProjectSierraModelPackage extends EPackage {
 	EClass getItem();
 
 	/**
+	 * Returns the meta object for the attribute '{@link projectSierraModel.Item#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see projectSierraModel.Item#getName()
+	 * @see #getItem()
+	 * @generated
+	 */
+	EAttribute getItem_Name();
+
+	/**
 	 * Returns the meta object for class '{@link projectSierraModel.Chain <em>Chain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1850,6 +1870,14 @@ public interface ProjectSierraModelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ITEM = eINSTANCE.getItem();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ITEM__NAME = eINSTANCE.getItem_Name();
 
 		/**
 		 * The meta object literal for the '{@link projectSierraModel.impl.ChainImpl <em>Chain</em>}' class.

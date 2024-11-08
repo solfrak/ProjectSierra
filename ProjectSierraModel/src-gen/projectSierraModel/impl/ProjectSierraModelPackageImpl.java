@@ -523,6 +523,15 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getItem_Name() {
+		return (EAttribute) itemEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getChain() {
 		return chainEClass;
 	}
@@ -687,6 +696,7 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 		createEReference(exchangeEClass, EXCHANGE__CONVEYS);
 
 		itemEClass = createEClass(ITEM);
+		createEAttribute(itemEClass, ITEM__NAME);
 
 		functionEClass = createEClass(FUNCTION);
 		createEReference(functionEClass, FUNCTION__HAS_PORT);
@@ -841,6 +851,8 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(itemEClass, Item.class, "Item", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getItem_Name(), ecorePackage.getEString(), "name", null, 0, 1, Item.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(functionEClass, Function.class, "Function", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
