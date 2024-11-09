@@ -4,7 +4,7 @@
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Operationnal Activity Diagram" domainClass="projectSierraModel::ActivityDiagram" enablePopupBars="true">
       <metamodel href="http://www.example.org/projectSierraModel#/"/>
       <defaultLayer name="Default">
-        <nodeMappings name="Capability" domainClass="projectSierraModel::Capabilitty">
+        <nodeMappings name="Capability" deletionDescription="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='test']" domainClass="projectSierraModel::Capabilitty">
           <style xsi:type="style:BundledImageDescription" labelSize="12" tooltipExpression="feature:name" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -165,6 +165,20 @@
                         </groups>
                       </subModelOperations>
                     </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="test" forceRefresh="true">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.isImplementedBy">
+                <subModelOperations xsi:type="tool_1:RemoveElement">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                    <subModelOperations xsi:type="tool_1:RemoveElement"/>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>

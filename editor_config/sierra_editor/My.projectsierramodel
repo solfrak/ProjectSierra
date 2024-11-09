@@ -9,5 +9,4 @@
   <specializableElements xsi:type="projectSierraModel:Entity" name="Charger" performs="//@specializableElements.1/@exchangeElements.0">
     <exchangeElements xsi:type="projectSierraModel:Function" name="Illuminate at night" isPerformedBy="//@specializableElements.1"/>
   </specializableElements>
-  <specializableElements xsi:type="projectSierraModel:Capabilitty" name="Provide 24h visibility"/>
 </projectSierraModel:ActivityDiagram>

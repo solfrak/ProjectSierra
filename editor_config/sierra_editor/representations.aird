@@ -4,7 +4,7 @@
     <semanticResources>My.projectsierramodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_FJjLEJoAEe-HeusnhYMRTg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_FdieEJoAEe-HeusnhYMRTg" name="new Operationnal Activity Diagram" repPath="#_FdQxQJoAEe-HeusnhYMRTg" changeId="1731081861898">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_FdieEJoAEe-HeusnhYMRTg" name="new Operationnal Activity Diagram" repPath="#_FdQxQJoAEe-HeusnhYMRTg" changeId="1731101874079">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']"/>
         <target xmi:type="projectSierraModel:ActivityDiagram" href="My.projectsierramodel#/"/>
       </ownedRepresentationDescriptors>
@@ -52,17 +52,6 @@
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_jBtUAZ3ZEe-8XqbQy2Yisg" fontName="Ubuntu Sans" fontHeight="12"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jBtUAp3ZEe-8XqbQy2Yisg" x="540" y="360" width="363" height="159"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_KxVq8J3aEe-8XqbQy2Yisg" type="2001" element="_KxQLYJ3aEe-8XqbQy2Yisg">
-          <children xmi:type="notation:Node" xmi:id="_KxWSAJ3aEe-8XqbQy2Yisg" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_KxWSAZ3aEe-8XqbQy2Yisg" y="5"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_KxWSAp3aEe-8XqbQy2Yisg" type="3004" element="_KxQycJ3aEe-8XqbQy2Yisg">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_KxWSA53aEe-8XqbQy2Yisg" fontName="Ubuntu Sans"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KxWSBJ3aEe-8XqbQy2Yisg"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_KxVq8Z3aEe-8XqbQy2Yisg" fontName="Ubuntu Sans" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KxVq8p3aEe-8XqbQy2Yisg" x="192" y="648" width="313" height="73"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_YUtS4J3mEe-214fDMDOw-Q" type="2001" element="_YUrdsZ3mEe-214fDMDOw-Q">
           <children xmi:type="notation:Node" xmi:id="_YUt58J3mEe-214fDMDOw-Q" type="5002">
@@ -124,14 +113,6 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='Function']"/>
       </ownedDiagramElements>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_KxQLYJ3aEe-8XqbQy2Yisg" name="Provide 24h visibility" tooltipText="Provide 24h visibility" width="3" height="3" resizeKind="NSEW">
-      <target xmi:type="projectSierraModel:Capabilitty" href="My.projectsierramodel#//@specializableElements.2"/>
-      <semanticElements xmi:type="projectSierraModel:Capabilitty" href="My.projectsierramodel#//@specializableElements.2"/>
-      <ownedStyle xmi:type="diagram:BundledImage" uid="_KxQycJ3aEe-8XqbQy2Yisg" labelSize="12" labelPosition="node" color="255,255,255">
-        <description xmi:type="style:BundledImageDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@nodeMappings[name='Capability']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@nodeMappings[name='Capability']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_YUrdsZ3mEe-214fDMDOw-Q">
       <target xmi:type="projectSierraModel:Exchange" href="My.projectsierramodel#//@containableElements.0"/>
