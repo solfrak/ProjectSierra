@@ -4,25 +4,47 @@
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Operationnal Activity Diagram" domainClass="projectSierraModel::ActivityDiagram" enablePopupBars="true">
       <metamodel href="http://www.example.org/projectSierraModel#/"/>
       <defaultLayer name="Default">
-        <nodeMappings name="Capability" deletionDescription="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='test']" domainClass="projectSierraModel::Capabilitty">
+        <nodeMappings name="Capability" deletionDescription="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Capabilitty']" domainClass="projectSierraModel::Capabilitty">
           <style xsi:type="style:BundledImageDescription" labelSize="12" tooltipExpression="feature:name" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="exchange" domainClass="projectSierraModel::Exchange"/>
-        <edgeMappings name="Exchange Link" doubleClickDescription="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='']" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@containerMappings[name='Actor']/@subNodeMappings[name='Function'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='Function']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@containerMappings[name='Actor']/@subNodeMappings[name='Function'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='Function']" targetFinderExpression="feature:sendsTo" sourceFinderExpression="feature:receivesFrom" domainClass="projectSierraModel::Exchange" useDomainElement="true">
+        <nodeMappings name="Chain" domainClass="projectSierraModel::Chain">
+          <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="Exchange" doubleClickDescription="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='']" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@containerMappings[name='Actor']/@subNodeMappings[name='Function'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='Function']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@containerMappings[name='Actor']/@subNodeMappings[name='Function'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='Function']" targetFinderExpression="aql:self.sendsTo" sourceFinderExpression="aql:self.receivesFrom" domainClass="projectSierraModel::Exchange" useDomainElement="true">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription labelSize="12" labelExpression="aql:if self.conveys->notEmpty() then self.conveys.name else '' endif ">
+            <centerLabelStyleDescription labelSize="12" labelExpression="aql:self.conveys.name">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Capabilitty_Chain" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@nodeMappings[name='Capability']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@nodeMappings[name='Chain']" targetFinderExpression="aql:self.isImplementedBy">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Chain_Exchange" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@nodeMappings[name='Chain']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@edgeMappings[name='Exchange']" targetFinderExpression="aql:self.contains">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <containerMappings name="Actor" domainClass="projectSierraModel::Actor" dropDescriptions="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='']">
           <subNodeMappings name="Function" semanticCandidatesExpression="aql:self.performs" domainClass="projectSierraModel::Function">
-            <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <style xsi:type="style:SquareDescription" borderSizeComputationExpression="2" labelSize="12" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
@@ -37,7 +59,7 @@
         </containerMappings>
         <containerMappings name="Entity" domainClass="projectSierraModel::Entity" dropDescriptions="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='']">
           <subNodeMappings name="Function" semanticCandidatesExpression="aql:self.performs" domainClass="projectSierraModel::Function">
-            <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <style xsi:type="style:SquareDescription" borderSizeComputationExpression="2" labelSize="12" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
@@ -144,7 +166,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:DoubleClickDescription" forceRefresh="true" mappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@edgeMappings[name='Exchange%20Link']">
+          <ownedTools xsi:type="tool:DoubleClickDescription" forceRefresh="true" mappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@edgeMappings[name='Exchange']">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -159,7 +181,7 @@
                     </buttons>
                     <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
                     <groups name="Default Group" labelExpression="Group" domainClass="projectSierraModel::Exchange" semanticCandidateExpression="var:self">
-                      <controls xsi:type="properties:TextDescription" valueExpression="aql:self.conveys.name">
+                      <controls xsi:type="properties:TextDescription" labelExpression="Item" valueExpression="aql:self.conveys.name">
                         <initialOperation>
                           <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.conveys">
                             <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
@@ -196,7 +218,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:DeleteElementDescription" name="test" forceRefresh="true">
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="Capabilitty" forceRefresh="true">
             <element name="element"/>
             <elementView name="elementView"/>
             <containerView name="containerView"/>
@@ -207,6 +229,27 @@
                     <subModelOperations xsi:type="tool_1:RemoveElement"/>
                   </subModelOperations>
                 </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="Chain">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:elementView.target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Create_Chain_Relation" edgeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Operationnal%20Activity%20Diagram']/@defaultLayer/@edgeMappings[name='Chain_Exchange']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="contains" valueExpression="aql:target"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>

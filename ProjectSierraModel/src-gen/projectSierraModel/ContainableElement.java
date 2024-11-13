@@ -2,6 +2,7 @@
  */
 package projectSierraModel;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -24,28 +25,18 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface ContainableElement extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Contains</b></em>' reference.
+	 * Returns the value of the '<em><b>Contains</b></em>' reference list.
+	 * The list contents are of type {@link projectSierraModel.ContainableElement}.
 	 * It is bidirectional and its opposite is '{@link projectSierraModel.ContainableElement#getIsContainedIn <em>Is Contained In</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Contains</em>' reference.
-	 * @see #setContains(ContainableElement)
+	 * @return the value of the '<em>Contains</em>' reference list.
 	 * @see projectSierraModel.ProjectSierraModelPackage#getContainableElement_Contains()
 	 * @see projectSierraModel.ContainableElement#getIsContainedIn
-	 * @model opposite="isContainedIn" required="true"
+	 * @model opposite="isContainedIn"
 	 * @generated
 	 */
-	ContainableElement getContains();
-
-	/**
-	 * Sets the value of the '{@link projectSierraModel.ContainableElement#getContains <em>Contains</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Contains</em>' reference.
-	 * @see #getContains()
-	 * @generated
-	 */
-	void setContains(ContainableElement value);
+	EList<ContainableElement> getContains();
 
 	/**
 	 * Returns the value of the '<em><b>Is Contained In</b></em>' reference.

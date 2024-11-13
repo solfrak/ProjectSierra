@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectSierraModel:ActivityDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:projectSierraModel="http://www.example.org/projectSierraModel">
-  <containableElements xsi:type="projectSierraModel:Exchange" sendsTo="//@specializableElements.0/@exchangeElements.0" receivesFrom="//@specializableElements.1/@exchangeElements.0">
-    <conveys name="Charger Light"/>
+  <containableElements xsi:type="projectSierraModel:Exchange" isContainedIn="//@containableElements.1" sendsTo="//@specializableElements.0/@exchangeElements.0" receivesFrom="//@specializableElements.1/@exchangeElements.0">
+    <conveys name="Charger_Light"/>
   </containableElements>
-  <specializableElements xsi:type="projectSierraModel:Actor" name="User" performs="//@specializableElements.0/@exchangeElements.0">
+  <containableElements xsi:type="projectSierraModel:Chain" contains="//@containableElements.0" name="Provide_chain" implements="//@specializableElements.2"/>
+  <containableElements xsi:type="projectSierraModel:Chain" contains="//@containableElements.3" name="Wow_chain" implements="//@specializableElements.3"/>
+  <containableElements xsi:type="projectSierraModel:Exchange" isContainedIn="//@containableElements.2" sendsTo="//@specializableElements.0/@exchangeElements.1" receivesFrom="//@specializableElements.1/@exchangeElements.1"/>
+  <specializableElements xsi:type="projectSierraModel:Actor" name="User" performs="//@specializableElements.0/@exchangeElements.0 //@specializableElements.0/@exchangeElements.1">
     <exchangeElements xsi:type="projectSierraModel:Function" name="Locate Charger" isPerformedBy="//@specializableElements.0"/>
+    <exchangeElements xsi:type="projectSierraModel:Function" name="Wow" isPerformedBy="//@specializableElements.0"/>
   </specializableElements>
-  <specializableElements xsi:type="projectSierraModel:Entity" name="Charger" performs="//@specializableElements.1/@exchangeElements.0">
+  <specializableElements xsi:type="projectSierraModel:Entity" name="Charger" performs="//@specializableElements.1/@exchangeElements.0 //@specializableElements.1/@exchangeElements.1">
     <exchangeElements xsi:type="projectSierraModel:Function" name="Illuminate at night" isPerformedBy="//@specializableElements.1"/>
+    <exchangeElements xsi:type="projectSierraModel:Function" name="huh" isPerformedBy="//@specializableElements.1"/>
   </specializableElements>
+  <specializableElements xsi:type="projectSierraModel:Capabilitty" name="Provide" isImplementedBy="//@containableElements.1"/>
+  <specializableElements xsi:type="projectSierraModel:Capabilitty" name="Wow" isImplementedBy="//@containableElements.2"/>
 </projectSierraModel:ActivityDiagram>

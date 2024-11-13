@@ -24,7 +24,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ContainableElement" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="contains" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contains" upperBound="-1"
         eType="#//ContainableElement" eOpposite="#//ContainableElement/isContainedIn"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="isContainedIn" eType="#//ContainableElement"
         eOpposite="#//ContainableElement/contains"/>

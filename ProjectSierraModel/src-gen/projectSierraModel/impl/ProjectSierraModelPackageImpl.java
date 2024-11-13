@@ -810,7 +810,7 @@ public class ProjectSierraModelPackageImpl extends EPackageImpl implements Proje
 		initEClass(containableElementEClass, ContainableElement.class, "ContainableElement", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getContainableElement_Contains(), this.getContainableElement(),
-				this.getContainableElement_IsContainedIn(), "contains", null, 1, 1, ContainableElement.class,
+				this.getContainableElement_IsContainedIn(), "contains", null, 0, -1, ContainableElement.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getContainableElement_IsContainedIn(), this.getContainableElement(),

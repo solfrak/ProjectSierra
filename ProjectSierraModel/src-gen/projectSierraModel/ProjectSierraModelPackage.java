@@ -231,7 +231,7 @@ public interface ProjectSierraModelPackage extends EPackage {
 	int CONTAINABLE_ELEMENT = 2;
 
 	/**
-	 * The feature id for the '<em><b>Contains</b></em>' reference.
+	 * The feature id for the '<em><b>Contains</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -554,7 +554,7 @@ public interface ProjectSierraModelPackage extends EPackage {
 	int EXCHANGE = 5;
 
 	/**
-	 * The feature id for the '<em><b>Contains</b></em>' reference.
+	 * The feature id for the '<em><b>Contains</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1076,7 +1076,7 @@ public interface ProjectSierraModelPackage extends EPackage {
 	int ENTITY_OPERATION_COUNT = INVOLVEABLE_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Contains</b></em>' reference.
+	 * The feature id for the '<em><b>Contains</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1183,10 +1183,10 @@ public interface ProjectSierraModelPackage extends EPackage {
 	EClass getContainableElement();
 
 	/**
-	 * Returns the meta object for the reference '{@link projectSierraModel.ContainableElement#getContains <em>Contains</em>}'.
+	 * Returns the meta object for the reference list '{@link projectSierraModel.ContainableElement#getContains <em>Contains</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Contains</em>'.
+	 * @return the meta object for the reference list '<em>Contains</em>'.
 	 * @see projectSierraModel.ContainableElement#getContains()
 	 * @see #getContainableElement()
 	 * @generated
@@ -1680,7 +1680,7 @@ public interface ProjectSierraModelPackage extends EPackage {
 		EClass CONTAINABLE_ELEMENT = eINSTANCE.getContainableElement();
 
 		/**
-		 * The meta object literal for the '<em><b>Contains</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Contains</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
